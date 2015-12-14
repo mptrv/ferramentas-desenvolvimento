@@ -3141,6 +3141,43 @@ Simuladores
 \end_layout
 
 \begin_layout Description
+Qucs
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Qucs
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ 
+\emph on
+Quite Universal Circuit Simulator.
+ 
+\emph default
+Simulador de circuitos analógicos e digitais, incluindo linhas de transmissão.
+ Sua atual GUI é consideravelmente amigável e simples.
+ Permite elaboração de circuitos relativamente complexos.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://qucs.sourceforge.net/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
 LogSim
 \begin_inset Index idx
 status collapsed
