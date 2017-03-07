@@ -119,7 +119,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.3+
+ 0.1.4
 \end_layout
 
 \begin_layout Author
@@ -2834,6 +2834,45 @@ http://www.freecommander.com/
 
 \end_layout
 
+\begin_layout Description
+Quick
+\begin_inset space ~
+\end_inset
+
+Hash
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Quick
+\begin_inset space ~
+\end_inset
+
+Hash
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Gerador e verificador de códigos CRC.
+ Suporta MD5, SHA-1, SHA256, SHA512 e xxHash64.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://quickhash-gui.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -3211,6 +3250,62 @@ http://sourceforge.net/projects/circuit/
 
 \end_layout
 
+\begin_layout Section
+EDAs
+\end_layout
+
+\begin_layout Description
+KiCad
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+KiCad
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplaforma.
+ Pacote EDA (
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Electronics Design Automation
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+) que permite desenhar esquemas elétricos, verificar suas regras, gerar
+ PCB e visualizar PCB em 3D.
+ Ainda, permite integração com simuladores.
+ Ver a 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sub:KiCad"
+
+\end_inset
+
+ para mais informações.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://kicad-pcb.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 OrCAD
 \begin_inset space ~
@@ -3226,7 +3321,7 @@ Designer
 
 Lite
 \begin_inset Index idx
-status collapsed
+status open
 
 \begin_layout Plain Layout
 OrCAD PCB Designer Lite
@@ -4894,10 +4989,61 @@ http://viniciuscanto.blogspot.com.br/2007/02/acentos-em-arquivos-bat.html
 Adicionais para Eletrônica
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section
+Notas e Dicas sobre os Programas
+\end_layout
 
-\emph on
-(por ora, nada neste apêndice)
+\begin_layout Subsection
+KiCad
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+KiCad
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:KiCad"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Há alguns locais onde obter mais bibliotecas de componentes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://per.launay.free.fr/kicad/kicad_php/composant.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://smisioto.no-ip.org/elettronica/kicad/kicad-en.htm
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
