@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \use_default_options true
 \maintain_unincluded_children false
@@ -9,16 +11,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -34,7 +36,7 @@
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
 \pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
+\pdf_breaklinks true
 \pdf_pdfborder true
 \pdf_colorlinks true
 \pdf_backref false
@@ -119,7 +121,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.4
+ 0.1.5
 \end_layout
 
 \begin_layout Author
@@ -200,6 +202,11 @@ width "88bp"
 special "none"
 height "1in"
 height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -235,12 +242,17 @@ width "70col%"
 special "none"
 height "1in"
 height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
 Esta nota técnica é licenciada sob a 
 \emph on
-Licença Creative Commons Atribuição -- Compartilha Igual 3.0 Não Adaptada,
+Licença Creative Commons Atribuição – Compartilha Igual 3.0 Não Adaptada,
  
 \emph default
 cuja descrição poderá ser acessada em
@@ -629,7 +641,8 @@ Documentação
 \end_layout
 
 \begin_layout Description
-TeXLive
+\SpecialChar TeX
+Live
 \begin_inset Index idx
 status collapsed
 
@@ -640,7 +653,8 @@ TexLive
 \end_inset
 
 : Gratuito, multiplataforma.
- Distribuição do formatador de texto LaTeX, com inúmeros pacotes associados.
+ Distribuição do formatador de texto \SpecialChar LaTeX
+, com inúmeros pacotes associados.
 \begin_inset Newline newline
 \end_inset
 
@@ -659,7 +673,8 @@ http://www.tug.org/texlive
 \end_layout
 
 \begin_layout Description
-MikTeX
+Mik\SpecialChar TeX
+
 \begin_inset Index idx
 status open
 
@@ -684,19 +699,21 @@ MikTeX
 Windows
 \emph default
 .
- Distribuição do formatador de texto LaTeX, com alguns pacotes associados.
- Normalmente, acompanha o LyX, em sua instalação padrão.
+ Distribuição do formatador de texto \SpecialChar LaTeX
+, com alguns pacotes associados.
+ Normalmente, acompanha o \SpecialChar LyX
+, em sua instalação padrão.
  Ver dicas no apêndice 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Instalação-de-Pacotes-Latex"
+reference "subsec:Instalação-de-Pacotes-Latex"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
 LatexCommand vpageref
-reference "sub:Instalação-de-Pacotes-Latex"
+reference "subsec:Instalação-de-Pacotes-Latex"
 
 \end_inset
 
@@ -719,7 +736,8 @@ http://miktex.org/
 \end_layout
 
 \begin_layout Description
-LyX
+\SpecialChar LyX
+
 \begin_inset Index idx
 status open
 
@@ -740,19 +758,21 @@ LyX
 \end_inset
 
 : Gratuito, multiplataforma.
- Ambiente gráfico de edição de texto integrado ao LaTeX, ou outros formatadores
- baseados em TeX.
+ Ambiente gráfico de edição de texto integrado ao \SpecialChar LaTeX
+, ou outros formatadores
+ baseados em \SpecialChar TeX
+.
  Ver dicas no apêndice 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Instalação-de-Pacotes-Latex"
+reference "subsec:Instalação-de-Pacotes-Latex"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
 LatexCommand vpageref
-reference "sub:Instalação-de-Pacotes-Latex"
+reference "subsec:Instalação-de-Pacotes-Latex"
 
 \end_inset
 
@@ -762,10 +782,14 @@ reference "sub:Instalação-de-Pacotes-Latex"
 status collapsed
 
 \begin_layout Plain Layout
-Na entrada do índice, LyX digitado por código TeX para evitar erro, pois
- é definido o comando 
+Na entrada do índice, \SpecialChar LyX
+ digitado por código \SpecialChar TeX
+ para evitar erro, pois é definido
+ o comando 
 \backslash
-LyX pelo LyX.
+\SpecialChar LyX
+ pelo \SpecialChar LyX
+.
 \end_layout
 
 \end_inset
@@ -951,7 +975,7 @@ GitHub
  Ver também as notas em 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "sub:Strut"
+reference "subsec:Strut"
 
 \end_inset
 
@@ -1110,7 +1134,7 @@ Oracle
  Para referências de documentações, ver apêndice 
 \begin_inset CommandInset ref
 LatexCommand vref
-reference "sub:Produtos-Oracle"
+reference "subsec:Produtos-Oracle"
 
 \end_inset
 
@@ -1334,7 +1358,7 @@ sem a necessidade de instalar o cliente do banco de dados.
  Ver dicas na seção 
 \begin_inset CommandInset ref
 LatexCommand vref
-reference "sub:Instant-Client"
+reference "subsec:Instant-Client"
 
 \end_inset
 
@@ -1393,7 +1417,7 @@ Svn
 \emph on
 Linux
 \emph default
-, mas pode ser compilado em outras plataformas -- há pacotes pré-compilados
+, mas pode ser compilado em outras plataformas – há pacotes pré-compilados
  para diversas distribuições 
 \emph on
 Linux
@@ -2127,7 +2151,7 @@ Audacity
  Ferramenta bastante completa para gravar e editar áudio, incluindo inúmeros
  filtros e possibilidade de mixagem.
  Há componentes adicionais que podem ser instalados para aumentar os recursos
- do programa -- entre eles, citam-se o 
+ do programa – entre eles, citam-se o 
 \emph on
 FFmpeg for Audacity
 \emph default
@@ -2313,6 +2337,56 @@ http://www.putty.org/
 
 \end_layout
 
+\begin_layout Description
+Cntlm
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Cntlm
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Permite o acesso à rede externa via autenticação 
+\emph on
+proxy
+\emph default
+ no 
+\emph on
+Linux
+\emph default
+.
+ Ver também: 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Cntlm"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://cntlm.sourceforge.net/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -2358,7 +2432,8 @@ Adobe Acrobat Reader
 , mas não permite modificá-lo ou inserir novos.
  Ao recarregar um documento alterado, exibe a página anteriormente visualizada,
  tornando-o muito propício para a etapa de finalização da diagramação de
- um documento (ao desenvolvê-lo, por exemplo, com o LyX).
+ um documento (ao desenvolvê-lo, por exemplo, com o \SpecialChar LyX
+).
 \begin_inset Newline newline
 \end_inset
 
@@ -3284,7 +3359,7 @@ Electronics Design Automation
  Ver a 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "sub:KiCad"
+reference "subsec:KiCad"
 
 \end_inset
 
@@ -3490,6 +3565,10 @@ Imagem original: 1920 x 1080
 
 \begin_layout Itemize
 Imagem de saída:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3504,6 +3583,10 @@ Imagem de saída:
 \end_deeper
 \begin_layout Itemize
 Comandos:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3576,7 +3659,7 @@ Produtos
 Oracle
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Produtos-Oracle"
+name "subsec:Produtos-Oracle"
 
 \end_inset
 
@@ -3680,7 +3763,7 @@ Java JDK6
 \bar default
  
 \emph default
--- atenção! o 
+– atenção! o 
 \emph on
 Data Modeler
 \emph default
@@ -3826,7 +3909,7 @@ Observação 3:
 \begin_layout Quote
 
 \emph on
-Adicionalmente -- ainda não foi testado -- com o procedimento da 
+Adicionalmente – ainda não foi testado – com o procedimento da 
 \series bold
 Observação 2
 \series default
@@ -3885,6 +3968,10 @@ Oracle
 \emph default
 .
  A identificação deste diretório será algo semelhante a:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -4015,7 +4102,7 @@ Instant Client
 
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Instant-Client"
+name "subsec:Instant-Client"
 
 \end_inset
 
@@ -4400,12 +4487,14 @@ possui arquivos HTML de ajuda, com informações gerais e técnicas.
 \end_layout
 
 \begin_layout Subsection
-LaTeX
+\SpecialChar LaTeX
+
 \begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
-LaTeX
+\SpecialChar LaTeX
+
 \end_layout
 
 \end_inset
@@ -4413,7 +4502,7 @@ LaTeX
 
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:LaTeX"
+name "subsec:LaTeX"
 
 \end_inset
 
@@ -4421,10 +4510,11 @@ name "sub:LaTeX"
 \end_layout
 
 \begin_layout Subsubsection
-Instalação de Pacotes Adicionais do LaTeX
+Instalação de Pacotes Adicionais do \SpecialChar LaTeX
+
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Instalação-de-Pacotes-Latex"
+name "subsec:Instalação-de-Pacotes-Latex"
 
 \end_inset
 
@@ -4434,19 +4524,25 @@ name "sub:Instalação-de-Pacotes-Latex"
 \begin_layout Standard
 Ao utilizar o 
 \emph on
-MikTeX
+Mik\SpecialChar TeX
+
 \emph default
 , versão para 
 \emph on
 Windows
 \emph default
-, juntamente com o LyX, novos pacotes podem ser acrescentados pelo seguinte
+, juntamente com o \SpecialChar LyX
+, novos pacotes podem ser acrescentados pelo seguinte
  método:
 \end_layout
 
 \begin_layout Enumerate
 Mover para os diretórios abaixo, os correspondentes arquivos com as extensões
  especificadas:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -4498,18 +4594,21 @@ texhash
 \end_layout
 
 \begin_layout Standard
-Neste momento, o LyX já deverá enxergar os novos pacotes.
+Neste momento, o \SpecialChar LyX
+ já deverá enxergar os novos pacotes.
  Não há necessidade de executar qualquer outro comando nele.
 \end_layout
 
 \begin_layout Standard
 Supõe-se que o procedimento descrito poderá se aplicar também ao 
 \emph on
-TeXLive
+\SpecialChar TeX
+Live
 \emph default
 , ao invés do 
 \emph on
-MikTeX
+Mik\SpecialChar TeX
+
 \emph default
 , contudo testes ainda não foram realizados.
 \end_layout
@@ -4538,7 +4637,8 @@ encontram-se em:
 \align center
 
 \family typewriter
-<diretório de instalação do MikTeX>/miktex/bin/
+<diretório de instalação do Mik\SpecialChar TeX
+>/miktex/bin/
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -4561,18 +4661,21 @@ O diretório
 \family default
  é o próprio diretório de instalação do 
 \emph on
-MikTeX
+Mik\SpecialChar TeX
+
 \emph default
 .
 \end_layout
 
 \begin_layout Subsection
-LyX
+\SpecialChar LyX
+
 \begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
-LyX
+\SpecialChar LyX
+
 \end_layout
 
 \end_inset
@@ -4580,7 +4683,7 @@ LyX
 
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:LyX"
+name "subsec:LyX"
 
 \end_inset
 
@@ -4592,7 +4695,8 @@ Conversão de Arquivos
 \end_layout
 
 \begin_layout Standard
-O LyX possui suporte para gerar arquivos do documento em diversos formatos,
+O \SpecialChar LyX
+ possui suporte para gerar arquivos do documento em diversos formatos,
  dos quais citam-se:
 \end_layout
 
@@ -4623,7 +4727,7 @@ ODT
 \begin_layout Standard
 Para gerar o arquivo do correspondente formato, basta acessar o menu 
 \family sans
-Arquivo \SpecialChar \menuseparator
+Arquivo \SpecialChar menuseparator
 Exportar
 \family default
 .
@@ -4662,7 +4766,7 @@ samepage
 \family default
 , envolvendo o conteúdo com 
 \family typewriter
-begin{samepage}\SpecialChar \ldots{}
+begin{samepage}\SpecialChar ldots
 end{samepage}
 \family default
 .
@@ -4674,7 +4778,7 @@ end{samepage}
 \family typewriter
 refstyle 
 \family default
--- Personalização
+– Personalização
 \end_layout
 
 \begin_layout Standard
@@ -4690,13 +4794,16 @@ prettyref
 \family typewriter
 refstyle.def
 \family default
- no mesmo local do arquivo LyX/LaTeX em edição.
+ no mesmo local do arquivo \SpecialChar LyX
+/\SpecialChar LaTeX
+ em edição.
  Tal arquivo pode ter como base o arquivo 
 \family typewriter
 refstyle.cfg
 \family default
 , localizado no correspondente subdiretório do diretório de instalação dos
- pacotes LaTeX.
+ pacotes \SpecialChar LaTeX
+.
 \end_layout
 
 \begin_layout Standard
@@ -4723,7 +4830,7 @@ Strut
 
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Strut"
+name "subsec:Strut"
 
 \end_inset
 
@@ -4802,12 +4909,51 @@ Windows
  deve ser fornecido.
 \end_layout
 
+\begin_layout Subsection
+Cntlm
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Cntlm
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Cntlm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ver tutorial em:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://gutocarvalho.net/wordpress/2010/05/11/cntlm-uma-solucao-rapida-e-elegante/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 
 \emph on
 Windows
 \emph default
- -- Notas e Dicas
+ – Notas e Dicas
 \end_layout
 
 \begin_layout Subsection
@@ -5007,7 +5153,7 @@ KiCad
 
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:KiCad"
+name "subsec:KiCad"
 
 \end_inset
 
