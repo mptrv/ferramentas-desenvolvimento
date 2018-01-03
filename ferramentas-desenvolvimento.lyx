@@ -121,7 +121,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.6
+ 0.1.7
 \end_layout
 
 \begin_layout Author
@@ -637,199 +637,6 @@ sumir
 \end_layout
 
 \begin_layout Section
-Documentação
-\end_layout
-
-\begin_layout Description
-\SpecialChar TeX
-Live
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-TexLive
-\end_layout
-
-\end_inset
-
-: Gratuito, multiplataforma.
- Distribuição do formatador de texto \SpecialChar LaTeX
-, com inúmeros pacotes associados.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://www.tug.org/texlive
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-Mik\SpecialChar TeX
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-MikTeX
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Windows
-\emph default
-.
- Distribuição do formatador de texto \SpecialChar LaTeX
-, com alguns pacotes associados.
- Normalmente, acompanha o \SpecialChar LyX
-, em sua instalação padrão.
- Ver dicas no apêndice 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Instalação-de-Pacotes-Latex"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand vpageref
-reference "subsec:Instalação-de-Pacotes-Latex"
-
-\end_inset
-
-.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://miktex.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\SpecialChar LyX
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-LyX
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-: Gratuito, multiplataforma.
- Ambiente gráfico de edição de texto integrado ao \SpecialChar LaTeX
-, ou outros formatadores
- baseados em \SpecialChar TeX
-.
- Ver dicas no apêndice 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Instalação-de-Pacotes-Latex"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand vpageref
-reference "subsec:Instalação-de-Pacotes-Latex"
-
-\end_inset
-
-.
- 
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-Na entrada do índice, \SpecialChar LyX
- digitado por código \SpecialChar TeX
- para evitar erro, pois é definido
- o comando 
-\backslash
-\SpecialChar LyX
- pelo \SpecialChar LyX
-.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://www.lyx.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-sumir
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
 Escritório
 \end_layout
 
@@ -1005,6 +812,844 @@ status collapsed
 \begin_layout Plain Layout
 
 https://github.com/tantaman/Strut/tree/v0.6.3-built/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Documentação
+\end_layout
+
+\begin_layout Description
+\SpecialChar TeX
+Live
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+TexLive
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Distribuição do formatador de texto \SpecialChar LaTeX
+, com inúmeros pacotes associados.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.tug.org/texlive
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Mik\SpecialChar TeX
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+MikTeX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Windows
+\emph default
+.
+ Distribuição do formatador de texto \SpecialChar LaTeX
+, com alguns pacotes associados.
+ Normalmente, acompanha o \SpecialChar LyX
+, em sua instalação padrão.
+ Ver dicas no apêndice
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:LaTeX"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://miktex.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\SpecialChar LyX
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+LyX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Ambiente gráfico de edição de texto integrado ao \SpecialChar LaTeX
+, ou outros formatadores
+ baseados em \SpecialChar TeX
+.
+ Ver dicas nos apêndices 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:LaTeX"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:LyX"
+
+\end_inset
+
+.
+ 
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Na entrada do índice, \SpecialChar LyX
+ digitado por código \SpecialChar TeX
+ para evitar erro, pois é definido
+ o comando 
+\backslash
+\SpecialChar LyX
+ pelo \SpecialChar LyX
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.lyx.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Texto
+\end_layout
+
+\begin_layout Description
+Vim
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Vim
+\end_layout
+
+\end_inset
+
+: 
+\emph on
+Vi Improved
+\emph default
+.
+ Gratuito, multiplataforma.
+ Ferramenta de edição de texto com uma infinidade de recursos.
+ Muito útil para programação.
+ Reconhece a sintaxe de muitas linguagens de programação.
+ Há a versão em modo texto e em modo gráfico (
+\emph on
+GVim
+\emph default
+).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.vim.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+GVim
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GVim
+\end_layout
+
+\end_inset
+
+: 
+\emph on
+GUI Vim
+\emph default
+.
+ Gratuito, multiplataforma.
+ É o 
+\emph on
+Vim
+\emph default
+, porém com GUI.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.vim.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+PDF
+\end_layout
+
+\begin_layout Description
+Evince
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Evince
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Leitor de arquivos em formato 
+\family sans
+PDF
+\family default
+.
+ Reconhece comentários do 
+\emph on
+Adobe Acrobat Reader
+\emph default
+, mas não permite modificá-lo ou inserir novos.
+ Ao recarregar um documento alterado, exibe a página anteriormente visualizada,
+ tornando-o muito propício para a etapa de finalização da diagramação de
+ um documento (ao desenvolvê-lo, por exemplo, com o \SpecialChar LyX
+).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://projects.gnome.org/evince/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Okular
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Okular
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Leitor de arquivos em formato 
+\family sans
+PDF
+\family default
+.
+ Reconhece comentários do 
+\emph on
+Adobe Acrobat Reader
+\emph default
+, embora haja ressalvas de compatibilidade, e permite acrescentar outros
+ comentários.
+ Há a função de histórico de navegação.
+ Semelhantemente ao 
+\emph on
+Evince
+\emph default
+, exibe a página anteriormente visualizada ao recarregar um documento.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://okular.kde.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Okular
+\begin_inset space ~
+\end_inset
+
+Standalone
+\begin_inset space ~
+\end_inset
+
+4
+\begin_inset space ~
+\end_inset
+
+Windows
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Okular Standalone 4 Windows
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Windows
+\emph default
+.
+ Leitor de arquivos em formato 
+\family sans
+PDF
+\family default
+.
+ É o 
+\emph on
+Okular
+\emph default
+, compilado para 
+\emph on
+Windows
+\emph default
+, sem a necessidade de instalar o 
+\emph on
+KDE
+\emph default
+ 
+\emph on
+para Windows
+\emph default
+.
+ Até o momento, a última versão é de março de 2012, para o 
+\emph on
+Okular
+\emph default
+ 
+\emph on
+4.7
+\emph default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://sourceforge.net/projects/okularinst4win/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Quotes eld
+\end_inset
+
+PDFreaders.org
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+PDFreaders.org
+\end_layout
+
+\end_inset
+
+: Relação de diversos leitores gratuitos de arquivos em formato PDF.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://pdfreaders.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Acrobat
+\begin_inset space ~
+\end_inset
+
+Reader
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Acrobat Reader
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Windows
+\emph default
+.
+ Leitor de arquivos em formato PDF.
+ Permite a inserção de comentários e há recursos adicionais.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://get.adobe.com/br/reader/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+PDFSam
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+PDFSam
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Realiza diversas operações sobre documentos PDF, como mesclar arquivos
+ em um único, separar páginas em arquivos distintos, reordenar e rotacionar
+ páginas.
+ 
+\emph on
+PDFSam
+\emph default
+ significa 
+\emph on
+PDF Split And Merge
+\emph default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\series medium
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://sourceforge.net/projects/pdfsam/
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.pdfsam.org/download/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+PDFCreator
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+PDFCreator
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Windows.
+ 
+\emph default
+Impressora virtual que permite redirecionar o arquivo impresso para PDF.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.pdfforge.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Controle de Versão
+\end_layout
+
+\begin_layout Description
+Svn
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Svn
+\end_layout
+
+\end_inset
+
+: Gratuito, nativo para compilação em 
+\emph on
+Linux
+\emph default
+, mas pode ser compilado em outras plataformas – há pacotes pré-compilados
+ para diversas distribuições 
+\emph on
+Linux
+\emph default
+.
+ É o 
+\emph on
+Subversion
+\emph default
+.
+ As funções são acessíveis por linha de comando.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://subversion.apache.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+SlikSVN
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+SlikSVN
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Windows
+\emph default
+.
+ É o 
+\emph on
+Subversion
+\emph default
+ compilado para 
+\emph on
+Windows
+\emph default
+.
+ As funções são acessíveis por linha de comando.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.sliksvn.com/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+TortoiseSVN
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+TortoiseSVN
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Windows
+\emph default
+.
+ É o 
+\emph on
+Subversion
+\emph default
+ com interface de interação com o usuário, incluindo, opicionalmente, as
+ ferramentas de linha de commando.
+ O programa consiste em uma extensão ao 
+\emph on
+shell
+\emph default
+ do 
+\emph on
+Windows
+\emph default
+, integrando-se ao 
+\emph on
+Windows Explorer
+\emph default
+, por meio do qual as tarefas SVN são acessíveis.
+ É bastante completo: além da apresentação gráfica das tarefas elementares
+ SVN, ainda possui diversos outros recursos.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://tortoisesvn.tigris.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Redmine
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Redmine
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Gerenciador de projeto via 
+\emph on
+web
+\emph default
+ com integração com o 
+\emph on
+Subversion
+\emph default
+.
+ Possui diversos recursos, como criação de subprojetos, páginas 
+\emph on
+wiki
+\emph default
+, associação de documentações, registro de problemas encontrados, navegação
+ no repositório.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.redmine.org/
 \end_layout
 
 \end_inset
@@ -1459,216 +2104,6 @@ sumir
 \end_layout
 
 \begin_layout Section
-Controle de Versão
-\end_layout
-
-\begin_layout Description
-Svn
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Svn
-\end_layout
-
-\end_inset
-
-: Gratuito, nativo para compilação em 
-\emph on
-Linux
-\emph default
-, mas pode ser compilado em outras plataformas – há pacotes pré-compilados
- para diversas distribuições 
-\emph on
-Linux
-\emph default
-.
- É o 
-\emph on
-Subversion
-\emph default
-.
- As funções são acessíveis por linha de comando.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://subversion.apache.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-SlikSVN
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-SlikSVN
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Windows
-\emph default
-.
- É o 
-\emph on
-Subversion
-\emph default
- compilado para 
-\emph on
-Windows
-\emph default
-.
- As funções são acessíveis por linha de comando.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://www.sliksvn.com/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-TortoiseSVN
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-TortoiseSVN
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Windows
-\emph default
-.
- É o 
-\emph on
-Subversion
-\emph default
- com interface de interação com o usuário, incluindo, opicionalmente, as
- ferramentas de linha de commando.
- O programa consiste em uma extensão ao 
-\emph on
-shell
-\emph default
- do 
-\emph on
-Windows
-\emph default
-, integrando-se ao 
-\emph on
-Windows Explorer
-\emph default
-, por meio do qual as tarefas SVN são acessíveis.
- É bastante completo: além da apresentação gráfica das tarefas elementares
- SVN, ainda possui diversos outros recursos.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://tortoisesvn.tigris.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-Redmine
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Redmine
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Linux
-\emph default
-.
- Gerenciador de projeto via 
-\emph on
-web
-\emph default
- com integração com o 
-\emph on
-Subversion
-\emph default
-.
- Possui diversos recursos, como criação de subprojetos, páginas 
-\emph on
-wiki
-\emph default
-, associação de documentações, registro de problemas encontrados, navegação
- no repositório.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://www.redmine.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-sumir
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
 Virtualização
 \end_layout
 
@@ -1727,34 +2162,28 @@ sumir
 \end_layout
 
 \begin_layout Section
-Texto
+Rede
 \end_layout
 
 \begin_layout Description
-Vim
+WakeOnLan
 \begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
-Vim
+WakeOnLan
 \end_layout
 
 \end_inset
 
-: 
+: Gratuito, para 
 \emph on
-Vi Improved
+Windows
 \emph default
 .
- Gratuito, multiplataforma.
- Ferramenta de edição de texto com uma infinidade de recursos.
- Muito útil para programação.
- Reconhece a sintaxe de muitas linguagens de programação.
- Há a versão em modo texto e em modo gráfico (
-\emph on
-GVim
-\emph default
-).
+ Programa que dispara o pacote mágico na rede para ligar algum computador.
+ Opera por GUI ou linha de comando.
+ Possui outras funções complementares.
 \begin_inset Newline newline
 \end_inset
 
@@ -1764,7 +2193,7 @@ status collapsed
 
 \begin_layout Plain Layout
 
-http://www.vim.org/
+http://aquilawol.sourceforge.net/
 \end_layout
 
 \end_inset
@@ -1773,27 +2202,85 @@ http://www.vim.org/
 \end_layout
 
 \begin_layout Description
-GVim
+PuTTY
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+PuTTY
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Windows
+\emph default
+.
+ Permite acessar outros computadores remotamente.
+ Especialmente útil para acessar computadores com 
+\emph on
+Sistema Operacional Linux 
+\emph default
+ou 
+\emph on
+Unix 
+\emph default
+a partir do 
+\emph on
+Windows
+\emph default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.putty.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Cntlm
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-GVim
+Cntlm
 \end_layout
 
 \end_inset
 
-: 
+: Gratuito, para 
 \emph on
-GUI Vim
+Linux
 \emph default
 .
- Gratuito, multiplataforma.
- É o 
+ Permite o acesso à rede externa via autenticação 
 \emph on
-Vim
+proxy
 \emph default
-, porém com GUI.
+ no 
+\emph on
+Linux
+\emph default
+.
+ Ver também: 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Cntlm"
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -1803,7 +2290,125 @@ status collapsed
 
 \begin_layout Plain Layout
 
-http://www.vim.org/
+http://cntlm.sourceforge.net/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Acesso Remoto
+\end_layout
+
+\begin_layout Description
+Remmina
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Remmina
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Permite o acesso remoto de diversas áreas de trabalho no 
+\emph on
+Linux
+\emph default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.remmina.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+mRemoteNG
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+mRemoteNG
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Windows
+\emph default
+.
+ Equivalente ao 
+\emph on
+Remmina
+\emph default
+ para 
+\emph on
+Windows
+\emph default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://mremoteng.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
 \end_layout
 
 \end_inset
@@ -2311,16 +2916,24 @@ sumir
 \end_layout
 
 \begin_layout Section
-Rede
+CD/DVD
 \end_layout
 
 \begin_layout Description
-WakeOnLan
+Infra
+\begin_inset space ~
+\end_inset
+
+Recorder
 \begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
-WakeOnLan
+Infra
+\begin_inset space ~
+\end_inset
+
+Recorder
 \end_layout
 
 \end_inset
@@ -2330,9 +2943,7 @@ WakeOnLan
 Windows
 \emph default
 .
- Programa que dispara o pacote mágico na rede para ligar algum computador.
- Opera por GUI ou linha de comando.
- Possui outras funções complementares.
+ Conjunto completo de ferramentas para leitura e gravação de CD e DVD.
 \begin_inset Newline newline
 \end_inset
 
@@ -2342,7 +2953,7 @@ status collapsed
 
 \begin_layout Plain Layout
 
-http://aquilawol.sourceforge.net/
+http://infrarecorder.org/
 \end_layout
 
 \end_inset
@@ -2351,59 +2962,12 @@ http://aquilawol.sourceforge.net/
 \end_layout
 
 \begin_layout Description
-PuTTY
+K3b
 \begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
-PuTTY
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Windows
-\emph default
-.
- Permite acessar outros computadores remotamente.
- Especialmente útil para acessar computadores com 
-\emph on
-Sistema Operacional Linux 
-\emph default
-ou 
-\emph on
-Unix 
-\emph default
-a partir do 
-\emph on
-Windows
-\emph default
-.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://www.putty.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-Cntlm
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Cntlm
+K3b
 \end_layout
 
 \end_inset
@@ -2413,23 +2977,7 @@ Cntlm
 Linux
 \emph default
 .
- Permite o acesso à rede externa via autenticação 
-\emph on
-proxy
-\emph default
- no 
-\emph on
-Linux
-\emph default
-.
- Ver também: 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "subsec:Cntlm"
-
-\end_inset
-
-
+ Conjunto completo de ferramentas para leitura gravação de CD e DVD.
 \begin_inset Newline newline
 \end_inset
 
@@ -2439,364 +2987,7 @@ status collapsed
 
 \begin_layout Plain Layout
 
-http://cntlm.sourceforge.net/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-sumir
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-PDF
-\end_layout
-
-\begin_layout Description
-Evince
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Evince
-\end_layout
-
-\end_inset
-
-: Gratuito, multiplataforma.
- Leitor de arquivos em formato 
-\family sans
-PDF
-\family default
-.
- Reconhece comentários do 
-\emph on
-Adobe Acrobat Reader
-\emph default
-, mas não permite modificá-lo ou inserir novos.
- Ao recarregar um documento alterado, exibe a página anteriormente visualizada,
- tornando-o muito propício para a etapa de finalização da diagramação de
- um documento (ao desenvolvê-lo, por exemplo, com o \SpecialChar LyX
-).
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-https://projects.gnome.org/evince/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-Okular
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Okular
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Linux
-\emph default
-.
- Leitor de arquivos em formato 
-\family sans
-PDF
-\family default
-.
- Reconhece comentários do 
-\emph on
-Adobe Acrobat Reader
-\emph default
-, embora haja ressalvas de compatibilidade, e permite acrescentar outros
- comentários.
- Há a função de histórico de navegação.
- Semelhantemente ao 
-\emph on
-Evince
-\emph default
-, exibe a página anteriormente visualizada ao recarregar um documento.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://okular.kde.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-Okular
-\begin_inset space ~
-\end_inset
-
-Standalone
-\begin_inset space ~
-\end_inset
-
-4
-\begin_inset space ~
-\end_inset
-
-Windows
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Okular Standalone 4 Windows
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Windows
-\emph default
-.
- Leitor de arquivos em formato 
-\family sans
-PDF
-\family default
-.
- É o 
-\emph on
-Okular
-\emph default
-, compilado para 
-\emph on
-Windows
-\emph default
-, sem a necessidade de instalar o 
-\emph on
-KDE
-\emph default
- 
-\emph on
-para Windows
-\emph default
-.
- Até o momento, a última versão é de março de 2012, para o 
-\emph on
-Okular
-\emph default
- 
-\emph on
-4.7
-\emph default
-.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://sourceforge.net/projects/okularinst4win/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Quotes eld
-\end_inset
-
-PDFreaders.org
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-PDFreaders.org
-\end_layout
-
-\end_inset
-
-: Relação de diversos leitores gratuitos de arquivos em formato PDF.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://pdfreaders.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-Acrobat
-\begin_inset space ~
-\end_inset
-
-Reader
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Acrobat Reader
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Windows
-\emph default
-.
- Leitor de arquivos em formato PDF.
- Permite a inserção de comentários e há recursos adicionais.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://get.adobe.com/br/reader/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-PDFSam
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-PDFSam
-\end_layout
-
-\end_inset
-
-: Gratuito, multiplataforma.
- Realiza diversas operações sobre documentos PDF, como mesclar arquivos
- em um único, separar páginas em arquivos distintos, reordenar e rotacionar
- páginas.
- 
-\emph on
-PDFSam
-\emph default
- significa 
-\emph on
-PDF Split And Merge
-\emph default
-.
-\begin_inset Newline newline
-\end_inset
-
-
-\series medium
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://sourceforge.net/projects/pdfsam/
-\end_layout
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://www.pdfsam.org/download/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-PDFCreator
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-PDFCreator
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Windows.
- 
-\emph default
-Impressora virtual que permite redirecionar o arquivo impresso para PDF.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://www.pdfforge.org/
+http://www.k3b.org/
 \end_layout
 
 \end_inset
@@ -3001,103 +3192,6 @@ status collapsed
 \begin_layout Plain Layout
 
 http://quickhash-gui.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-sumir
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-CD/DVD
-\end_layout
-
-\begin_layout Description
-Infra
-\begin_inset space ~
-\end_inset
-
-Recorder
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Infra
-\begin_inset space ~
-\end_inset
-
-Recorder
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Windows
-\emph default
-.
- Conjunto completo de ferramentas para leitura e gravação de CD e DVD.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://infrarecorder.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-K3b
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-K3b
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Linux
-\emph default
-.
- Conjunto completo de ferramentas para leitura gravação de CD e DVD.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://www.k3b.org/
 \end_layout
 
 \end_inset
@@ -4572,13 +4666,6 @@ name "subsec:LaTeX"
 \begin_layout Subsubsection
 Instalação de Pacotes Adicionais do \SpecialChar LaTeX
 
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Instalação-de-Pacotes-Latex"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -4872,6 +4959,64 @@ Consultar o manual de
 refstyle
 \family default
  para outras possibilidades e descrições mais detalhadas.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Quotes eld
+\end_inset
+
+Visualizar PDF
+\begin_inset Quotes erd
+\end_inset
+
+ Não Habilitado
+\end_layout
+
+\begin_layout Standard
+Quando o 
+\begin_inset Quotes eld
+\end_inset
+
+olho
+\begin_inset Quotes erd
+\end_inset
+
+ para 
+\begin_inset Quotes eld
+\end_inset
+
+visualizar PDF
+\begin_inset Quotes erd
+\end_inset
+
+ não estiver habilitado, significa que o \SpecialChar LyX
+ não conseguiu encontrar um visualizado
+r.
+ Deve-se, então, instalar um (se ainda não instalado) e indicar para o \SpecialChar LyX
+
+ o seu caminho, se não for localizado automaticamente após a 
+\begin_inset Quotes eld
+\end_inset
+
+Reconfiguração
+\begin_inset Quotes erd
+\end_inset
+
+ (em 
+\begin_inset Quotes eld
+\end_inset
+
+Ferramentas
+\begin_inset Quotes erd
+\end_inset
+
+).
+ 
+\emph on
+(No momento, não é recordado exatamente onde deve-se indicar o caminho para
+ o \SpecialChar LyX
+\SpecialChar ldots
+)
 \end_layout
 
 \begin_layout Subsection
