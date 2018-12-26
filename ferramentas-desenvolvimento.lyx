@@ -3541,12 +3541,12 @@ http://qucs.sourceforge.net/
 \end_layout
 
 \begin_layout Description
-LogSim
+LogiSim
 \begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
-LogSim
+LogiSim
 \end_layout
 
 \end_inset
@@ -3557,6 +3557,7 @@ LogSim
  Sua GUI é bastante amigável.
  Permite elaboração de circuitos com relativa complexidade.
  Uma deficiência encontrada refere-se ao fato de não gerar cartas de tempo.
+ Foi descontinuado em 2014.
 \begin_inset Newline newline
 \end_inset
 
@@ -3567,6 +3568,110 @@ status collapsed
 \begin_layout Plain Layout
 
 http://sourceforge.net/projects/circuit/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+LogiSim-Evolution
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+LogiSim-Evolution
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Simulador de circuitos digitais em tempo de edição, com fins, originariamente,
+ didáticos.
+ Sua GUI é bastante amigável.
+ Permite elaboração de circuitos com relativa complexidade.
+ É uma extensão do original 
+\emph on
+LogiSim
+\emph default
+ e contorna algumas deficiências, como a geração de cartas de tempo.
+ Seu desenvolvimento não parece ser contínuo ou intensivo.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/reds-heig/logisim-evolution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Digital
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Digital
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Simulador de circuitos digitais em tempo de edição, com fins, originariamente,
+ didáticos.
+ Sua GUI é bastante amigável.
+ Permite elaboração de circuitos com relativa complexidade, com símbolos
+ no padrão americano ou IEEE.
+ De certa forma, é uma reimplementação do 
+\emph on
+LogSim
+\emph default
+.
+ (No 
+\emph on
+site
+\emph default
+, há citações de outros trabalhos derivados do 
+\emph on
+LogiSim
+\emph default
+.)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/hneemann/Digital
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
 \end_layout
 
 \end_inset
