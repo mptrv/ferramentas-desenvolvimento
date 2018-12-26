@@ -3615,6 +3615,66 @@ https://github.com/reds-heig/logisim-evolution
 \end_layout
 
 \begin_layout Description
+CircuitVerse
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CircuitVerse
+\end_layout
+
+\end_inset
+
+: Gratuito, 
+\emph on
+Web
+\emph default
+.
+ Simulador de circuitos digitais em tempo de edição, com fins, originariamente,
+ didáticos.
+ Sua GUI é bastante amigável.
+ Permite elaboração de circuitos com relativa complexidade.
+ É uma versão para 
+\emph on
+Web
+\emph default
+ do original 
+\emph on
+LogiSim
+\emph default
+.
+ Permite salvar projetos na nuvem, inclusive no 
+\emph on
+GoogleDrive
+\emph default
+.
+ Há algumas falhas em tempo de edição.
+ Ver dicas em 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:CircuitVerse"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://circuitverse.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
 Digital
 \begin_inset Index idx
 status collapsed
@@ -5595,6 +5655,33 @@ http://smisioto.no-ip.org/elettronica/kicad/kicad-en.htm
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+CircuitVerse
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+CircuitVerse
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:CircuitVerse"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para contornar as falhas de edição, pode-se criar um novo circuito no projeto
+ (mesmo que vazio) e, quando as teclas não funcionarem, alternar para a
+ aba deste novo circuito e voltar à original.
 \end_layout
 
 \begin_layout Standard
