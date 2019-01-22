@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -21,6 +21,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -62,6 +64,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -70,7 +73,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -3834,6 +3840,7 @@ PSpice
 LatexCommand nomenclature
 symbol "PCB"
 description "Printed Circuit Board (Placa de Circuito Impresso)"
+literal "true"
 
 \end_inset
 
@@ -3908,6 +3915,7 @@ Web
 LatexCommand href
 name "http://www.webdesignerdepot.com/2009/07/using-wireframes-to-streamline-your-development-process/"
 target "http://www.webdesignerdepot.com/2009/07/using-wireframes-to-streamline-your-development-process/"
+literal "false"
 
 \end_inset
 
@@ -3925,6 +3933,7 @@ LatexCommand href
 name "artigos-referenciados/using-wireframes-to-streamline-your-development-process-webdesigner-depot.pdf"
 target "artigos-referenciados/using-wireframes-to-streamline-your-development-process-webdesigner-depot.pdf"
 type "file:"
+literal "false"
 
 \end_inset
 
@@ -4579,6 +4588,7 @@ instantclient-odbc-win32-10.2.0.5.zip
 \begin_inset CommandInset href
 LatexCommand href
 target "http://www.oracle.com/technetwork/topics/winsoft-085727.html"
+literal "false"
 
 \end_inset
 
@@ -4675,6 +4685,7 @@ driver
 LatexCommand href
 name "http://turingsman.net/my-blog-list/160-part-12-using-ms-access-2010-as-a-frontend-to-oracle-database-11gr2-backend-via-odbc"
 target "http://turingsman.net/my-blog-list/160-part-12-using-ms-access-2010-as-a-frontend-to-oracle-database-11gr2-backend-via-odbc"
+literal "false"
 
 \end_inset
 
@@ -4692,6 +4703,7 @@ LatexCommand href
 name "artigos-referenciados/using-ms-access-2010-as-a-frontend-to-oracle-database-11gr2-backend-via-odbc.pdf"
 target "artigos-referenciados/using-ms-access-2010-as-a-frontend-to-oracle-database-11gr2-backend-via-odbc.pdf"
 type "file:"
+literal "false"
 
 \end_inset
 
@@ -5413,6 +5425,103 @@ http://gutocarvalho.net/wordpress/2010/05/11/cntlm-uma-solucao-rapida-e-elegante
 
 \end_layout
 
+\begin_layout Subsection
+Gimp
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Gimp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No 
+\emph on
+Windows
+\emph default
+, por vezes, o 
+\emph on
+Gimp
+\emph default
+ poderá demorar para iniciar devido à procura e carga das fontes.
+ Para solucionar o problema, pode-se experimentar os passos a seguir:
+\end_layout
+
+\begin_layout Enumerate
+Executar o Gimp como administrador e fechá-lo.
+ Basta uma única vez.
+\end_layout
+
+\begin_layout Enumerate
+Executar o Gimp com o parâmetro 
+\family sans
+-f
+\family default
+, em seu diretório de instalação.
+ Basta uma única vez.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Por exemplo:
+\end_layout
+
+\begin_layout Enumerate
+Ir para: 
+\family typewriter
+C:
+\backslash
+Program Files
+\backslash
+GIMP 2
+\backslash
+bin
+\end_layout
+
+\begin_layout Enumerate
+Executar: 
+\family typewriter
+gimp-2.8.exe -f
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Mais informações podem ser obtidas em:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://gimpchat.com/viewtopic.php?f=8&t=16064
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.gimp-forum.net/Thread-GIMP-Taking-Too-Long-to-Start-Fonts
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 
 \emph on
@@ -5718,6 +5827,8 @@ name "indice-remissivo"
 \begin_inset CommandInset index_print
 LatexCommand printindex
 type "idx"
+name "Index"
+literal "true"
 
 \end_inset
 
