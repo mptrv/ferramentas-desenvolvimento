@@ -3728,6 +3728,60 @@ https://github.com/hneemann/Digital
 
 \end_layout
 
+\begin_layout Description
+TinkerCad
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TinkerCad
+\end_layout
+
+\end_inset
+
+: Gratuito, 
+\emph on
+Web
+\emph default
+.
+ Simulador de circuitos não muito complexo, mas com suporte, por exemplo
+ ao 555 ou ao Arduino.
+ Possui 
+\emph on
+protoboard.
+ 
+\emph default
+Mantido pela 
+\emph on
+Autodesk
+\emph default
+.
+
+\emph on
+ 
+\emph default
+Era o antigo 
+\emph on
+Circuits.io.
+\emph default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.tinkercad.com/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -5764,6 +5818,30 @@ http://smisioto.no-ip.org/elettronica/kicad/kicad-en.htm
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+No 
+\emph on
+Windows
+\emph default
+, ao atualizar as bibliotecas de componentes manualmente, a partir do 
+\emph on
+GitHub
+\emph default
+, deve-se copiar o arquivo 
+\family sans
+fp-lib-table 
+\family default
+para 
+\family sans
+%AppData%
+\backslash
+Roaming
+\backslash
+kicad
+\family default
+.
 \end_layout
 
 \begin_layout Subsection
