@@ -2603,7 +2603,7 @@ LibreOffice
 
 Draw
 \begin_inset Index idx
-status collapsed
+status open
 
 \begin_layout Plain Layout
 LibreOffice
@@ -2632,6 +2632,38 @@ status collapsed
 \begin_layout Plain Layout
 
 https://www.libreoffice.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Processing.org
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Processing.org
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Linguagem de programação para desenho e animação.
+ Muitas vezes, a ser utilizado em conjunto com um editor de imagens.
+ A linguagem de programação é baseada em C.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://processing.org/
 \end_layout
 
 \end_inset
