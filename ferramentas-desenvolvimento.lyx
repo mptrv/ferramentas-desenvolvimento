@@ -127,7 +127,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.7
+ 0.1.8
 \end_layout
 
 \begin_layout Author
@@ -2984,7 +2984,25 @@ Capturer
 \begin_inset space ~
 \end_inset
 
-Recorder: Gratuito, para 
+Recorder
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Screen
+\begin_inset space ~
+\end_inset
+
+Capturer
+\begin_inset space ~
+\end_inset
+
+Recorder
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
 \emph on
 Windows
 \emph default
@@ -3024,6 +3042,161 @@ status collapsed
 \begin_layout Plain Layout
 
 http://sourceforge.net/projects/screencapturer/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+v4l2loopback
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+v4l2loopback
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ 
+\emph on
+Loopback 
+\emph default
+(dispositivo virtual) para vídeo.
+ Ver também: 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Celular-Webcam"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/umlaeute/v4l2loopback/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+snd-aloop
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+snd-aloop
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ 
+\emph on
+Loopback
+\emph default
+ (dispositivo virtual) para áudio.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://sysplay.in/blog/linux/2019/06/playing-with-alsa-loopback-devices/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+IP
+\begin_inset space ~
+\end_inset
+
+Webcam
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IP
+\begin_inset space ~
+\end_inset
+
+Webcam
+\end_layout
+
+\end_inset
+
+: Para 
+\emph on
+Android
+\emph default
+.
+ Servidor que transmite por IP a imagem capturada pela câmera do 
+\emph on
+Android
+\emph default
+.
+ Opera na rede 
+\emph on
+Wifi
+\emph default
+ e pode operar também na 
+\emph on
+internet
+\emph default
+.
+ Possui servidor Html embutido para controle da câmera, filmagens e fotos
+ e também disponibiliza o vídeo nos protocolos RTSP, h264, ONVIF.
+ Ver também: 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Celular-Webcam"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://play.google.com/store/apps/details?id=com.pas.webcam&hl=pt_BR
 \end_layout
 
 \end_inset
@@ -5789,6 +5962,135 @@ http://viniciuscanto.blogspot.com.br/2007/02/acentos-em-arquivos-bat.html
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+
+\emph on
+Linux 
+\emph default
+- Notas e Dicas
+\end_layout
+
+\begin_layout Subsection
+Como Utilizar o Celular como 
+\emph on
+WebCam
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Celular-Webcam"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No 
+\emph on
+Android
+\emph default
+, instalar o aplicativo 
+\emph on
+IP Webcam
+\emph default
+.
+ No 
+\emph on
+Linux
+\emph default
+, instalar o 
+\emph on
+v4l2loopback
+\emph default
+.
+ Executar:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\family typewriter
+$ sudo modprobe v4l2loopback video_nr=
+\series bold
+<núm_vídeo>
+\series default
+ card_label="
+\series bold
+<nome_dispositivo_virtual>
+\series default
+" exclusive_caps=1
+\end_layout
+
+\begin_layout Standard
+\align left
+$ avconv -i rtsp://
+\series bold
+<ip>
+\series default
+:
+\series bold
+<porta>
+\series default
+/h264_ulaw.sdp -vsync 2 -f v4l2 /dev/video
+\series bold
+<núm_vídeo>
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por exemplo:
+\family typewriter
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\family typewriter
+$ sudo modprobe v4l2loopback video_nr=10 card_label="Câmera IP" exclusive_caps=1
+\end_layout
+
+\begin_layout Standard
+\align left
+$ avconv -i rtsp://192.168.1.101:8080/h264_ulaw.sdp -vsync 2 -f v4l2 /dev/video10
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para mais informações, ver as documentações do 
+\emph on
+avconv
+\emph default
+ e do 
+\emph on
+v4l2loopback
+\emph default
+.
 \end_layout
 
 \begin_layout Chapter
