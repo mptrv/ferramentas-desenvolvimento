@@ -5973,6 +5973,10 @@ Linux
 \end_layout
 
 \begin_layout Subsection
+Vídeo
+\end_layout
+
+\begin_layout Subsubsection
 Como Utilizar o Celular como 
 \emph on
 WebCam
@@ -6091,6 +6095,701 @@ avconv
 v4l2loopback
 \emph default
 .
+\end_layout
+
+\begin_layout Subsection
+Áudio
+\end_layout
+
+\begin_layout Subsubsection
+Artigos
+\end_layout
+
+\begin_layout Description
+Conceito
+\begin_inset space ~
+\end_inset
+
+do
+\begin_inset space ~
+\end_inset
+
+ALSA:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.volkerschatz.com/noise/alsa.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Loopback
+\begin_inset space ~
+\end_inset
+
+com
+\begin_inset space ~
+\end_inset
+
+ALSA:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://sysplay.in/blog/linux/2019/06/playing-with-alsa-loopback-devices/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.alsa-project.org/wiki/Matrix:Module-aloop
+\backslash
+#The_module_options_for_snd-aloop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Problemas
+\begin_inset space ~
+\end_inset
+
+com
+\begin_inset space ~
+\end_inset
+
+PulseAudio:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://thelinuxexperiment.com/fix-pulseaudio-loopback-delay/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+ffmpeg
+\begin_inset space ~
+\end_inset
+
+e
+\begin_inset space ~
+\end_inset
+
+ALSA
+\begin_inset space ~
+\end_inset
+
+e
+\begin_inset space ~
+\end_inset
+
+PulseAudio:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://ubuntuforums.org/showthread.php?t=2119648
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Programas Úteis
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+pavucontrol
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+pavumeter
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+paman
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+pacat
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+qasmixer
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+amixer
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+alsamixer
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+inxi (sudo inxi -Fxzd)
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+aplay (aplay -l)
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+arecord
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+avplay / ffplay
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+lsof (lsof /dev/snd/*)
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+lsmod
+\end_layout
+
+\begin_layout Subsubsection
+Solução de Problemas
+\end_layout
+
+\begin_layout Paragraph
+Áudio mudo após fechamento de algum programa
+\end_layout
+
+\begin_layout Description
+Efeito: Ao encerrar o programa
+\emph on
+ AnyDesk
+\emph default
+, versão 5.5.4, o áudio do sistema fica mudo.
+ Nota-se a mensagem de dispositivo ocupado ao rodar, por exemplo, o VLC.
+\end_layout
+
+\begin_layout Description
+Solução:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=sh,basicstyle={\small\ttfamily},breaklines=true,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# Os dispositivos ALSA são referenciados por /dev/snd/*.
+\end_layout
+
+\begin_layout Plain Layout
+
+$ lsof /dev/snd/*
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Identificar os PIDs dos processos que utilizam os dispositivos ALSA e
+ encerrá-los.
+\end_layout
+
+\begin_layout Plain Layout
+
+$ kill -s KILL <PID>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Após o kill, novos processos são criados para os dispositivos ALSA (na
+ tentativa, foram realizados vários 
+\begin_inset Quotes eld
+\end_inset
+
+kills
+\begin_inset Quotes erd
+\end_inset
+
+, porém um já deveria ter sido suficiente.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Como Utilizar o Celular como Microfone
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Celular-Microfone"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+No 
+\emph on
+Android
+\emph default
+, instalar o aplicativo 
+\emph on
+IP Webcam 
+\emph default
+e habilitar o áudio (pode ser a opção 
+\begin_inset Quotes eld
+\end_inset
+
+audio only).
+\end_layout
+
+\begin_layout Enumerate
+Carregar os dispositivos ALSA para 
+\emph on
+Loopback
+\emph default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ sudo modprobe snd_aloop
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Carregar o módulo de 
+\emph on
+Loopback
+\emph default
+ do PulseAudio:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ pactl module-load module-loopback latency_msec=60
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+No VLC, reproduzir o fluxo de rede:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+http://<ip>:<porta>/audio.wav
+\end_layout
+
+\begin_layout Standard
+<ip>:<porta> é o informado pelo 
+\emph on
+IP Webcam
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Redirecionar a saída o VLC para o 
+\emph on
+Loopback
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Nos aplicativos, escolher como fonte de áudio o 
+\emph on
+Loopback
+\emph default
+ (às vezes, o nome pode ficar em branco).
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Nota 1
+\bar default
+: logo no início da reprodução, o atraso é pequeno; com o tempo, o atraso
+ aumenta e chega a em torno de 1 s.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Nota 2
+\bar default
+: com o 
+\family sans
+avconv / ffmpeg
+\family default
+, os atrasos são maiores; linha para reprodução:
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+$ avconv -fflags nobuffer -i http://192.168.1.101:8080/audio.wav -f pulse hw:Loopbac
+k,0,1
+\end_layout
+
+\begin_layout Subsection
+Disco
+\end_layout
+
+\begin_layout Subsubsection
+Artigos
+\end_layout
+
+\begin_layout Description
+Swap: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://help.ubuntu.com/community/SwapFaq
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Programas e Arquvios Úteis:
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+cat /proc/sys/vm/swappiness
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+cat /proc/swaps
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+gparted
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+mount
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+/etc/fstab
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+/etc/mtab
+\end_layout
+
+\begin_layout Subsubsection
+Swappiness
+\end_layout
+
+\begin_layout Standard
+Ver o artigo (SwapFaq) para mais detalhes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=sh,basicstyle={\small\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# Verificar o swappiness atual:
+\end_layout
+
+\begin_layout Plain Layout
+
+$ cat /proc/sys/vm/swappiness
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Alterar o swappiness temporariamente:
+\end_layout
+
+\begin_layout Plain Layout
+
+$ sudo sysctl vm.swappiness=40
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Alterar o swappiness na inicialização:
+\end_layout
+
+\begin_layout Plain Layout
+
+sudo vim /etc/sysctl.conf
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#	Alterar ou acrescentar a linha:
+\end_layout
+
+\begin_layout Plain Layout
+
+vm.swappiness=40
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Salvar e reiniciar o sistema.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Acrescentar Novo Swap
+\end_layout
+
+\begin_layout Enumerate
+Usar 
+\family sans
+GParted 
+\family default
+para preparar a nova partição para 
+\emph on
+swap
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Salvar o relatório do 
+\family sans
+GParted 
+\family default
+para identificar o UUID do novo 
+\emph on
+swap
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Acrescentar a linha seguinte no 
+\family sans
+/etc/fstab
+\family default
+ (o UUID é o identificado anteriormente)
+\family sans
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+UUID=825c2d23-3528-465c-afa8-3ca1274f4f7c none swap sw,pri=1,discard=pages,nofai
+l 0 0 
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Ferramentas para Análise de Desempenho do Sistema
+\end_layout
+
+\begin_layout Standard
+Seguem citações breves de ferramentas e/ou linhas de comando para análise
+ de desempenho do Sistema como um todo.
+\end_layout
+
+\begin_layout Subsubsection
+Memória
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ watch -n 1 free -ltwh
+\end_layout
+
+\begin_layout Subsubsection
+Disco
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+cat /proc/sys/vm/swappiness
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+cat /proc/swaps
+\end_layout
+
+\begin_layout Subsubsection
+Rede
+\end_layout
+
+\begin_layout Subsubsection
+Processos
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Quotes eld
+\end_inset
+
+Combinados
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ferramentas que analisam diversas informações em conjunto.
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ gnome-system-monitor
+\family default
+ (Monitor do Sistema)
 \end_layout
 
 \begin_layout Chapter
