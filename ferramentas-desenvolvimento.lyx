@@ -5784,189 +5784,6 @@ https://www.gimp-forum.net/Thread-GIMP-Taking-Too-Long-to-Start-Fonts
 \begin_layout Section
 
 \emph on
-Windows
-\emph default
- – Notas e Dicas
-\end_layout
-
-\begin_layout Subsection
-
-\family typewriter
-services.msc
-\end_layout
-
-\begin_layout Standard
-Há o programa
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-services.msc
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace medskip
-\end_inset
-
-que permite configurar serviços do 
-\emph on
-Windows
-\emph default
-.
-\end_layout
-
-\begin_layout Standard
-Sitam-se alguns:
-\end_layout
-
-\begin_layout Description
-Horário
-\begin_inset space ~
-\end_inset
-
-do
-\begin_inset space ~
-\end_inset
-
-Windows: mantém a sincronização de data e hora em todos os clientes e servidores
- da rede.
-\end_layout
-
-\begin_layout Subsection
-Código de Página para Nomes de Arquivos
-\end_layout
-
-\begin_layout Standard
-O código de página para nomes de arquivo no Windows é
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-cp850
-\family default
-
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-O NTFS utiliza Unicode como conjunto de caracteres para os nomes dos arquivos.
- Entretanto, o 
-\emph on
-Console do Windows
-\emph default
- não dá suporte ao Unicode e, portanto, os
-\emph on
- scripts 
-\emph default
-devem ser salvos com a codificação de página 
-\family typewriter
-cp850
-\family default
-, a fim de que referências a arquivos com nomes acentuados sejam válidas.
-\end_layout
-
-\begin_layout Standard
-No 
-\emph on
-Vim
-\emph default
-, pode-se editar o arquivo em 
-\family typewriter
-utf-8
-\family default
- e, ao salvá-lo, convertê-lo para 
-\family typewriter
-cp850
-\family default
-.
- Os comandos para esta tarefa são:
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-:set fenc=cp850
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-:w
-\family default
-
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Ver também os artigos:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://msdn.microsoft.com/en-us/library/windows/desktop/dd317752(v=vs.85).aspx
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://msdn.microsoft.com/en-us/library/windows/desktop/dd317748(v=vs.85).aspx
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://viniciuscanto.blogspot.com.br/2007/02/acentos-em-arquivos-bat.html
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-
-\emph on
 Linux 
 \emph default
 - Notas e Dicas
@@ -6578,6 +6395,12 @@ cat /proc/swaps
 \begin_layout Enumerate
 
 \family typewriter
+cat /etc/initramfs-tools/conf.d/resume
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
 gparted
 \end_layout
 
@@ -6600,6 +6423,8 @@ mount
 \end_layout
 
 \begin_layout Subsubsection
+
+\emph on
 Swappiness
 \end_layout
 
@@ -6680,9 +6505,29 @@ vm.swappiness=40
 \end_layout
 
 \begin_layout Subsubsection
-Acrescentar Novo Swap
+Acrescentar Novo 
+\emph on
+Swap
 \end_layout
 
+\begin_layout Enumerate
+Preparar a nova partição para 
+\emph on
+swap
+\emph default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Método 1 (utilizando 
+\family sans
+GParted
+\family default
+):
+\end_layout
+
+\begin_deeper
 \begin_layout Enumerate
 Usar 
 \family sans
@@ -6707,6 +6552,34 @@ swap
 .
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+Método 2 (utilizando 
+\family sans
+mkswap
+\family default
+):
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family typewriter
+sudo mkswap -L <nome_do_volume> <dispositivo>
+\end_layout
+
+\begin_layout Standard
+por exemplo:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+sudo mkswap -L swaphde -c /dev/sdb2
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 Acrescentar a linha seguinte no 
 \family sans
@@ -6721,11 +6594,68 @@ Acrescentar a linha seguinte no
 \begin_layout Standard
 
 \family typewriter
-UUID=825c2d23-3528-465c-afa8-3ca1274f4f7c none swap sw,pri=1,discard=pages,nofai
-l 0 0 
+UUID=825c2d23-3528-465c-afa8-3ca1274f4f7c none swap 
+\backslash
+
+\begin_inset Newline newline
+\end_inset
+
+sw,pri=1,discard=pages,nofail 0 0 
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Para habilitá-lo para hibernação, o arquivo:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+cat /etc/initramfs-tools/conf.d/resume
+\end_layout
+
+\begin_layout Standard
+deve conter o conteúdo:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+resume=UUID=825c2d23-3528-465c-afa8-3ca1274f4f7c
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Problemas no 
+\emph on
+Swap
+\end_layout
+
+\begin_layout Standard
+Problemas no 
+\emph on
+swap
+\emph default
+ podem ser corrigidos ao executar novamente o 
+\family sans
+mkswap
+\family default
+:
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+swapoff <dispositivo>
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+sudo mkswap -L <nome_do_volume> -c <dispositivo>
+\end_layout
+
 \begin_layout Subsection
 Ferramentas para Análise de Desempenho do Sistema
 \end_layout
@@ -6790,6 +6720,189 @@ Ferramentas que analisam diversas informações em conjunto.
 $ gnome-system-monitor
 \family default
  (Monitor do Sistema)
+\end_layout
+
+\begin_layout Section
+
+\emph on
+Windows
+\emph default
+ – Notas e Dicas
+\end_layout
+
+\begin_layout Subsection
+
+\family typewriter
+services.msc
+\end_layout
+
+\begin_layout Standard
+Há o programa
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+services.msc
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+que permite configurar serviços do 
+\emph on
+Windows
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Sitam-se alguns:
+\end_layout
+
+\begin_layout Description
+Horário
+\begin_inset space ~
+\end_inset
+
+do
+\begin_inset space ~
+\end_inset
+
+Windows: mantém a sincronização de data e hora em todos os clientes e servidores
+ da rede.
+\end_layout
+
+\begin_layout Subsection
+Código de Página para Nomes de Arquivos
+\end_layout
+
+\begin_layout Standard
+O código de página para nomes de arquivo no Windows é
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+cp850
+\family default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O NTFS utiliza Unicode como conjunto de caracteres para os nomes dos arquivos.
+ Entretanto, o 
+\emph on
+Console do Windows
+\emph default
+ não dá suporte ao Unicode e, portanto, os
+\emph on
+ scripts 
+\emph default
+devem ser salvos com a codificação de página 
+\family typewriter
+cp850
+\family default
+, a fim de que referências a arquivos com nomes acentuados sejam válidas.
+\end_layout
+
+\begin_layout Standard
+No 
+\emph on
+Vim
+\emph default
+, pode-se editar o arquivo em 
+\family typewriter
+utf-8
+\family default
+ e, ao salvá-lo, convertê-lo para 
+\family typewriter
+cp850
+\family default
+.
+ Os comandos para esta tarefa são:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+:set fenc=cp850
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+:w
+\family default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ver também os artigos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/dd317752(v=vs.85).aspx
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/dd317748(v=vs.85).aspx
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://viniciuscanto.blogspot.com.br/2007/02/acentos-em-arquivos-bat.html
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
