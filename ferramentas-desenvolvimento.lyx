@@ -3204,6 +3204,120 @@ https://play.google.com/store/apps/details?id=com.pas.webcam&hl=pt_BR
 
 \end_layout
 
+\begin_layout Description
+OBS
+\begin_inset space ~
+\end_inset
+
+Studio
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+OBS
+\begin_inset space ~
+\end_inset
+
+Studio
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Estúdio para sequenciamento de áudio e vídeo com diversos efeitos, como
+ redimensionamento de vídeo, filtro 
+\emph on
+croma-key
+\emph default
+, transição de cena, filtros de áudio.
+ Permite a gravação, a transmissão ao vivo e o redirecionamento para dispositivo
+ do 
+\family sans
+v4l2loopback
+\family default
+ (por meio do 
+\emph on
+plugin
+\emph default
+ 
+\family sans
+obs-v4l2sink
+\family default
+).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://obsproject.com/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+obs-v4l2sink
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+obs-v4l2sink
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ 
+\emph on
+Plugin
+\emph default
+ do 
+\family sans
+OBS Studio 
+\family default
+para redirecionamento da saída para dispositivo criado pelo 
+\family sans
+v4l2loopback
+\family default
+.
+ Ver também: 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:obs-v4l2sink"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/CatxFish/obs-v4l2sink/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -5912,6 +6026,100 @@ avconv
 v4l2loopback
 \emph default
 .
+\end_layout
+
+\begin_layout Subsubsection
+
+\family sans
+Como Instalar e Usar o obs-v4l2sink
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:obs-v4l2sink"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para a instalação do 
+\family sans
+obs-v4l2sink
+\family default
+, seguir os passos de sua página no 
+\emph on
+Github
+\emph default
+, transcritos abaixo:
+\end_layout
+
+\begin_layout Itemize
+Install QT
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+sudo apt install qtbase5-dev
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Get obs-studio source code
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+git clone --recursive https://github.com/obsproject/obs-studio.git
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Build plugins
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+git clone https://github.com/CatxFish/obs-v4l2sink.git cd obs-v4l2sink mkdir
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+build && cd build cmake -DLIBOBS_INCLUDE_DIR="../../obs-studio/libobs" -DCMAKE_INSTA
+LL_PREFIX=/usr ..
+ make -j4 sudo make install 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Para a operação, deve-se selecionar, dentro do 
+\family sans
+OBS Studio
+\family default
+, o menu 
+\family sans
+Ferramentas > V4L2 Video Output
+\family default
+ e indicar o dispositivo 
+\family sans
+v4l2loopback 
+\family default
+desejado.
+ Quanto ao formato, o YUV420 provocou o encerramento abrupto do 
+\family sans
+OBS Studio
+\family default
+, enquanto que o RGB32 funcionou perfeitamente.
 \end_layout
 
 \begin_layout Subsection
