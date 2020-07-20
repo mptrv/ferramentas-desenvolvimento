@@ -6159,6 +6159,34 @@ http://www.volkerschatz.com/noise/alsa.html
 
 \end_deeper
 \begin_layout Description
+Conceito
+\begin_inset space ~
+\end_inset
+
+do
+\begin_inset space ~
+\end_inset
+
+PulseAudio:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://wiki.archlinux.org/index.php/PulseAudio
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
 Loopback
 \begin_inset space ~
 \end_inset
@@ -6300,6 +6328,27 @@ pavumeter
 
 \family typewriter
 paman
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Pode ser obtido em 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://archive.ubuntu.com/ubuntu/pool/universe/p/paman/
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -6930,6 +6979,50 @@ $ gnome-system-monitor
  (Monitor do Sistema)
 \end_layout
 
+\begin_layout Subsection
+Ferramentas para Administração do Sistema
+\end_layout
+
+\begin_layout Subsubsection
+Gerenciamento de Pacotes
+\end_layout
+
+\begin_layout Description
+flatpak
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ flatpak list
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ flatpak uninstall <pacote>
+\end_layout
+
+\end_deeper
+\begin_layout Description
+apt-get
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ apt-get install <pacote>
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ apt-get clean
+\end_layout
+
+\end_deeper
 \begin_layout Section
 
 \emph on
