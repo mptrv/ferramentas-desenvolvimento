@@ -4101,6 +4101,70 @@ https://www.tinkercad.com/
 
 \end_layout
 
+\begin_layout Description
+Falstad
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Falstad
+\end_layout
+
+\end_inset
+
+: Gratuito, 
+\emph on
+Web
+\emph default
+.
+ Simulador de circuitos digitais em tempo de edição baseado em 
+\emph on
+Applets
+\emph default
+, com fins, originariamente, didáticos.
+ Sua GUI é bastante amigável.
+ Permite elaboração de circuitos com relativa complexidade.
+ Há outros 
+\emph on
+Applets
+\emph default
+ à disposição, em outras áreas (ver o segundo 
+\emph on
+link
+\emph default
+).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.falstad.com/circuit/
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.falstad.com/mathphysics.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -6409,6 +6473,12 @@ lsof (lsof /dev/snd/*)
 
 \family typewriter
 lsmod
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+ls /usr/share/pulseaudio/alsa-mixer/paths
 \end_layout
 
 \begin_layout Subsubsection
