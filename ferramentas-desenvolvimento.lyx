@@ -1548,6 +1548,46 @@ http://www.pdfforge.org/
 
 \end_layout
 
+\begin_layout Description
+Master
+\begin_inset space ~
+\end_inset
+
+PDF
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Master
+\begin_inset space ~
+\end_inset
+
+PDF
+\end_layout
+
+\end_inset
+
+: Gratuito, com marca d'água, multiplaforma.
+ Deve-se comprar uma licença para remover a marca d'água.
+ Permite fazer praticamente qualquer trabalho com arquivos PDF, dentre os
+ quais, desenhos e anotações.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://code-industry.net/masterpdfeditor/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -3070,6 +3110,15 @@ Linux
 Loopback 
 \emph default
 (dispositivo virtual) para vídeo.
+ Pode-se compilá-lo a partir do fonte ou instalar o pacote 
+\family sans
+v4l2loopback-dkms
+\family default
+ na distribuição linux 
+\emph on
+Debian
+\emph default
+.
  Ver também: 
 \begin_inset CommandInset ref
 LatexCommand nameref
@@ -7041,12 +7090,20 @@ Combinados
 Ferramentas que analisam diversas informações em conjunto.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 
 \family typewriter
-$ gnome-system-monitor
+gnome-system-monitor
 \family default
  (Monitor do Sistema)
+\end_layout
+
+\begin_layout Enumerate
+GtkStressTesting
+\end_layout
+
+\begin_layout Enumerate
+Psensor
 \end_layout
 
 \begin_layout Subsection
