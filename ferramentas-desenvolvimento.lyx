@@ -6174,7 +6174,7 @@ Install QT
 \begin_layout Standard
 
 \family typewriter
-sudo apt install qtbase5-dev
+$ sudo apt install qtbase5-dev
 \end_layout
 
 \end_deeper
@@ -6186,7 +6186,7 @@ Get obs-studio source code
 \begin_layout Standard
 
 \family typewriter
-git clone --recursive https://github.com/obsproject/obs-studio.git
+$ git clone --recursive https://github.com/obsproject/obs-studio.git
 \end_layout
 
 \end_deeper
@@ -6198,7 +6198,45 @@ Build plugins
 \begin_layout Standard
 
 \family typewriter
-git clone https://github.com/CatxFish/obs-v4l2sink.git cd obs-v4l2sink mkdir
+$ git clone https://github.com/CatxFish/obs-v4l2sink.git cd obs-v4l2sink mkdir
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ build && cd build
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ cmake -DLIBOBS_INCLUDE_DIR="../../obs-studio/libobs" -DCMAKE_INSTALL_PREFIX=/usr
+ ..
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ make -j4 sudo make install 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Se ocorrer erro durante o 
+\family typewriter
+cmake
+\family default
+ (LIBOBS não encontrado), instalar também o 
+\family typewriter
+libobs-dev
+\family default
+:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ sudo apt install libobs-dev
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -6206,14 +6244,32 @@ git clone https://github.com/CatxFish/obs-v4l2sink.git cd obs-v4l2sink mkdir
 \end_layout
 
 \begin_layout Standard
-
-\family typewriter
-build && cd build cmake -DLIBOBS_INCLUDE_DIR="../../obs-studio/libobs" -DCMAKE_INSTA
-LL_PREFIX=/usr ..
- make -j4 sudo make install 
+Se, após carregar o OBS, o 
+\emph on
+plugin 
+\family sans
+\emph default
+v4l2sink
+\family default
+ não for carregado, executar o comando seguinte:
 \end_layout
 
-\end_deeper
+\begin_layout Standard
+
+\family typewriter
+$ cd /usr/lib/x86_64-linux-gnu/obs-plugins/
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ sudo ln -s /usr/lib/obs-plugins/v4l2sink.so
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 Para a operação, deve-se selecionar, dentro do 
 \family sans
