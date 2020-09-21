@@ -7167,6 +7167,90 @@ Ferramentas para Administração do Sistema
 \end_layout
 
 \begin_layout Subsubsection
+Logs e Análises do Sistema
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ journalctl -b
+\end_layout
+
+\begin_layout Subsubsection
+Carga de Módulos na Inicialização
+\end_layout
+
+\begin_layout Standard
+Ver também:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://unix.stackexchange.com/questions/71064/systemd-automate-modprobe-command-a
+t-boot-time
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Criar um arquivo de configuração como abaixo, cujo conteúdo consiste no
+ nome do módulo e seus parâmetros.
+ O 
+\family typewriter
+<nome>
+\family default
+ do arquivo pode ser o próprio nome do módulo.
+ Assim, na próxima inicialização, o módulo será carregado.
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+/etc/modules-load.d/<nome>.conf
+\end_layout
+
+\begin_layout Standard
+Alternativamente, os módulos a carregar podem ser relacionados no arquivo:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+/etc/modules
+\end_layout
+
+\begin_layout Standard
+E os parâmetros no arquivo abaixo:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+/etc/modprobe.d/v4l2loopback.conf
+\end_layout
+
+\begin_layout Standard
+Com o conteúdo (exemplo para o 
+\family sans
+v4l2loopback
+\family default
+):
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+options v4l2loopback video_nr=10 card_label="OBS Video Source" exclusive_caps=1
+\end_layout
+
+\begin_layout Subsubsection
 Gerenciamento de Pacotes
 \end_layout
 
@@ -7206,6 +7290,84 @@ $ apt-get clean
 \end_layout
 
 \end_deeper
+\begin_layout Subsubsection
+Controle de Ventoinha
+\end_layout
+
+\begin_layout Standard
+Para detalhes, ver:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://askubuntu.com/questions/22108/how-to-control-fan-speed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Instalar: 
+\family typewriter
+lm-sensors
+\family default
+ e 
+\family typewriter
+fancontrol
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ sudo sensors-detect
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ sudo service module-init-tools restart
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+ou, equivalentemente,
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ sudo service kmod start
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\family typewriter
+$ sudo pwmconfig
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ sudo service fancontrol restart
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ sudo service fancontrol start
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
 \begin_layout Section
 
 \emph on
