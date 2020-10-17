@@ -1555,7 +1555,7 @@ Master
 
 PDF
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Master
@@ -1581,6 +1581,43 @@ status collapsed
 \begin_layout Plain Layout
 
 https://code-industry.net/masterpdfeditor/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+pdfjam
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+pdfjam
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Programa integrante do 
+\emph on
+TeX Live
+\emph default
+.
+ Permite facilmente criar um PDF a partir de um conjunto de arquivos PDF,
+ JPG e PNG.
+ Há diversas opções, inclusive, para escolha de página, se desejado.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.tug.org/texlive
 \end_layout
 
 \end_inset
@@ -7312,6 +7349,21 @@ https://askubuntu.com/questions/22108/how-to-control-fan-speed
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://superuser.com/questions/203827/how-do-i-prevent-linux-services-from-auto-
+starting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 Instalar: 
 \family typewriter
@@ -7364,8 +7416,18 @@ $ sudo service fancontrol restart
 $ sudo service fancontrol start
 \end_layout
 
-\begin_layout Verbatim
+\begin_layout Standard
+Para desabilitar o início automático de 
+\family typewriter
+fancontrol
+\family default
+:
+\end_layout
 
+\begin_layout Enumerate
+
+\family typewriter
+$ sudo systemctl disable fancontrol
 \end_layout
 
 \begin_layout Section
