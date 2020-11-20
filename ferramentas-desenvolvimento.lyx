@@ -127,7 +127,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.8
+ 0.1.9
 \end_layout
 
 \begin_layout Author
@@ -5814,6 +5814,31 @@ Ferramentas
 )
 \end_layout
 
+\begin_layout Subsubsection
+Identificação de Funções do Lyx
+\end_layout
+
+\begin_layout Standard
+Se uma determina função ou argumento de função não for encontrado no manual
+ de funções do Lyx, acessível pelo menu 
+\family sans
+Ajuda
+\family default
+, pode-se inicializar o Lyx pelo comando
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ lyx -dbg action
+\end_layout
+
+\begin_layout Standard
+\noindent
+o qual ecoará no terminal todas as chamadas de função com os respectivos
+ argumentos.
+\end_layout
+
 \begin_layout Subsection
 
 \emph on
@@ -7207,12 +7232,44 @@ Ferramentas para Administração do Sistema
 Logs e Análises do Sistema
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Description
+journalctl
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 
 \family typewriter
 $ journalctl -b
 \end_layout
 
+\end_deeper
+\begin_layout Description
+head: mostra as primeiras linhas de um arquivo (mesmo os de tamanho muito
+ grande)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ head -n 100 ./arquivo.log
+\end_layout
+
+\end_deeper
+\begin_layout Description
+tail: mostra as últimas linhas de um arquivo (mesmo os de tamanho muito
+ grande)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ tail -n 100 ./arquivo.log
+\end_layout
+
+\end_deeper
 \begin_layout Subsubsection
 Carga de Módulos na Inicialização
 \end_layout
@@ -7298,14 +7355,57 @@ flatpak
 \begin_deeper
 \begin_layout Standard
 
+\family sans
+Lista os pacotes instalados:
+\end_layout
+
+\begin_layout Standard
+
 \family typewriter
-$ flatpak list
+$ flatpak list [-d]
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+Desinstala um pacote:
 \end_layout
 
 \begin_layout Standard
 
 \family typewriter
 $ flatpak uninstall <pacote>
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+Desinstala um pacote não utilizado:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ flatpak uninstall --unused
+\end_layout
+
+\begin_layout Standard
+Ver também:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://docs.flatpak.org/en/latest/flatpak-command-reference.html
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
