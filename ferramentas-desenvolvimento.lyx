@@ -1874,6 +1874,99 @@ https://git-scm.com/
 
 \end_layout
 
+\begin_layout Description
+Gitk
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Gitk
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Visualizador de 
+\emph on
+\lang english
+commit
+\lang brazilian
+ 
+\emph default
+para o 
+\emph on
+Git
+\emph default
+.
+ É possível instalá-lo pelo 
+\emph on
+apt-get
+\emph default
+, por exemplo.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://git-scm.com/docs/gitk
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Git-Gui
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Git-Gui
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Permite realizar alterações em um repositório 
+\emph on
+Git
+\emph default
+.
+ É possível instalá-lo pelo 
+\emph on
+apt-get
+\emph default
+, por exemplo.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://git-scm.com/docs/git-gui
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
