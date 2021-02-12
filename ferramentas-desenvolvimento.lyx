@@ -8,7 +8,12 @@
 \begin_preamble
 % Indenta os primeiros parágrafos.
 \usepackage{indentfirst}
+
+% Garante não ultrapassar a URL para além da borda do texto.
+%	(Acrescentar também 'hyphens' nas opções globais da "Classe de Documento".)
+\sloppy
 \end_preamble
+\options hyphens
 \use_default_options true
 \maintain_unincluded_children false
 \language brazilian
@@ -131,7 +136,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.11
+ 0.1.14
 \end_layout
 
 \begin_layout Author
@@ -1071,6 +1076,54 @@ status collapsed
 \begin_layout Plain Layout
 
 https://github.com/CatxFish/obs-v4l2sink/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+DroidCam
+\begin_inset space ~
+\end_inset
+
+OBS
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+DroidCam
+\begin_inset space ~
+\end_inset
+
+OBS
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ 
+\emph on
+\lang english
+Plugin
+\emph default
+\lang brazilian
+ do 
+\family sans
+OBS Studio
+\family default
+ para utilizar as câmeras do celular como fonte de vídeo direta.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.dev47apps.com/obs/
 \end_layout
 
 \end_inset
@@ -3855,6 +3908,86 @@ status collapsed
 \begin_layout Plain Layout
 
 http://cntlm.sourceforge.net/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Segurança
+\end_layout
+
+\begin_layout Description
+ecryptfs-utils
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ecryptfs-utils
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Cria uma pasta privada criptografada para o usuário corrente.
+ Ver também: 
+\emph on
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:ecryptfs-utils"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:ecryptfs-utils"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\emph default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.ecryptfs.org/
 \end_layout
 
 \end_inset
@@ -6673,6 +6806,34 @@ https://wiki.archlinux.org/index.php/PulseAudio
 
 \end_deeper
 \begin_layout Description
+Módulos
+\begin_inset space ~
+\end_inset
+
+do
+\begin_inset space ~
+\end_inset
+
+PulseAudio:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
 Loopback
 \begin_inset space ~
 \end_inset
@@ -6846,6 +7007,18 @@ pacat
 \begin_layout Enumerate
 
 \family typewriter
+pactl
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+pacmd
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
 qasmixer
 \end_layout
 
@@ -6905,6 +7078,61 @@ ls /usr/share/pulseaudio/alsa-mixer/paths
 
 \begin_layout Subsubsection
 Solução de Problemas
+\end_layout
+
+\begin_layout Paragraph
+Inspeções gerais
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+systemctl --user status pulseaudio
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+pacmd list-cards 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+pacmd list-sinks 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+pacmd list-sink-inputs 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+pacmd list-sources 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+pacmd list-source-outputs
+\end_layout
+
+\begin_layout Paragraph
+Reinicialização do PulseAudio
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\family typewriter
+pulseaudio -k
 \end_layout
 
 \begin_layout Paragraph
@@ -7033,7 +7261,7 @@ Loopback
 \begin_layout Standard
 
 \family typewriter
-$ pactl module-load module-loopback latency_msec=60
+$ pactl load-module module-loopback latency_msec=60
 \end_layout
 
 \end_deeper
@@ -7678,6 +7906,150 @@ desejado.
 OBS Studio
 \family default
 , enquanto que o RGB32 funcionou perfeitamente.
+\end_layout
+
+\begin_layout Subsection
+Segurança
+\end_layout
+
+\begin_layout Subsubsection
+ecryptfs-utils
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+ecryptfs-utils
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:ecryptfs-utils"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Basicamente, para a instalação deve-se:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ sudo apt-get install ecryptfs-utils
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ ecryptfs-setup-private
+\end_layout
+
+\begin_layout Standard
+\noindent
+E, por fim, sair da sessão e entrar novamente.
+\end_layout
+
+\begin_layout Standard
+O procedimento cria as seguintes duas pastas:
+\end_layout
+
+\begin_layout Description
+
+\family typewriter
+~/.Private
+\family default
+: Pasta oculta com os dados criptografados.
+\end_layout
+
+\begin_layout Description
+
+\family typewriter
+~/Private
+\family default
+: Pasta montada com os dados descriptografados.
+ Ao inserir qualquer conteúdo nesta, ele será criptografado e armazenado
+ em 
+\family typewriter
+~/.Private
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Para montar e desmontar, pode-se utilizar os comandos (por padrão, ao entrar
+ na sessão, a unidade privada já é montada):
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ ecryptfs-mount-private
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ ecryptfs-umount-private
+\end_layout
+
+\begin_layout Standard
+Ver também os demais comandos iniciados por 
+\family typewriter
+ecryptfs-
+\family default
+.
+ Em adição, há mais informações nos 
+\emph on
+links
+\emph default
+ abaixo (sendo o último o do próprio projeto):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.edivaldobrito.com.br/como-criptografar-volumes-no-ubuntu/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://wiki.archlinux.org/index.php/ECryptfs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.ecryptfs.org/
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
