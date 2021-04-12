@@ -12,6 +12,16 @@
 % Garante não ultrapassar a URL para além da borda do texto.
 %	(Acrescentar também 'hyphens' nas opções globais da "Classe de Documento".)
 \sloppy
+
+% Cria uma quebra de linha após o título do parágrafo.
+% 	Ref.: https://latex.org/forum/viewtopic.php?t=1383
+\makeatletter
+\renewcommand\paragraph{%
+   \@startsection{paragraph}{4}{0mm}%
+      {-\baselineskip}%
+      {.5\baselineskip}%
+      {\normalfont\normalsize\bfseries}}
+\makeatother
 \end_preamble
 \options hyphens
 \use_default_options true
@@ -78,8 +88,8 @@
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth 3
-\tocdepth 3
+\secnumdepth 5
+\tocdepth 5
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
@@ -136,7 +146,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.14
+ 0.1.17
 \end_layout
 
 \begin_layout Author
@@ -5241,6 +5251,147 @@ logs
  referentes ao caminho serão retornados.
 \end_layout
 
+\begin_layout Subsubsection
+Listar Servidor Remoto
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ git remote -v
+\end_layout
+
+\begin_layout Subsubsection
+Habilitar a Depuração do SSH na Chamada pelo Git
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ export GIT_TRACE=1
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ export GIT_SSH_COMMAND="ssh -vvv"
+\end_layout
+
+\begin_layout Subsubsection
+Configuração de Acesso Remoto por SSH no GitHub
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://docs.github.com/en/github/getting-started-with-github/managing-remote-repo
+sitories#switching-remote-urls-from-https-to-ssh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-wi
+th-ssh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Falha: Repositório Não Encontrado (via SSH)
+\end_layout
+
+\begin_layout Standard
+Ao ocorrer a falha de 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+repositório não encontrado
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+, considerando o acesso via 
+\family typewriter
+ssh
+\family default
+, provavelmente, significa que o 
+\family typewriter
+ssh 
+\family default
+não encontrou o arquivo correspondente da chave, em especial, se antes já
+ houve sucesso na conexão e o nome do arquivo não for o nome padrão.
+ Para resolver (ao menos temporariamente), executar:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ eval "$(ssh-agent -s)"
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ ssh-add ~/.ssh/<arquivo da chave privada>
+\end_layout
+
+\begin_layout Standard
+Para acrescentar a chave de forma permanente, deve-se acrescentar as seguintes
+ linhas em 
+\family typewriter
+~/.ssh/config 
+\family default
+(criá-lo, se não existir):
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+Host *
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset space \quad{}
+\end_inset
+
+AddKeysToAgent yes
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset space \quad{}
+\end_inset
+
+IdentityFile <nome da chave>
+\end_layout
+
+\begin_layout Standard
+Poderá ser solicitada a frase de passagem em uma tela GUI.
+ Fornecê-la e marcar a opção para sempre desbloquear a chave quando estiver
+ logado.
+\end_layout
+
 \begin_layout Subsection
 \SpecialChar LaTeX
 
@@ -8273,6 +8424,30 @@ $ tail -n 100 ./arquivo.log
 
 \end_deeper
 \begin_layout Subsubsection
+Módulos
+\end_layout
+
+\begin_layout Paragraph
+Carga de Módulos
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ modprobe <módulo>
+\end_layout
+
+\begin_layout Paragraph
+Remoção de Módulos
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ rmmod <módulo>
+\end_layout
+
+\begin_layout Paragraph
 Carga de Módulos na Inicialização
 \end_layout
 
@@ -8426,6 +8601,24 @@ $ apt-get install <pacote>
 
 \family typewriter
 $ apt-get clean
+\end_layout
+
+\end_deeper
+\begin_layout Description
+dpkg
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family sans
+Lista os arquivos de um pacote instalado:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ dpkg -L <pacote>
 \end_layout
 
 \end_deeper
