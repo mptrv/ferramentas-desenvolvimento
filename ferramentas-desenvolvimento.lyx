@@ -146,7 +146,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.18
+ 0.1.24
 \end_layout
 
 \begin_layout Author
@@ -2216,6 +2216,51 @@ http://www.lyx.org/
 
 \end_layout
 
+\begin_layout Description
+jsdoc
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+jsdoc
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Gerador automático para documentação HTML de fontes 
+\emph on
+Javascript
+\emph default
+.
+ No 
+\emph on
+\lang english
+link
+\emph default
+\lang brazilian
+ seguinte, há informações sobre seu uso.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://jsdoc.app/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -2413,6 +2458,52 @@ status collapsed
 \begin_layout Plain Layout
 
 http://www.freedownloadmanager.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Destreamer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Destreamer
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Ferramenta para 
+\emph on
+\lang english
+download
+\emph default
+\lang brazilian
+ de vídeos do 
+\emph on
+Microsoft Stream
+\emph default
+.
+ Usa o 
+\family sans
+node.js 
+\family default
+e deve ser compilado para usar.
+ Ver também 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/snobu/destreamer
 \end_layout
 
 \end_inset
@@ -2996,12 +3087,12 @@ http://quickhash-gui.org/
 \end_layout
 
 \begin_layout Description
-FDuples
+FDupes
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-FDuples
+FDupes
 \end_layout
 
 \end_inset
@@ -3020,7 +3111,7 @@ Linux
 
 \begin_inset CommandInset ref
 LatexCommand vref
-reference "subsec:FDuples"
+reference "subsec:FDupes"
 plural "false"
 caps "false"
 noprefix "false"
@@ -4922,12 +5013,12 @@ http://gutocarvalho.net/wordpress/2010/05/11/cntlm-uma-solucao-rapida-e-elegante
 \end_layout
 
 \begin_layout Subsection
-FDuples
+Destreamer
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
-FDuples
+Destreamer
 \end_layout
 
 \end_inset
@@ -4935,7 +5026,144 @@ FDuples
 
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:FDuples"
+name "subsec:Destreamer"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por padrão, ele baixa e usa uma variante do 
+\emph on
+Chromium
+\emph default
+ para realizar a autenticação.
+ Todavia, pode-se estipular um outro navegador 
+\bar under
+antes da compilação
+\bar default
+ (ou, então, se depois, deverá ser recompilado), conforme informações do
+ próprio sítio:
+\end_layout
+
+\begin_layout Enumerate
+Localizar os arquivos 
+\family typewriter
+src/destreamer.ts
+\family default
+ e 
+\family typewriter
+src/TokenCache.ts
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Localizar:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+const browser: puppeteer.Browser = await puppeteer.launch({ executablePath:
+ getPuppeteerChromiumPath(),
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+// … });
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Substituir
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+executablePath: getPuppeteerChromiumPath(
+\end_layout
+
+\begin_layout Standard
+por
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+executablePath: '/usr/bin/chromium',
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Recompilar com:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ npm run build
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Exemplo de uso:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ ./destreamer.sh -i URL -o DIR
+\end_layout
+
+\begin_layout Standard
+em que:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+URL Endereço do vídeo no 
+\emph on
+Microsoft Stream
+\emph default
+.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+DIR Diretório em qual o vídeo será gravado (se não fornecido, o padrão é
+ 
+\family typewriter
+Destreamer/videos/
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Ver as informações do sítio para mais detalhes.
+\end_layout
+
+\begin_layout Subsection
+FDupes
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+FDupes
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:FDupes"
 
 \end_inset
 
@@ -5243,7 +5471,7 @@ https://www.gimp-forum.net/Thread-GIMP-Taking-Too-Long-to-Start-Fonts
 \begin_layout Subsection
 Git
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Git
@@ -5289,6 +5517,16 @@ logs
 \emph default
 \lang brazilian
  referentes ao caminho serão retornados.
+\end_layout
+
+\begin_layout Subsubsection
+Adicionar e Remover Automaticamente Arquivos com Nomes Alterados
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ git add -u
 \end_layout
 
 \begin_layout Subsubsection
@@ -5834,6 +6072,353 @@ $ lyx -dbg action
 \noindent
 o qual ecoará no terminal todas as chamadas de função com os respectivos
  argumentos.
+\end_layout
+
+\begin_layout Subsection
+
+\emph on
+Moodle
+\emph default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Moodle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Data de Tarefas na Reconfiguração
+\end_layout
+
+\begin_layout Standard
+O 
+\emph on
+Moodle
+\emph default
+ ajusta automaticamente a data de todas as tarefas no momento da reconfiguração
+ do curso.
+ Para tanto, ele considera a diferença de data entre a data de início do
+ curso em 
+\begin_inset Quotes eld
+\end_inset
+
+Configuração do Curso
+\begin_inset Quotes erd
+\end_inset
+
+ e a data informada como 
+\begin_inset Quotes eld
+\end_inset
+
+início do curso
+\begin_inset Quotes erd
+\end_inset
+
+ na 
+\begin_inset Quotes eld
+\end_inset
+
+Reconfiguração do Curso
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como técnica, pode-se fazer uma primeira reconfiguração, escolhendo uma
+ data inicial do curso e assinalando as demais opções desejadas.
+ Depois, pode-se alterar a data inicial do curso em 
+\begin_inset Quotes eld
+\end_inset
+
+Configuração do Curso
+\begin_inset Quotes erd
+\end_inset
+
+ para uma data de referência 
+\begin_inset Quotes eld
+\end_inset
+
+sincronizada
+\begin_inset Quotes erd
+\end_inset
+
+ com a data da primeira tarefa.
+ Por fim, pode-se realizar a reconfiguração novamente, com data anterior
+ à recém-definida para início do curso em 
+\begin_inset Quotes eld
+\end_inset
+
+Configuração do Curso
+\begin_inset Quotes erd
+\end_inset
+
+.
+ As tarefas terão suas datas diminuídas de acordo com a diferença entre
+ as referidas datas.
+\end_layout
+
+\begin_layout Standard
+Por outro lado, o horário das tarefas sempre é somado com o horário apontado
+ em 
+\begin_inset Quotes eld
+\end_inset
+
+data inicial
+\begin_inset Quotes erd
+\end_inset
+
+ na 
+\begin_inset Quotes eld
+\end_inset
+
+Reconfiguração do Curso
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Exemplo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\bar under
+Entradas
+\end_layout
+
+\begin_layout Plain Layout
+Data da tarefa: 10/08/2021 11:16
+\end_layout
+
+\begin_layout Plain Layout
+Data desejada da tarefa: 09/08/2021 00:00
+\end_layout
+
+\begin_layout Plain Layout
+Data inicial definida em 
+\begin_inset Quotes eld
+\end_inset
+
+Configuração do Curso
+\begin_inset Quotes erd
+\end_inset
+
+: 11/08/2021 15:09
+\end_layout
+
+\begin_layout Plain Layout
+Data inicial definida em 
+\begin_inset Quotes eld
+\end_inset
+
+Reconfiguração do Curso
+\begin_inset Quotes erd
+\end_inset
+
+: 09/08/2021 12:44
+\end_layout
+
+\begin_layout Plain Layout
+
+\bar under
+Resultados
+\end_layout
+
+\begin_layout Plain Layout
+Data da tarefa: 09/08/2021 00:00 {ou seja: 10/08/2021 + (09/08/2021 - 11/08/2021
+) 11:16 + 12:44 = 08/08/2021 24:00 = 09/08/2021 00:00}
+\end_layout
+
+\begin_layout Plain Layout
+Data inicial do curso: 09/08/2021 12:44 {pode-se redefinir o horário de
+ início diretamente em 
+\begin_inset Quotes eld
+\end_inset
+
+Configuração do Curso
+\begin_inset Quotes erd
+\end_inset
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Produtos 
+\emph on
+Microsoft
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Produtos-Microsoft"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\emph on
+Microsoft 
+\lang english
+Stream
+\end_layout
+
+\begin_layout Standard
+É possível embutir a URL de um canal do 
+\emph on
+Microsoft 
+\lang english
+Stream
+\emph default
+\lang brazilian
+ em um código HTML.
+ Na própria interface 
+\emph on
+Web
+\emph default
+, na opção de compartilhar, há o recurso de 
+\begin_inset Quotes eld
+\end_inset
+
+embutir
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Neste, pode-se escolher algumas opções, entre as quais a ordenação.
+ Todavia, na interface, não são exibidas todas as possibilidades de ordenação.
+ Uma das não exibidas é a ordenação pelo nome.
+ Outra, é a ordenação de forma descendente.
+\end_layout
+
+\begin_layout Standard
+Assim, tem-se as seguintes opções de ordenação:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\emph on
+\lang english
+date
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\emph on
+\lang english
+likes
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\emph on
+\lang english
+name
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\emph on
+\lang english
+trending
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\emph on
+\lang english
+views
+\end_layout
+
+\begin_layout Standard
+À frente destas opções, pode-se acrescentar:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+asc
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+desc
+\end_layout
+
+\begin_layout Standard
+\noindent
+para a ordenação ascendente ou descendente, respectivamente.
+ A primeira é a padrão.
+\end_layout
+
+\begin_layout Standard
+Como exemplo, segue um código para embutir com os vídeos listados em ordem
+ decrescente de nome:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\family typewriter
+<div style='max-width: 960px'><div style='position: relative; padding-bottom:
+ 56.25%; height: 0; overflow: hidden;'><iframe width="960" height="540" src="http
+s://web.microsoftstream.com/embed/channel/
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\family typewriter
+047f26df-cf6d-414d-87dd-c226fd4acff1
+\series bold
+?sort=name desc
+\series default
+" allowfullscreen style='border:none; position: absolute; top: 0; left:
+ 0; right: 0; bottom: 0; height: 100%; max-width: 100%;'></iframe></div></div>
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+Note-se o 
+\family typewriter
+\series bold
+?sort=name desc
+\family default
+\series default
+ no código.
 \end_layout
 
 \begin_layout Subsection
@@ -8341,6 +8926,31 @@ Samba
 \emph default
 , bastará informar este usuário e esta senha para ter acesso ao material
  compartilhado.
+\end_layout
+
+\begin_layout Subsection
+Sincronismo de Arquivos e Diretórios
+\end_layout
+
+\begin_layout Standard
+As seguintes ferramentas são bastante úteis para realizar o sincronismo
+ de arquivos e diretórios, além de seus equivalentes por linha de comando:
+\end_layout
+
+\begin_layout Enumerate
+Grsync
+\end_layout
+
+\begin_layout Enumerate
+KDiff3
+\end_layout
+
+\begin_layout Enumerate
+Meld
+\end_layout
+
+\begin_layout Enumerate
+FDupes
 \end_layout
 
 \begin_layout Subsection
