@@ -146,7 +146,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.24
+ 0.1.27
 \end_layout
 
 \begin_layout Author
@@ -7509,6 +7509,68 @@ $ wget -c "https://some.host/:z:/x/personal/some_user/
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+Wine
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Wine
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para instalar um programa 
+\emph on
+Windows 
+\emph default
+via 
+\emph on
+Wine
+\emph default
+, pode-se executar:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ wine <executavel_windows_de_instalacao>
+\end_layout
+
+\begin_layout Standard
+O 
+\emph on
+Wine
+\emph default
+ deverá criar uma entrada no 
+\begin_inset Quotes eld
+\end_inset
+
+menu do 
+\emph on
+Linux
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ para o programa instalado.
+ Caso contrário, pode-se executar o programa com o próprio comando 
+\family typewriter
+wine
+\family default
+.
+ O programa instalado encontra-se dentro de 
+\family typewriter
+~/.wine/drive_c/
+\family default
+.
+\end_layout
+
 \begin_layout Section
 
 \emph on
@@ -9020,6 +9082,18 @@ gnome-system-monitor
 \end_layout
 
 \begin_layout Enumerate
+
+\family typewriter
+htop 
+\family default
+(possui algumas opções a mais que o 
+\family typewriter
+gnome-system-monitor
+\family default
+)
+\end_layout
+
+\begin_layout Enumerate
 GtkStressTesting
 \end_layout
 
@@ -9556,6 +9630,78 @@ http://viniciuscanto.blogspot.com.br/2007/02/acentos-em-arquivos-bat.html
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Desabilitar Imposição de Assinatura de 
+\emph on
+\lang english
+Driver
+\end_layout
+
+\begin_layout Standard
+Como administrador, executar no 
+\family typewriter
+cmd
+\family default
+:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+> bcdedit /set loadoptions DDISABLE_INTEGRITY_CHECKS
+\end_layout
+
+\begin_layout Standard
+A fim de o comando acima se tornar permanente para um determinado 
+\emph on
+\lang english
+driver
+\emph default
+\lang brazilian
+, pode ser necessário reinstalá-lo.
+\end_layout
+
+\begin_layout Standard
+Para uma alteração temporária, pode-se pressionar F8 durante a inicialização
+ do 
+\emph on
+Windows
+\emph default
+ e escolher a opção 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Desabilitar Imposição de Assinatura de 
+\emph default
+\lang english
+Driver
+\emph on
+\lang brazilian
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ (
+\emph on
+\lang english
+
+\begin_inset Quotes eld
+\end_inset
+
+Disable Driver Signature Enforcement
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+\lang brazilian
+).
 \end_layout
 
 \begin_layout Chapter
