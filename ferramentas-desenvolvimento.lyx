@@ -146,7 +146,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.27
+ 0.1.28
 \end_layout
 
 \begin_layout Author
@@ -9733,6 +9733,10 @@ name "subsec:KiCad"
 
 \end_layout
 
+\begin_layout Subsubsection
+Biblioteca de Símbolos, Envólucros e Modelos 3D
+\end_layout
+
 \begin_layout Standard
 Há alguns locais onde obter mais bibliotecas de componentes:
 \end_layout
@@ -9766,6 +9770,31 @@ http://smisioto.no-ip.org/elettronica/kicad/kicad-en.htm
 \end_layout
 
 \begin_layout Standard
+Atualmente, diversos fabricantes ou vendedores estão produzindo bibliotecas
+ para o 
+\emph on
+KiCad
+\emph default
+:
+\end_layout
+
+\begin_layout Itemize
+Digikey
+\end_layout
+
+\begin_layout Itemize
+Octopart
+\end_layout
+
+\begin_layout Itemize
+Snapeda
+\end_layout
+
+\begin_layout Itemize
+Sparkfun
+\end_layout
+
+\begin_layout Standard
 No 
 \emph on
 Windows
@@ -9787,6 +9816,61 @@ Roaming
 kicad
 \family default
 .
+\end_layout
+
+\begin_layout Subsubsection
+Bibliotecas 
+\emph on
+Spice
+\end_layout
+
+\begin_layout Standard
+Modelo 
+\emph on
+Spice
+\emph default
+ podem ser convenientemente encontrados em:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/kicad-spice-library/KiCad-Spice-Library/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Adicionalmente, também pode-se instalar o programa 
+\emph on
+OrCAD PSpice Designer Lite (Capture, PSpice only) 
+\emph default
+e obter os arquivos com os modelos a partir do diretório da instalação.
+ O 
+\emph on
+download
+\emph default
+ pode ser feito em:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.orcad.com/
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
