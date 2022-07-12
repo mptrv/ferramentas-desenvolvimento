@@ -146,7 +146,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.28
+ 0.1.33
 \end_layout
 
 \begin_layout Author
@@ -5670,6 +5670,256 @@ Poderá ser solicitada a frase de passagem em uma tela GUI.
  logado.
 \end_layout
 
+\begin_layout Standard
+Ver também a seção 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:git-Múltiplos-Hospedeiros-e-Usuários"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Múltiplos Hospedeiros (
+\emph on
+\lang english
+Hosts
+\emph default
+\lang brazilian
+) e Usuários
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:git-Múltiplos-Hospedeiros-e-Usuários"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Na ocasião de haver múltiplos hospedeiros e usuários, deve-se informar um
+ nome para 
+\family typewriter
+Host
+\family default
+ no 
+\family typewriter
+~/.ssh/config
+\family default
+.
+ Por exemplo, suponha que haja duas chaves para dois repositórios diferentes
+ para dois usuários diferentes, um para cada repositório, no GitHub.
+ O arquivo de configuração do SSH deverá ficar assim:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\small}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# Repositório 1 do Usuário 1
+\end_layout
+
+\begin_layout Plain Layout
+
+Host <repositorio-1>
+\end_layout
+
+\begin_layout Plain Layout
+
+	User <usuario-1>
+\end_layout
+
+\begin_layout Plain Layout
+
+	HostName github.com
+\end_layout
+
+\begin_layout Plain Layout
+
+	AddKeysToAgent yes
+\end_layout
+
+\begin_layout Plain Layout
+
+	IdentityFile ~/.ssh/<arquivo da chave privada 1>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Repositório 2 do Usuário 2
+\end_layout
+
+\begin_layout Plain Layout
+
+Host <repositorio-2>
+\end_layout
+
+\begin_layout Plain Layout
+
+	User <usuario-2>
+\end_layout
+
+\begin_layout Plain Layout
+
+	HostName github.com
+\end_layout
+
+\begin_layout Plain Layout
+
+	AddKeysToAgent yes
+\end_layout
+
+\begin_layout Plain Layout
+
+	IdentityFile ~/.ssh/<arquivo da chave privada 2>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O próximo passo é configurar os diretórios de trabalho do Git para cada
+ usuário para cada repositório de forma a apontar aos correspondentes 
+\emph on
+\lang english
+Hosts
+\emph default
+\lang brazilian
+ do arquivo de configuração do
+\family typewriter
+ 
+\family default
+SSH.
+ Primeiramente, conferir a configuração atual:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\small}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ git remote -v
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Saída HTTPS:
+\end_layout
+
+\begin_layout Plain Layout
+
+> origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+\end_layout
+
+\begin_layout Plain Layout
+
+> origin  https://github.com/USERNAME/REPOSITORY.git (push)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Saída SSH:
+\end_layout
+
+\begin_layout Plain Layout
+
+> origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+\end_layout
+
+\begin_layout Plain Layout
+
+> origin  git@github.com:USERNAME/REPOSITORY.git (push)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Depois alterar a URL de forma a corresponder ao 
+\emph on
+\lang english
+Host
+\emph default
+\lang brazilian
+, usuário e repositório:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\small}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ git remote set-url origin git@HOST:USERNAME/REPOSITORY.git
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se o retorno de 
+\family typewriter
+git remote -v 
+\family default
+indicar 
+\family typewriter
+git@github.com
+\family default
+, o usuário correto poderá não ser encontrado e ocorrer falha de autenticação.
+ Ao realizar a configuração para 
+\family typewriter
+git@HOST
+\family default
+, sendo 
+\family typewriter
+HOST
+\family default
+ o correspondente nome do 
+\emph on
+\lang english
+host
+\emph default
+\lang brazilian
+ definido no arquivo de configuração do SSH (por exemplo, 
+\family typewriter
+<repositorio-1>
+\family default
+), o SSH irá identificar o usuário e o arquivo de chave privada corretos
+ a utilizar e a autenticação se dará com sucesso.
+\end_layout
+
 \begin_layout Subsection
 \SpecialChar LaTeX
 
@@ -7350,6 +7600,228 @@ Windows
 \emph default
 , as barras contrárias devem ser trocadas por barras normais e o diretório
  deve ser fornecido.
+\end_layout
+
+\begin_layout Subsection
+Vim
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Vim
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Arquivos temporários
+\end_layout
+
+\begin_layout Standard
+O 
+\emph on
+Vim
+\emph default
+ cria três tipos de arquivos temporários:
+\end_layout
+
+\begin_layout Itemize
+Um para 
+\emph on
+\lang english
+backup
+\emph default
+\lang brazilian
+: terminado com 
+\family typewriter
+~
+\end_layout
+
+\begin_layout Itemize
+Um para o 
+\emph on
+\lang english
+swap
+\emph default
+\lang brazilian
+: terminado com 
+\family typewriter
+swp
+\end_layout
+
+\begin_layout Itemize
+Um para 
+\emph on
+\lang english
+undo
+\emph default
+\lang brazilian
+: terminado com 
+\family typewriter
+un~
+\end_layout
+
+\begin_layout Standard
+Por padrão, os arquivos são criados no mesmo diretório do arquivo editado.
+ Todavia, é possível redefinir seus locais.
+ O código abaixo, faz isso, além de também definir os parâmetros para 
+\emph on
+\lang english
+undo
+\emph default
+\lang brazilian
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "basicstyle={\footnotesize},breaklines=true,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+" Define os parâmetros de "desfazer".
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+set undofile
+\end_layout
+
+\begin_layout Plain Layout
+
+set undolevels=1000	
+\begin_inset Quotes erd
+\end_inset
+
+ How many undos set
+\end_layout
+
+\begin_layout Plain Layout
+
+undoreload=10000	" number of lines to save for undo
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+" Define os diretórios temporários em local específico.
+\end_layout
+
+\begin_layout Plain Layout
+
+set backup	" enable backups
+\end_layout
+
+\begin_layout Plain Layout
+
+set swapfile	" enable swaps
+\end_layout
+
+\begin_layout Plain Layout
+
+set undodir=$HOME/.vim/tmp/undo 	
+\begin_inset Quotes erd
+\end_inset
+
+ undo files
+\end_layout
+
+\begin_layout Plain Layout
+
+set backupdir=$HOME/.vim/tmp/backup " backups
+\end_layout
+
+\begin_layout Plain Layout
+
+set directory=$HOME/.vim/tmp/swap   " swap files
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+" 	Make those folders automatically if they don't already exist.
+\end_layout
+
+\begin_layout Plain Layout
+
+if !isdirectory(expand(&undodir))
+\end_layout
+
+\begin_layout Plain Layout
+
+	call mkdir(expand(&undodir), "p")
+\end_layout
+
+\begin_layout Plain Layout
+
+endif
+\end_layout
+
+\begin_layout Plain Layout
+
+if !isdirectory(expand(&backupdir))
+\end_layout
+
+\begin_layout Plain Layout
+
+	call mkdir(expand(&backupdir), "p")
+\end_layout
+
+\begin_layout Plain Layout
+
+endif
+\end_layout
+
+\begin_layout Plain Layout
+
+if !isdirectory(expand(&directory))
+\end_layout
+
+\begin_layout Plain Layout
+
+	call mkdir(expand(&directory), "p")
+\end_layout
+
+\begin_layout Plain Layout
+
+endif 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fonte:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://stackoverflow.com/questions/743150/how-to-prevent-vim-from-creating-and-l
+eaving-temporary-files
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -9704,6 +10176,50 @@ Disable Driver Signature Enforcement
 ).
 \end_layout
 
+\begin_layout Subsection
+Sempre Exibir o Menu de Inicialização (Menu de Opções Avançadas)
+\end_layout
+
+\begin_layout Standard
+Como administrador, executar no 
+\family typewriter
+cmd
+\family default
+:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+> bcdedit /set {globalsettings} advancedoptions true
+\end_layout
+
+\begin_layout Standard
+Para não mostrar sempre, executar:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+> bcdedit /set {globalsettings} advancedoptions false
+\end_layout
+
+\begin_layout Standard
+Funciona no 
+\emph on
+Windows 7
+\emph default
+, 
+\emph on
+Windows 10 
+\emph default
+e 
+\emph on
+Windows 11
+\emph default
+ e, possivelmente, em outros também.
+\end_layout
+
 \begin_layout Chapter
 Adicionais para Eletrônica
 \end_layout
@@ -9741,7 +10257,7 @@ Biblioteca de Símbolos, Envólucros e Modelos 3D
 Há alguns locais onde obter mais bibliotecas de componentes:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 \begin_inset Flex URL
 status collapsed
 
@@ -9755,13 +10271,27 @@ http://per.launay.free.fr/kicad/kicad_php/composant.php
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 \begin_inset Flex URL
 status collapsed
 
 \begin_layout Plain Layout
 
 http://smisioto.no-ip.org/elettronica/kicad/kicad-en.htm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.reniemarquet.com/bibliotecas_en.html
 \end_layout
 
 \end_inset
@@ -9824,8 +10354,14 @@ Bibliotecas
 Spice
 \end_layout
 
+\begin_layout Paragraph
+
+\emph on
+KiCad Spice Library
+\end_layout
+
 \begin_layout Standard
-Modelo 
+Modelos 
 \emph on
 Spice
 \emph default
@@ -9844,6 +10380,54 @@ https://github.com/kicad-spice-library/KiCad-Spice-Library/
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Ao fazer o 
+\emph on
+\lang english
+clone
+\emph default
+\lang brazilian
+ do repositório, tem-se disponível também o 
+\emph on
+\lang english
+script
+\emph default
+\lang brazilian
+ 
+\family typewriter
+check_supported.py
+\family default
+, dentro do subdiretório 
+\family sans
+\emph on
+\lang english
+Scripts
+\family default
+\emph default
+\lang brazilian
+, com o objetivo de encontrar a biblioteca que contém o modelo de um determinado
+ componente.
+ Se o 
+\emph on
+\lang english
+script
+\emph default
+\lang brazilian
+ não rodar diretamente, pode-se invocá-lo por meio de:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ python check_supported.py
+\end_layout
+
+\begin_layout Paragraph
+
+\emph on
+OrCAD PSpice Designer Lite
 \end_layout
 
 \begin_layout Standard
@@ -9871,6 +10455,91 @@ https://www.orcad.com/
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Visualização 3D
+\end_layout
+
+\begin_layout Paragraph
+Cor dos componentes
+\end_layout
+
+\begin_layout Standard
+É possível alterar a cor dos componentes editando-se o arquivo 
+\family typewriter
+.wrl 
+\family default
+ou 
+\family typewriter
+.step
+\family default
+.
+ Em especial, o 
+\family typewriter
+.wrl
+\family default
+ é mais intuitivo.
+\end_layout
+
+\begin_layout Standard
+No caso dos LEDs, por exemplo, tem-se o componente 
+\family typewriter
+LED_THT.3dshapes/LED_D3.0mm.step
+\family default
+, o qual já possui em suas definições diversas cores de LED.
+ Portanto, basta fazer uma cópia do arquivo e alterar todas as ocorrências
+ de 
+\family typewriter
+USE LED-RED 
+\family default
+para 
+\family typewriter
+USE LED-<cor desejada>
+\family default
+.
+ Para encontrar as cores possíveis, procurar pelas definições 
+\family typewriter
+material DEF
+\family default
+.
+\end_layout
+
+\begin_layout Subsubsection
+Contorno de Problemas
+\end_layout
+
+\begin_layout Paragraph
+Campo 
+\family sans
+Value
+\family default
+ no Editor de Campos de Símbolos
+\end_layout
+
+\begin_layout Standard
+No editor de campos de símbolos, os dados do campo 
+\family sans
+Value
+\family default
+ podem não aparecer na versão em português.
+ Para fazer aparecer os correspondentes dados, acrescentar um novo campo
+ na lista à esquerda, com nome 
+\family sans
+
+\begin_inset Quotes eld
+\end_inset
+
+Valor
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+.
+ Em seguida, a ordem das colunas na tabela poderá ser rearranjada para melhor
+ visualização.
+ (Observações para a versão 5.1.10-ubuntu.)
 \end_layout
 
 \begin_layout Subsection
