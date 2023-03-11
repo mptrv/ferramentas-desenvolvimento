@@ -146,7 +146,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.33
+ 0.1.35
 \end_layout
 
 \begin_layout Author
@@ -3759,6 +3759,67 @@ http://www.tug.org/texlive
 
 \end_layout
 
+\begin_layout Description
+pdfbook2
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pdfbook2
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Permite a geração de PDF no formato 
+\begin_inset Quotes eld
+\end_inset
+
+brochura
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\begin_inset Quotes eld
+\end_inset
+
+livreto
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Ver a seção 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Pdfbook2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/jenom/pdfbook2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -4407,6 +4468,156 @@ sumir
 
 \end_layout
 
+\begin_layout Section
+Emulação de Comandos de Teclado e Mouse
+\end_layout
+
+\begin_layout Description
+xdotool
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+xdotool
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Ferramenta que permite enviar sequências de pressionamentos de teclas,
+ posicionamentos do 
+\emph on
+\lang english
+mouse
+\emph default
+\lang brazilian
+, pressionamentos de botões do 
+\emph on
+\lang english
+mouse
+\emph default
+\lang brazilian
+.
+ Há também outros recursos disponíveis, como leitura e alteração de posicionamen
+to e geometria de janelas.
+ É uma ferramenta de automação do X11 para linha de comando.
+ Ver também 
+\emph on
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:xdotool"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:xdotool"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\emph default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.semicomplete.com/projects/xdotool
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+tmux
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+tmux
+\end_layout
+
+\end_inset
+
+: 
+\emph on
+Terminal Multiplexer
+\emph default
+.
+ Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Permite criar, acessar e controlar diversos terminais a partir de uma única
+ tela.
+ O 
+\family typewriter
+tmux
+\family default
+ pode ser desanexado de uma tela e continuar a rodar no plano de fundo e,
+ depois, pode ser reanexado.
+ Ver também 
+\emph on
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:tmux"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:tmux"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Eletrônica
 \end_layout
@@ -4974,9 +5185,72 @@ Notas, observações e dicas de instalação, uso ou outros detalhes sobre os
 \end_layout
 
 \begin_layout Subsection
+Apt
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Apt
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Apt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Baixar Pacote com Instalação Posterior
+\end_layout
+
+\begin_layout Standard
+Os pacotes podem ser baixados sem executar a instalação e, posteriormente,
+ a instalação poderá ser executada com base no pacote baixado.
+\end_layout
+
+\begin_layout Paragraph*
+Baixar Pacote sem Instalar
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ sudo apt-get install -d -o=dir::cache=<dir> <pacote>
+\end_layout
+
+\begin_layout Paragraph*
+Instalar Pacote Previamente Baixado
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ sudo apt-get install --no-download <pacote>
+\end_layout
+
+\begin_layout Subsubsection
+Contornando Falta de Espaço Durante Atualização de Pacote
+\end_layout
+
+\begin_layout Standard
+Caso ocorra falta de espaço durante a atualização de um pacote, pode-se
+ primeiro remover o pacote anterior (com 
+\family typewriter
+apt-get remove <pacote>
+\family default
+) e depois proceder com a instalação normalmente.
+\end_layout
+
+\begin_layout Subsection
 Cntlm
 \begin_inset Index idx
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Cntlm
@@ -5283,10 +5557,6 @@ Imagem original: 1920 x 1080
 
 \begin_layout Itemize
 Imagem de saída:
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -5371,6 +5641,62 @@ Gimp
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+Firefox
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Firefox
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Como Minimizar a Lentidão ao Iniciar
+\end_layout
+
+\begin_layout Standard
+Caso o Firefox esteja muito lento para iniciar, em especial, da primeira
+ vez que for carregado após o 
+\emph on
+\lang english
+boot
+\emph default
+\lang brazilian
+, uma alternativa que se mostrou bastante eficaz é mover o subdiretório
+ 
+\family typewriter
+storage
+\family default
+ para outro disco rígido físico.
+ Assim, durante a inicialização, ele poderá ler e gravar em dispositivos
+ diferentes, diminuindo a latência durante estas atividades.
+ Após mover o subdiretório, deve-se fazer um 
+\emph on
+\lang english
+link
+\emph default
+\lang brazilian
+ simbólico a ele no diretório de origem.
+ O subdiretório 
+\family typewriter
+storage
+\family default
+ é encontrado no seguinte caminho, no Linux:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\family typewriter
+$HOME/.mozilla/firefox/<\SpecialChar ldots
+>.default/storage
+\end_layout
+
 \begin_layout Subsection
 Gimp
 \begin_inset Index idx
@@ -6442,6 +6768,7 @@ Exemplo
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -6511,6 +6838,45 @@ Configuração do Curso
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Pdfbook2
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Pdfbook2
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Pdfbook2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para gerar a brochura:
+\end_layout
+
+\begin_layout Enumerate
+Gerar o arquivo pdf da forma convencional.
+\end_layout
+
+\begin_layout Enumerate
+Executar:
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+$ pdfbook2 -i 90 -o 60 <arquivo.pdf>
 \end_layout
 
 \begin_layout Subsection
@@ -7603,6 +7969,51 @@ Windows
 \end_layout
 
 \begin_layout Subsection
+tmux
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+tmux
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:tmux"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Referências:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://superuser.com/questions/585398/sending-simulated-keystrokes-in-bash
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ man tmux
+\end_layout
+
+\begin_layout Subsection
 Vim
 \begin_inset Index idx
 status open
@@ -8041,6 +8452,51 @@ wine
 ~/.wine/drive_c/
 \family default
 .
+\end_layout
+
+\begin_layout Subsection
+xdotool
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+xdotool
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:xdotool"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Referências:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://superuser.com/questions/585398/sending-simulated-keystrokes-in-bash
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ man xdotool
 \end_layout
 
 \begin_layout Section
@@ -8941,6 +9397,170 @@ swapoff <dispositivo>
 
 \family typewriter
 sudo mkswap -L <nome_do_volume> -c <dispositivo>
+\end_layout
+
+\begin_layout Subsubsection
+Montagem de Discos Removíveis Sempre no Mesmo Ponto de Montagem
+\end_layout
+
+\begin_layout Enumerate
+Rodar 
+\family typewriter
+sudo
+\family default
+ 
+\family typewriter
+fdisk -l
+\family default
+ e 
+\family typewriter
+sudo
+\family default
+ 
+\family typewriter
+blkid
+\family default
+ para identificar o 
+\family sans
+UUID
+\family default
+ da partição.
+\end_layout
+
+\begin_layout Enumerate
+Editar 
+\family typewriter
+/etc/fstab
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Adicionar a linha 
+\family typewriter
+UUID="xxxx-xxxx" /media/<ponto de montagem desejado> <tipo> defaults,user,auto
+ 0 1
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Desmontar as partições e remontá-las com 
+\family typewriter
+sudo mount -a
+\family default
+, ou reiniciar o computador.
+\end_layout
+
+\begin_layout Standard
+Notas:
+\end_layout
+
+\begin_layout Enumerate
+Os 
+\emph on
+\lang english
+flags
+\emph default
+\lang brazilian
+ podem ser determinados por 
+\family typewriter
+mount
+\family default
+ na montagem inicial, antes de desmontar a partição.
+\end_layout
+
+\begin_layout Enumerate
+O diretório 
+\family typewriter
+/media/<ponto de montagem desejado>
+\family default
+ deve ser criado para a montagem poder ocorrer.
+\end_layout
+
+\begin_layout Paragraph*
+Referência:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://askubuntu.com/questions/1378363/how-to-mount-external-drive-with-the-same
+-name-every-time
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Servidor de Janelas
+\end_layout
+
+\begin_layout Subsubsection
+Redimensionamento e Reposicionamento de Janela
+\end_layout
+
+\begin_layout Standard
+Pode-se utilizar o 
+\family typewriter
+wmctrl
+\family default
+.
+ Consultar a ajuda ou a referência para mais detalhes.
+\end_layout
+
+\begin_layout Paragraph
+Listagem
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ wmctrl -l -G
+\end_layout
+
+\begin_layout Paragraph
+Redimensionamento e Reposicionamento
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ wmctrl -r <Nome da Janela> -e <gravity,X,Y,width,height>
+\end_layout
+
+\begin_layout Standard
+Exemplo:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ wmctrl -r Firefox -e 0,0,0,640,480
+\end_layout
+
+\begin_layout Paragraph
+Referência
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://stackoverflow.com/questions/288512/resizing-a-window-to-a-set-size-in-lin
+ux
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -10540,6 +11160,21 @@ Valor
  Em seguida, a ordem das colunas na tabela poderá ser rearranjada para melhor
  visualização.
  (Observações para a versão 5.1.10-ubuntu.)
+\end_layout
+
+\begin_layout Paragraph
+Falta de Espaço Durante Atualização
+\end_layout
+
+\begin_layout Standard
+Caso ocorra falta de espaço durante uma atualização, normalmente deve-se
+ à atualização do pacote 
+\family typewriter
+kicad-packages3d
+\family default
+.
+ Para contornar o problema, pode-se remover primeiramente este pacote e
+ depois reinstalá-lo.
 \end_layout
 
 \begin_layout Subsection
