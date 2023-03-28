@@ -146,7 +146,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.35
+ 0.1.36
 \end_layout
 
 \begin_layout Author
@@ -2504,6 +2504,96 @@ status collapsed
 \begin_layout Plain Layout
 
 https://github.com/snobu/destreamer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Discos nas Nuvens
+\end_layout
+
+\begin_layout Description
+Rclone
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Rclone
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Ferramenta para 
+\emph on
+\lang english
+download
+\emph default
+\lang brazilian
+ e 
+\emph on
+\lang english
+upload
+\emph default
+\lang brazilian
+ de arquivos em discos nas nuvens e sincronismo destes com arquivos em discos
+ locais.
+ É possível fazer o acesso por um ponto de montagem, dentre outros recursos.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://rclone.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Rclone
+\begin_inset space ~
+\end_inset
+
+Browser
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Rclone
+\begin_inset space ~
+\end_inset
+
+Browser
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Interface gráfica para o 
+\family sans
+rclone
+\family default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/kapitainsky/RcloneBrowser
 \end_layout
 
 \end_inset
