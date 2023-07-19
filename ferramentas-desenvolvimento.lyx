@@ -146,11 +146,13 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.36
+ 0.1.42
 \end_layout
 
 \begin_layout Author
-Marcelo Porto Trevizan
+
+\family typewriter
+mptrv
 \end_layout
 
 \begin_layout Chapter*
@@ -203,7 +205,7 @@ internet,
 Os capítulos identificam as grandes áreas das ferramentas, e as seções procuram
  relacionar, sucintamente, sua área de aplicação.
  Já o índice remissivo, ao final do documento, indica em quais páginas se
- encontram informações sobre um programa específico.
+ encontram informações sobre um programa ou um procedimento específico.
 \end_layout
 
 \begin_layout Standard
@@ -277,7 +279,7 @@ status open
 \begin_layout Plain Layout
 Esta nota técnica é licenciada sob a 
 \emph on
-Licença Creative Commons Atribuição – Compartilha Igual 3.0 Não Adaptada,
+Licença Creative Commons Atribuição – Compartilha Igual 4.0 Não Adaptada,
  
 \emph default
 cuja descrição poderá ser acessada em
@@ -291,11 +293,11 @@ cuja descrição poderá ser acessada em
 
 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-http://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR
+http://creativecommons.org/licenses/by-sa/4.0/deed.pt_BR
 \end_layout
 
 \end_inset
@@ -350,7 +352,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Chapter
-Tecnologia da Informação
+Informática
 \end_layout
 
 \begin_layout Section
@@ -3832,6 +3834,17 @@ TeX Live
  Permite facilmente criar um PDF a partir de um conjunto de arquivos PDF,
  JPG e PNG.
  Há diversas opções, inclusive, para escolha de página, se desejado.
+ Ver a seção 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Pdfjam"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \begin_inset Newline newline
 \end_inset
 
@@ -4382,6 +4395,72 @@ status collapsed
 \begin_layout Plain Layout
 
 http://www.vim.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+QR Code
+\end_layout
+
+\begin_layout Description
+QtQr
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+QtQr
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Codificador e decodificador de códigos QR, com interface gráfica.
+ Disponível nos pacotes de instalação da distribuição (testado no 
+\emph on
+Ubuntu
+\emph default
+/
+\emph on
+Linux Mint
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
 \end_layout
 
 \end_inset
@@ -5214,7 +5293,7 @@ sumir
 \end_layout
 
 \begin_layout Chapter
-Adicionais para Tecnologia da Informação
+Adicionais para Informática
 \end_layout
 
 \begin_layout Section
@@ -5266,7 +5345,70 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Notas e Dicas sobre os Programas
+Procedimentos
+\end_layout
+
+\begin_layout Subsection
+Geração de Brochuras
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Brochuras, geração de
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Geração-de-Brochuras"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Brochura 2x1
+\end_layout
+
+\begin_layout Enumerate
+Gerar o arquivo PDF da forma convencional.
+\end_layout
+
+\begin_layout Enumerate
+Executar:
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+$ pdfbook2 [--short-edge] -i 90 -o 60 <arquivo.pdf>
+\end_layout
+
+\begin_layout Subsubsection
+Brochura 2x2 Borda Curta (para 8 páginas no total)
+\end_layout
+
+\begin_layout Enumerate
+Gerar o arquivo PDF da forma convencional.
+\end_layout
+
+\begin_layout Enumerate
+Executar (considerando-se 8 páginas no total):
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+$ pdfjam <arquivo.pdf> '5,4,7,2' --no-landscape --angle 180 -o /dev/stdout
+ | pdfjam <arquivo.pdf> '8,1' /dev/stdin '1,2' <arquivo.pdf> '6,3' /dev/stdin
+ '3,4' --no-landscape --nup 2x2 -o <saida.pdf>
+\end_layout
+
+\begin_layout Section
+Programas – Notas e Dicas
 \end_layout
 
 \begin_layout Standard
@@ -5801,6 +5943,12 @@ Gimp
 
 \end_layout
 
+\begin_layout Subsubsection
+Carga Demorada de Fontes no 
+\emph on
+Windows
+\end_layout
+
 \begin_layout Standard
 No 
 \emph on
@@ -5933,6 +6081,49 @@ logs
 \emph default
 \lang brazilian
  referentes ao caminho serão retornados.
+\end_layout
+
+\begin_layout Subsubsection
+Listar Conteúdo da Árvore de Arquivos com Tamanho
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ git ls-tree -l HEAD
+\end_layout
+
+\begin_layout Standard
+Ao invés de 
+\family typewriter
+HEAD
+\family default
+, pode ser outro identificador de índice.
+ Pode-se acrescentar 
+\family typewriter
+-r
+\family default
+ para listar diretórios recursivamente.
+ Há outros recursos disponíveis no comando e outros comandos.
+\end_layout
+
+\begin_layout Standard
+Ver a referência abaixo para mais detalhes, além dos manuais:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://stackoverflow.com/questions/3150727/how-to-see-the-file-size-history-of-a
+-single-file-in-a-git-repository
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -6967,6 +7158,75 @@ Executar:
 
 \family typewriter
 $ pdfbook2 -i 90 -o 60 <arquivo.pdf>
+\end_layout
+
+\begin_layout Standard
+Ver também 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Geração-de-Brochuras"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ na 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:Geração-de-Brochuras"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Pdfjam
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Pdfjam
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Pdfjam"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ver 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Geração-de-Brochuras"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ na 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:Geração-de-Brochuras"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -8595,6 +8855,79 @@ $ man xdotool
 Linux 
 \emph default
 - Notas e Dicas
+\end_layout
+
+\begin_layout Subsection
+Ambiente de Trabalho
+\end_layout
+
+\begin_layout Subsubsection
+
+\emph on
+Cinnamon
+\end_layout
+
+\begin_layout Paragraph
+
+\emph on
+\lang english
+Panel Launcher
+\emph default
+\lang brazilian
+ (Lançador de Aplicativos) com Comportamento Inconsistente
+\end_layout
+
+\begin_layout Standard
+Ao criar ou editar um novo item no Lançador de Aplicativos (
+\emph on
+\lang english
+Panel Launcher
+\emph default
+\lang brazilian
+), os ícones e os conteúdos eram trocados por valores de outros itens, de
+ forma aparentemente aleatória.
+ O problema residia na existência de arquivos 
+\family typewriter
+cinnamon-custom-launcher-*.desktop 
+\family default
+com mesmos nomes em diretórios diferentes.
+ Os diretórios evolvidos são:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$HOME/.cinnamon/panel-launchers/
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$HOME/.local/share/applications/
+\end_layout
+
+\begin_layout Standard
+Assim, ao criar ou editar um item do lançador na interface gráfica do 
+\emph on
+Cinnamon
+\emph default
+, os novos arquivos eram salvos no primeiro diretório.
+ Todavia, quando o programa lançador fazia a carga das configurações, ele
+ também estava lendo os conteúdos do segundo diretório e sobrepunha os dados
+ dos arquivos 
+\family typewriter
+cinnamon-custom-launcher-*.desktop 
+\family default
+do primeiro diretório que possuíam o mesmo nome, de forma que o conteúdo
+ deste segundo prevalecia sobre o do primeiro.
+\end_layout
+
+\begin_layout Standard
+Os conteúdos do segundo diretório devem ter sido herdados de versões anteriores.
+\end_layout
+
+\begin_layout Standard
+A solução foi excluir os referidos arquivos do segundo diretório.
 \end_layout
 
 \begin_layout Subsection
@@ -10640,9 +10973,33 @@ Windows
 \end_layout
 
 \begin_layout Subsection
+Programas de Configuração do 
+\emph on
+Windows
+\end_layout
+
+\begin_layout Subsubsection
+Serviços do 
+\emph on
+Windows 
+\emph default
+(
+\family typewriter
+services.msc
+\family default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
 
 \family typewriter
 services.msc
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Standard
@@ -10668,10 +11025,7 @@ que permite configurar serviços do
 Windows
 \emph default
 .
-\end_layout
-
-\begin_layout Standard
-Sitam-se alguns:
+ Dentre estes, citam-se:
 \end_layout
 
 \begin_layout Description
@@ -10685,6 +11039,88 @@ do
 
 Windows: mantém a sincronização de data e hora em todos os clientes e servidores
  da rede.
+\end_layout
+
+\begin_layout Subsubsection
+Agendador de Tarefas do 
+\emph on
+Windows
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Agendador-de-Tarefas-do-Windows"
+
+\end_inset
+
+ 
+\emph default
+(
+\family typewriter
+taskschd.msc
+\family default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+taskschd.msc
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Executar o programa
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+taskschd.msc
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+que permite configurar o agendamento de execução das tarefas do 
+\emph on
+Windows
+\emph default
+.
+ Dentre estas, citam-se:
+\end_layout
+
+\begin_layout Description
+
+\emph on
+Windows
+\begin_inset space ~
+\end_inset
+
+Defender
+\emph default
+: dispara a verificação e a varredura do 
+\emph on
+Windows Defender
+\emph default
+, entre outras ações.
 \end_layout
 
 \begin_layout Subsection
@@ -10928,6 +11364,572 @@ e
 Windows 11
 \emph default
  e, possivelmente, em outros também.
+\end_layout
+
+\begin_layout Subsection
+Alterar o Local do 
+\family typewriter
+pagefile.sys
+\family default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+pagefile.sys
+\family default
+, alterar o local do
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para alterar o local do arquivo de paginação 
+\family typewriter
+pagefile.sys
+\family default
+ do 
+\emph on
+Windows
+\emph default
+,
+\emph on
+ 
+\emph default
+proceder com os passos seguintes:
+\end_layout
+
+\begin_layout Enumerate
+Pressionar 
+\family sans
+Win + R
+\family default
+, digitar 
+\family typewriter
+SystemPropertiesAdvanced
+\family default
+ e clicar em 
+\family sans
+OK
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Selecionar a aba 
+\family sans
+
+\begin_inset Quotes eld
+\end_inset
+
+Avançado
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+ e, sob a seção 
+\family sans
+
+\begin_inset Quotes eld
+\end_inset
+
+Desempenho
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+, clicar em 
+\family sans
+
+\begin_inset Quotes eld
+\end_inset
+
+Configurações
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Na nova janela, selecionar a aba 
+\family sans
+
+\begin_inset Quotes eld
+\end_inset
+
+Avançado
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+ e, sob a seção 
+\family sans
+
+\begin_inset Quotes eld
+\end_inset
+
+Memória Virtual
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+, clicar em 
+\family sans
+
+\begin_inset Quotes eld
+\end_inset
+
+Alterar
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Desmarcar a opção 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Gerenciar automaticamente o tamanho do arquivo de paginação de todas as
+ unidades
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Na caixa mais abaixo, selecionar a unidade atual que contém o arquivo de
+ paginação, marcar o rádio 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Sem arquivo de paginação
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ e clicar em 
+\family sans
+
+\begin_inset Quotes eld
+\end_inset
+
+Definir
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Na mesma caixa, selecionar a outra unidade, marcar o rádio 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Tamanho personalizado
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ ou 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Tamanho gerenciado pelo sistema
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ e clicar em 
+\family sans
+
+\begin_inset Quotes eld
+\end_inset
+
+Definir
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Para o tamanho personalizado, sugere-se o valor mínimo como o dobro da memória
+ RAM e o máximo como o triplo, mas outros valores podem ser mais adequados
+ conforme cada contexto.
+ Ver também as orientações na seção 
+\family sans
+
+\begin_inset Quotes eld
+\end_inset
+
+Tamanho total do arquivo de paginação
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+, mais abaixo na mesma janela.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Clicar em 
+\family sans
+OK
+\family default
+ e reiniciar o 
+\emph on
+Windows
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Nota:
+\series default
+ para haver otimização do sistema, é melhor que o arquivo de paginação esteja
+ em um disco físico diferente do disco do sistema operacional (ou do disco
+ que possui a maior demanda de leituras e gravações).
+\end_layout
+
+\begin_layout Subsubsection*
+Referência Complementar:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://winaero.com/how-to-move-page-file-in-windows-10-to-another-disk/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\emph on
+Windows Defender
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Windows Defender
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Adicionar uma Exclusão ao 
+\emph on
+Windows Defender
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Windows Defender
+\emph off
+, adicionar uma exclusão ao
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para adicionar uma exclusão ao Windows Defender, seguir os passos:
+\end_layout
+
+\begin_layout Enumerate
+Iniciar > configurações > Atualização e Segurança > Segurança do Windows
+ > Proteção contra vírus e ameaças.
+\end_layout
+
+\begin_layout Enumerate
+Em 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Configurações de proteção contra vírus e ameaças
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+, selecionar 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Gerenciar configurações
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ e, em seguida, em 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Exclusões
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+, selecionar 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Adicionar ou remover exclusões
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Selecionar 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Adicionar uma exclusão
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ e, então, pode-se selecionar arquivos, pastas, tipos de arquivo ou processos.
+ Uma exclusão de pasta também será aplicada a todas as subpastas dentro
+ da pasta.
+\end_layout
+
+\begin_layout Paragraph*
+Referência
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://support.microsoft.com/pt-br/windows/adicionar-uma-exclus%C3%A3o-ao-seguran
+%C3%A7a-do-windows-811816c0-4dfd-af4a-47e4-c301afe13b26
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Agendamento de Tarefas para o 
+\emph on
+Windows Defender
+\emph default
+ 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Windows Defender, 
+\emph off
+agendamento de tarefa para o
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ver a subseção 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Agendador-de-Tarefas-do-Windows"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Desativar o 
+\emph on
+Windows Defender
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Windows Defender
+\emph off
+, desativar o
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para desativar o 
+\emph on
+Windows Defender
+\emph default
+, seguir os passos:
+\end_layout
+
+\begin_layout Enumerate
+Iniciar > configurações > Atualização e Segurança > Segurança do Windows
+ > Proteção contra vírus e ameaças.
+\end_layout
+
+\begin_layout Enumerate
+Em 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Configurações de proteção contra vírus e ameaças
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+, selecionar 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Gerenciar configurações
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Alternar a 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Proteção em tempo real
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph default
+para 
+\family sans
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Desativado
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+\emph default
+.
+ Note-se que as verificações programadas continuarão a ser executadas –
+ no entanto, os arquivos que forem baixados ou instalados não serão verificados.
+\end_layout
+
+\begin_layout Paragraph*
+Referência
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://support.microsoft.com/pt-br/windows/desativar-a-prote%C3%A7%C3%A3o-antiv%C
+3%ADrus-defender-na-seguran%C3%A7a-do-windows-99e6004f-c54c-8509-773c-a4d776b779
+60
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
