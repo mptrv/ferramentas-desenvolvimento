@@ -146,13 +146,13 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.42
+ 0.1.43
 \end_layout
 
 \begin_layout Author
 
 \family typewriter
-mptrv
+mptrev
 \end_layout
 
 \begin_layout Chapter*
@@ -11651,38 +11651,12 @@ https://winaero.com/how-to-move-page-file-in-windows-10-to-another-disk/
 
 \emph on
 Windows Defender
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-Windows Defender
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
 Adicionar uma Exclusão ao 
 \emph on
 Windows Defender
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-Windows Defender
-\emph off
-, adicionar uma exclusão ao
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -11789,20 +11763,6 @@ Agendamento de Tarefas para o
 Windows Defender
 \emph default
  
-\emph on
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Windows Defender, 
-\emph off
-agendamento de tarefa para o
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -11823,20 +11783,6 @@ noprefix "false"
 Desativar o 
 \emph on
 Windows Defender
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-Windows Defender
-\emph off
-, desativar o
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
