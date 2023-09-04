@@ -146,7 +146,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.1.43
+ 0.2.1
 \end_layout
 
 \begin_layout Author
@@ -2032,6 +2032,53 @@ https://git-scm.com/docs/git-gui
 
 \end_layout
 
+\begin_layout Description
+GitHub
+\begin_inset space ~
+\end_inset
+
+Desktop
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GitHub
+\begin_inset space ~
+\end_inset
+
+Desktop
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Windows
+\emph default
+.
+ Interface gráfica do GitHub para interagir com o mecanismo de controle
+ de versão 
+\family sans
+git
+\family default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://desktop.github.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -2077,7 +2124,7 @@ status collapsed
 
 \begin_layout Plain Layout
 
-http://www.tug.org/texlive
+https://tug.org/texlive
 \end_layout
 
 \end_inset
@@ -2206,11 +2253,11 @@ Na entrada do índice, \SpecialChar LyX
 
 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-http://www.lyx.org/
+https://www.lyx.org/
 \end_layout
 
 \end_inset
@@ -3964,12 +4011,10 @@ Project
 \end_inset
 
 : Gratuito, multiplataforma.
- Ferramenta simples e eficaz, interface amigável.
- Assemelha-se ao 
-\emph on
-Planner
-\emph default
-.
+ Ferramenta simples, eficaz e com interface amigável para gerenciamento
+ de projetos.
+ Permite elaborar o cronograma e o Diagrama de Gantt e definir as atribuições
+ de recursos.
 \begin_inset Newline newline
 \end_inset
 
@@ -3979,7 +4024,7 @@ status collapsed
 
 \begin_layout Plain Layout
 
-http://www.ganttproject.biz/
+https://www.ganttproject.biz/
 \end_layout
 
 \end_inset
@@ -5030,8 +5075,8 @@ TinkerCad
 Web
 \emph default
 .
- Simulador de circuitos não muito complexo, mas com suporte, por exemplo
- ao 555 ou ao Arduino.
+ Editor de formas 3D e simulador de circuitos digitais e analógicos não
+ muito complexos, mas com suporte, por exemplo, ao 555 ou ao Arduino.
  Possui 
 \emph on
 protoboard.
@@ -5132,6 +5177,45 @@ https://www.falstad.com/mathphysics.html
 
 \end_layout
 
+\begin_layout Description
+Ngspice
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ngspice
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Simulador 
+\emph on
+Spice
+\emph default
+ com muitos e ótimos recursos.
+ Entre outros recursos, permite a criação de 
+\emph on
+scripts
+\emph default
+ de simulação.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://ngspice.sourceforge.io
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -5178,8 +5262,12 @@ Electronics Design Automation
 
 \emph default
 ) que permite desenhar esquemas elétricos, verificar suas regras, gerar
- PCB e visualizar PCB em 3D.
- Ainda, permite integração com simuladores.
+ PCI (PCB) e visualizar a PCI em 3D.
+ Ainda, permite integração com simuladores, em especial, com o 
+\emph on
+Ngspice
+\emph default
+.
  Ver a 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -5193,11 +5281,11 @@ reference "subsec:KiCad"
 
 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-http://kicad-pcb.org/
+https://www.kicad.org/
 \end_layout
 
 \end_inset
@@ -5277,6 +5365,109 @@ status open
 
 \backslash
 sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+IDEs
+\end_layout
+
+\begin_layout Description
+Arduino
+\begin_inset space ~
+\end_inset
+
+IDE
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Arduino
+\begin_inset space ~
+\end_inset
+
+IDE
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplaforma.
+ IDE para desenvolvimento, depuração e gravação de programas para Arduíno.
+ Permite fácil instalação e seleção de placas e bibliotecas.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.arduino.cc/en/software
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Outras Áreas
+\end_layout
+
+\begin_layout Section
+CAD
+\end_layout
+
+\begin_layout Description
+Freecad
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Freecad
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplaforma.
+ Modelador 3D parametrizável de objetos em 2D e 3D.
+ Atende a diversas áreas, como desenho de produto, engenharia mecânica e
+ arquitetura.
+ Possui integradas ferramentas de análises por elementos finitos (FEA),
+ CFD experimental, BIM dedicado, ambientes de trabalho Geodata e CAM/CNC,
+ módulo de simulação de robôs, dentre outros recursos.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.freecad.org/
 \end_layout
 
 \end_inset
@@ -6525,6 +6716,33 @@ host
 \family default
 ), o SSH irá identificar o usuário e o arquivo de chave privada corretos
  a utilizar e a autenticação se dará com sucesso.
+\end_layout
+
+\begin_layout Subsubsection
+Falha: 
+\family typewriter
+\emph on
+\lang english
+Bad owner or permissions on /home/mpt/.ssh/config
+\end_layout
+
+\begin_layout Standard
+Se ocorrer esta falha, provavelmente deve-se às permissões do arquivo 
+\family typewriter
+config
+\family default
+ após uma edição.
+ Para corrigir, basta atribuir o modo 
+\family typewriter
+644
+\family default
+ ao aquivo:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ chmod 644 ~/.ssh/config
 \end_layout
 
 \begin_layout Subsection
@@ -10973,21 +11191,67 @@ Windows
 \end_layout
 
 \begin_layout Subsection
-Programas de Configuração do 
+Teclas de Atalho
+\end_layout
+
+\begin_layout Description
+
+\family sans
+Win+R
+\family default
+ Executar um programa
+\end_layout
+
+\begin_layout Description
+
+\family sans
+Win+X
+\family default
+ Selecionar configurações em um menu
+\end_layout
+
+\begin_layout Description
+
+\family sans
+Win+I
+\family default
+ Tela de configurações do usuário
+\end_layout
+
+\begin_layout Description
+
+\family sans
+Win+E
+\family default
+ Abrir o gerenciador de arquivos
+\end_layout
+
+\begin_layout Description
+
+\family sans
+Win+L 
+\family default
+Bloquear a tela
+\end_layout
+
+\begin_layout Subsection
+Programas de Gerenciamento do 
 \emph on
 Windows
 \end_layout
 
-\begin_layout Subsubsection
-Serviços do 
-\emph on
-Windows 
-\emph default
-(
+\begin_layout Standard
+Pressionar 
+\family sans
+Win+R 
+\family default
+e executar o programa desejado.
+\end_layout
+
+\begin_layout Description
+
 \family typewriter
 services.msc
-\family default
-
 \begin_inset Index idx
 status open
 
@@ -10999,36 +11263,26 @@ services.msc
 
 \end_inset
 
-)
-\end_layout
 
-\begin_layout Standard
-Há o programa
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-services.msc
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace medskip
-\end_inset
-
-que permite configurar serviços do 
+\family default
+ 
+\series bold
+Serviços do 
 \emph on
 Windows
+\series default
 \emph default
 .
- Dentre estes, citam-se:
 \end_layout
 
-\begin_layout Description
+\begin_deeper
+\begin_layout Standard
+Dentre os serviços, citam-se:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
 Horário
 \begin_inset space ~
 \end_inset
@@ -11037,27 +11291,17 @@ do
 \begin_inset space ~
 \end_inset
 
-Windows: mantém a sincronização de data e hora em todos os clientes e servidores
+Windows:
+\emph default
+ mantém a sincronização de data e hora em todos os clientes e servidores
  da rede.
 \end_layout
 
-\begin_layout Subsubsection
-Agendador de Tarefas do 
-\emph on
-Windows
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Agendador-de-Tarefas-do-Windows"
+\end_deeper
+\begin_layout Description
 
-\end_inset
-
- 
-\emph default
-(
 \family typewriter
 taskschd.msc
-\family default
-
 \begin_inset Index idx
 status open
 
@@ -11069,60 +11313,101 @@ taskschd.msc
 
 \end_inset
 
-)
-\end_layout
-
-\begin_layout Standard
-Executar o programa
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-taskschd.msc
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align block
-que permite configurar o agendamento de execução das tarefas do 
+ 
+\family default
+\series bold
+Agendador de Tarefas do 
 \emph on
 Windows
+\series default
 \emph default
 .
- Dentre estas, citam-se:
+\begin_inset CommandInset label
+LatexCommand label
+name "descr:Agendador-de-Tarefas-do-Windows"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Description
+\begin_deeper
+\begin_layout Standard
+Dentre as tarefas, citam-se:
+\end_layout
+
+\begin_layout Itemize
 
 \emph on
 Windows
 \begin_inset space ~
 \end_inset
 
-Defender
+Defender:
 \emph default
-: dispara a verificação e a varredura do 
+ dispara a verificação e a varredura do 
 \emph on
 Windows Defender
 \emph default
 , entre outras ações.
 \end_layout
 
+\end_deeper
+\begin_layout Description
+
+\family typewriter
+msconfig
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+msconfig
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\family default
+\series bold
+Configurações Gerais do 
+\emph on
+Windows
+\emph default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dentre as configurações, citam-se:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Modo de Inicialização:
+\emph default
+ permite selecionar o modo de inicialização do 
+\emph on
+Windows
+\emph default
+ – por exemplo, inicializar de forma 
+\begin_inset Quotes eld
+\end_inset
+
+limpa
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Código de Página para Nomes de Arquivos
 \end_layout
@@ -11766,17 +12051,27 @@ Windows Defender
 \end_layout
 
 \begin_layout Standard
-Ver a subseção 
+Ver o tópico 
 \begin_inset CommandInset ref
-LatexCommand vref
-reference "subsec:Agendador-de-Tarefas-do-Windows"
+LatexCommand nameref
+reference "descr:Agendador-de-Tarefas-do-Windows"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-.
+
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "descr:Agendador-de-Tarefas-do-Windows"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ .
 \end_layout
 
 \begin_layout Subsubsection
