@@ -99,6 +99,7 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\listings_params "tabsize=2"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -146,7 +147,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.1
+ 0.2.2
 \end_layout
 
 \begin_layout Author
@@ -6342,15 +6343,57 @@ Habilitar a Depuração do SSH na Chamada pelo Git
 \end_layout
 
 \begin_layout Standard
+A partir do 
+\family sans
+git
+\family default
+ 2.10.0:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ git config core.sshCommand 
+\begin_inset Quotes eld
+\end_inset
+
+ssh -v
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para versões anteriores (e também recentes):
+\end_layout
+
+\begin_layout Quotation
 
 \family typewriter
 $ export GIT_TRACE=1
 \end_layout
 
-\begin_layout Standard
+\begin_layout Quotation
 
 \family typewriter
-$ export GIT_SSH_COMMAND="ssh -vvv"
+$ export GIT_SSH_COMMAND="ssh -v"
+\end_layout
+
+\begin_layout Standard
+Pode-se utilizar 
+\family typewriter
+-v
+\family default
+, 
+\family typewriter
+-vv
+\family default
+ ou 
+\family typewriter
+-vvv
+\family default
+, conforme o nível de detalhes desejado.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6479,7 +6522,7 @@ noprefix "false"
 
 \end_inset
 
-.
+ para uma solução mais consistente.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6510,14 +6553,12 @@ Host
 ~/.ssh/config
 \family default
 .
- Por exemplo, suponha que haja duas chaves para dois repositórios diferentes
- para dois usuários diferentes, um para cada repositório, no GitHub.
- O arquivo de configuração do SSH deverá ficar assim:
+ Por exemplo:
 \end_layout
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "basicstyle={\small}"
+lstparams "basicstyle={\small\ttfamily}"
 inline false
 status open
 
@@ -6528,12 +6569,110 @@ status open
 
 \begin_layout Plain Layout
 
-Host <repositorio-1>
+Host <rotulo-host-1>
 \end_layout
 
 \begin_layout Plain Layout
 
 	User <usuario-1>
+\end_layout
+
+\begin_layout Plain Layout
+
+	HostName <endereco-1>
+\end_layout
+
+\begin_layout Plain Layout
+
+	AddKeysToAgent yes
+\end_layout
+
+\begin_layout Plain Layout
+
+	IdentityFile ~/.ssh/<arquivo da chave privada 1>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Repositório 2 do Usuário 2
+\end_layout
+
+\begin_layout Plain Layout
+
+Host <rotulo-host-2>
+\end_layout
+
+\begin_layout Plain Layout
+
+	User <usuario-2>
+\end_layout
+
+\begin_layout Plain Layout
+
+	HostName <endereco-2>
+\end_layout
+
+\begin_layout Plain Layout
+
+	AddKeysToAgent yes
+\end_layout
+
+\begin_layout Plain Layout
+
+	IdentityFile ~/.ssh/<arquivo da chave privada 2>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suponha que haja duas chaves para dois repositórios diferentes para dois
+ usuários diferentes, um para cada repositório, no GitHub.
+ O 
+\family typewriter
+HostName
+\family default
+ deverá ser sempre 
+\family typewriter
+github.com
+\family default
+ e o 
+\family typewriter
+User
+\family default
+ deverá ser sempre 
+\family typewriter
+git
+\family default
+.
+ O arquivo de configuração do SSH deverá ficar assim:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\small\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# Repositório 1 do Usuário 1
+\end_layout
+
+\begin_layout Plain Layout
+
+Host <rotulo-host-1>
+\end_layout
+
+\begin_layout Plain Layout
+
+	User git
 \end_layout
 
 \begin_layout Plain Layout
@@ -6562,12 +6701,12 @@ Host <repositorio-1>
 
 \begin_layout Plain Layout
 
-Host <repositorio-2>
+Host <rotulo-host-2>
 \end_layout
 
 \begin_layout Plain Layout
 
-	User <usuario-2>
+	User git
 \end_layout
 
 \begin_layout Plain Layout
@@ -6591,24 +6730,56 @@ Host <repositorio-2>
 \end_layout
 
 \begin_layout Standard
-O próximo passo é configurar os diretórios de trabalho do Git para cada
- usuário para cada repositório de forma a apontar aos correspondentes 
+Feito isso, pode-se fazer o 
 \emph on
 \lang english
-Hosts
+clone
 \emph default
 \lang brazilian
- do arquivo de configuração do
-\family typewriter
- 
-\family default
-SSH.
- Primeiramente, conferir a configuração atual:
+ da seguinte forma:
 \end_layout
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "basicstyle={\small}"
+lstparams "basicstyle={\small\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ git clone rotulo-host:USUARIO/REPOSITORIO.git
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso o repositório já tenha sido 
+\begin_inset Quotes eld
+\end_inset
+
+clonado
+\begin_inset Quotes erd
+\end_inset
+
+ sem o rótulo de prefixo do 
+\emph on
+\lang english
+host
+\emph default
+\lang brazilian
+, pode-se reconfigurar o endereço do repositório para incluí-lo.
+\end_layout
+
+\begin_layout Standard
+Para tanto, primeiramente, conferir a configuração atual:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\small\ttfamily}"
 inline false
 status open
 
@@ -6628,12 +6799,12 @@ $ git remote -v
 
 \begin_layout Plain Layout
 
-> origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+> origin  https://github.com/USUARIO/REPOSITORIO.git (fetch)
 \end_layout
 
 \begin_layout Plain Layout
 
-> origin  https://github.com/USERNAME/REPOSITORY.git (push)
+> origin  https://github.com/USUARIO/REPOSITORIO.git (push)
 \end_layout
 
 \begin_layout Plain Layout
@@ -6647,12 +6818,12 @@ $ git remote -v
 
 \begin_layout Plain Layout
 
-> origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+> origin  git@github.com:USUARIO/REPOSITORIO.git (fetch)
 \end_layout
 
 \begin_layout Plain Layout
 
-> origin  git@github.com:USERNAME/REPOSITORY.git (push)
+> origin  git@github.com:USUARIO/REPOSITORIO.git (push)
 \end_layout
 
 \end_inset
@@ -6661,24 +6832,24 @@ $ git remote -v
 \end_layout
 
 \begin_layout Standard
-Depois alterar a URL de forma a corresponder ao 
+Depois, alterar a URL de forma a corresponder ao rótulo do 
 \emph on
 \lang english
-Host
+host
 \emph default
 \lang brazilian
-, usuário e repositório:
+ desejado, mantendo o usuário e o nome do repositório:
 \end_layout
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "basicstyle={\small}"
+lstparams "basicstyle={\small\ttfamily}"
 inline false
 status open
 
 \begin_layout Plain Layout
 
-$ git remote set-url origin git@HOST:USERNAME/REPOSITORY.git
+$ git remote set-url origin rotulo-host:USUARIO/REPOSITORIO.git
 \end_layout
 
 \end_inset
@@ -6696,26 +6867,23 @@ indicar
 git@github.com
 \family default
 , o usuário correto poderá não ser encontrado e ocorrer falha de autenticação.
- Ao realizar a configuração para 
-\family typewriter
-git@HOST
-\family default
-, sendo 
-\family typewriter
-HOST
-\family default
- o correspondente nome do 
+ Ao utilizar o rótulo de prefixo do 
 \emph on
 \lang english
 host
 \emph default
 \lang brazilian
- definido no arquivo de configuração do SSH (por exemplo, 
-\family typewriter
-<repositorio-1>
-\family default
-), o SSH irá identificar o usuário e o arquivo de chave privada corretos
+, o SSH irá identificar o usuário e o arquivo de chave privada corretos
  a utilizar e a autenticação se dará com sucesso.
+ Por outro lado, note-se que a autenticação no GitHub sempre será com 
+\family typewriter
+git@github.com
+\family default
+, conforme indicado pelas chaves no arquivo 
+\family typewriter
+~/.ssh/config
+\family default
+.
 \end_layout
 
 \begin_layout Subsubsection
