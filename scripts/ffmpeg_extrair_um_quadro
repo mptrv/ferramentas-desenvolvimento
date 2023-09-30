@@ -1,0 +1,26 @@
+#! /bin/bash
+
+ext_e=".mp4"
+ext_s=".png"
+arq_e=$1
+
+echo
+echo ===========================================================================
+echo ${arq_e} ---\> .png
+echo
+echo Extraindo quadro...
+echo
+
+duracao=$(ffprobe -v error -select_streams v -show_entries stream=duration -of csv=p=0:s=x -i "${arq_e}")
+
+t1=60; t2=$(echo ${duracao}/2 | bc); t3=$(echo ${duracao}-${t1} | bc)
+
+for t in {${t1},${t2},${t3}}; do
+	arq_s=$(dirname "${arq_e}")/$(basename "${arq_e}" ${ext_e})_quadro_${t}${ext_s};
+	ffmpeg -hide_banner -accurate_seek -ss ${t} -i "${arq_e}" -frames:v 1 "${arq_s}";
+done
+
+echo
+echo Concluído.
+echo
+echo ===========================================================================

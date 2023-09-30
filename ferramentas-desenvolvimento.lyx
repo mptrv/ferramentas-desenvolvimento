@@ -147,7 +147,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.2
+ 0.2.3
 \end_layout
 
 \begin_layout Author
@@ -5971,7 +5971,7 @@ Avconv
 .
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Cortar e Redimensionar
 \end_layout
 
@@ -5995,10 +5995,6 @@ Imagem de saída:
 \end_deeper
 \begin_layout Itemize
 Comandos:
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -6065,6 +6061,205 @@ Gimp
 \end_layout
 
 \end_deeper
+\begin_layout Subsubsection
+Extração de Quadros de Um Vídeo
+\end_layout
+
+\begin_layout Standard
+Pode-se executar o seguinte comando:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ ffmpeg -hide_banner -accurate_seek -ss ${t} -i "${arq_e}" -frames:v 1
+ "${arq_s}"
+\end_layout
+
+\begin_layout Standard
+\noindent
+em que 
+\family typewriter
+${t}
+\family default
+ é o tempo em segundos desejado.
+\end_layout
+
+\begin_layout Standard
+O seguinte 
+\emph on
+script
+\emph default
+ extrai três quadros: um a 60s, outro na metade da duração e outro a 60s
+ antes do final.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Script
+\emph default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/mptrv/ferramentas-desenvolvimento/blob/master/scripts/ffmpeg_e
+xtrair_um_quadro
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Redução de Tamanho de Arquivo com Manutenção de Boa Qualidade
+\end_layout
+
+\begin_layout Standard
+Com corte:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ ffmpeg -hide_banner -i "${arq_e}" -filter:v "crop=w=<largura>:h=<altura>:x=<x_
+inicial>:y=<y_inicial>" -preset veryfast -crf 28 -b:a 64k "${arq_s}"
+\end_layout
+
+\begin_layout Standard
+Sem corte:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ ffmpeg -hide_banner -i "${arq_e}" -preset veryfast -crf 28 -b:a 64k "${arq_s}"
+\end_layout
+
+\begin_layout Standard
+Se necessitar de áudio com melhor qualidade, pode-se utilizar 
+\family typewriter
+-b:a 128k
+\family default
+, por exemplo.
+\end_layout
+
+\begin_layout Subsubsection
+Ajuste de Cores a Partir do Gimp
+\end_layout
+
+\begin_layout Standard
+É possível converter um mapa de curvas de cores o Gimp para uso com filtros
+ do FFmpeg.
+ Há um 
+\emph on
+script
+\emph default
+ na fonte citada abaixo para este propósito.
+ Este 
+\emph on
+script
+\emph default
+ foi readaptado e disponibilizado junto a este repositório.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Script
+\emph default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/mptrv/ferramentas-desenvolvimento/blob/master/scripts/ffmpeg_c
+urvas_gimp_para_ffmpeg.py
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uso:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ ffmpeg_curvas_gimp_para_ffmpeg.py <entrada> <saida>
+\end_layout
+
+\begin_layout Standard
+Para gerar o arquivo de entrada, dentro do Gimp, em qualquer ferramenta
+ que manipule curvas (por exemplo, "Níveis" ou "Curvas"), basta exportar
+ as definições da curva para um arquivo (clicar no botão com uma seta à
+ esquerda no canto direito superior da caixa de diálogo para acessar a exportaçã
+o).
+\end_layout
+
+\begin_layout Standard
+Depois, para usar no FFmpeg, deve-se abrir o arquivo de saída e copiar a
+ "grande" linha logo no início do arquivo, identificada com o rótulo "Final
+ command" logo acima dela.
+ Esta linha copiada deverá ser passada ao parâmetro -vf do FFmpeg.
+\end_layout
+
+\begin_layout Standard
+Para maior facilidade, ao concluir, o 
+\emph on
+script
+\emph default
+ já deixa o comando final copiado na área de transferência (
+\emph on
+\lang english
+clipboard
+\emph default
+\lang brazilian
+).
+\end_layout
+
+\begin_layout Standard
+Por fim, basta executar o ffmpeg, como abaixo, por exemplo:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ ffmpeg -i <video-de-entrada> -vf <dados-colados-da-curva> <video-de-saida>
+\end_layout
+
+\begin_layout Paragraph*
+Fonte:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/NapoleonWils0n/cerberus/blob/master/ffmpeg/ffmpeg-white-balanc
+e.org
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Subsection
 Firefox
 \begin_inset Index idx
