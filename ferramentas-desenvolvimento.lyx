@@ -147,7 +147,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.3
+ 0.2.6
 \end_layout
 
 \begin_layout Author
@@ -2669,6 +2669,156 @@ sumir
 \end_layout
 
 \begin_layout Section
+Emulação de Comandos de Teclado e Mouse
+\end_layout
+
+\begin_layout Description
+xdotool
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+xdotool
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Ferramenta que permite enviar sequências de pressionamentos de teclas,
+ posicionamentos do 
+\emph on
+\lang english
+mouse
+\emph default
+\lang brazilian
+, pressionamentos de botões do 
+\emph on
+\lang english
+mouse
+\emph default
+\lang brazilian
+.
+ Há também outros recursos disponíveis, como leitura e alteração de posicionamen
+to e geometria de janelas.
+ É uma ferramenta de automação do X11 para linha de comando.
+ Ver também 
+\emph on
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:xdotool"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:xdotool"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\emph default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.semicomplete.com/projects/xdotool
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+tmux
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+tmux
+\end_layout
+
+\end_inset
+
+: 
+\emph on
+Terminal Multiplexer
+\emph default
+.
+ Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Permite criar, acessar e controlar diversos terminais a partir de uma única
+ tela.
+ O 
+\family typewriter
+tmux
+\family default
+ pode ser desanexado de uma tela e continuar a rodar no plano de fundo e,
+ depois, pode ser reanexado.
+ Ver também 
+\emph on
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:tmux"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:tmux"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Escritório
 \end_layout
 
@@ -2869,7 +3019,124 @@ sumir
 \end_layout
 
 \begin_layout Section
+Gerenciamento de Tarefas e Processos
+\end_layout
+
+\begin_layout Description
+PsTools
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PsTools
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Windows
+\emph default
+.
+ Pacote com diversas ferramentas para gerenciamento de tarefas e processos
+ no 
+\emph on
+Windows
+\emph default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://learn.microsoft.com/en-us/sysinternals/downloads/pstools
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Imagem
+\end_layout
+
+\begin_layout Description
+Convert
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Convert
+\end_layout
+
+\end_inset
+
+: Gratuito, para multiplataforma.
+ Realiza diversas operações sobre imagens.
+ Opera por linha de comando.
+ Faz parte do pacote 
+\emph on
+ImageMagick
+\emph default
+.
+ Ver também a 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Convert"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:Convert"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://imagemagick.org
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -2983,6 +3250,44 @@ status collapsed
 \begin_layout Plain Layout
 
 https://www.libreoffice.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Magick
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Magick
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ É o comando atualmente utilizado pelo 
+\emph on
+ImageMagick
+\emph default
+ referente ao 
+\family sans
+Convert
+\family default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://imagemagick.org
 \end_layout
 
 \end_inset
@@ -3443,7 +3748,7 @@ Ou colocá-lo em nota marginal.
 \end_layout
 
 \begin_layout Section
-PDF
+PDF e PS
 \end_layout
 
 \begin_layout Description
@@ -3482,6 +3787,40 @@ status collapsed
 \begin_layout Plain Layout
 
 https://projects.gnome.org/evince/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+GhostScript
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GhostScript
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Interpretador de linguagem 
+\emph on
+PostScript
+\emph default
+ e de arquivos PDF.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.ghostscript.com
 \end_layout
 
 \end_inset
@@ -4683,156 +5022,6 @@ sumir
 
 \end_layout
 
-\begin_layout Section
-Emulação de Comandos de Teclado e Mouse
-\end_layout
-
-\begin_layout Description
-xdotool
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-xdotool
-\end_layout
-
-\end_inset
-
-: Gratuito, para 
-\emph on
-Linux
-\emph default
-.
- Ferramenta que permite enviar sequências de pressionamentos de teclas,
- posicionamentos do 
-\emph on
-\lang english
-mouse
-\emph default
-\lang brazilian
-, pressionamentos de botões do 
-\emph on
-\lang english
-mouse
-\emph default
-\lang brazilian
-.
- Há também outros recursos disponíveis, como leitura e alteração de posicionamen
-to e geometria de janelas.
- É uma ferramenta de automação do X11 para linha de comando.
- Ver também 
-\emph on
-
-\begin_inset CommandInset ref
-LatexCommand nameref
-reference "subsec:xdotool"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand vpageref
-reference "subsec:xdotool"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-
-\emph default
-.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://www.semicomplete.com/projects/xdotool
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-tmux
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-tmux
-\end_layout
-
-\end_inset
-
-: 
-\emph on
-Terminal Multiplexer
-\emph default
-.
- Gratuito, para 
-\emph on
-Linux
-\emph default
-.
- Permite criar, acessar e controlar diversos terminais a partir de uma única
- tela.
- O 
-\family typewriter
-tmux
-\family default
- pode ser desanexado de uma tela e continuar a rodar no plano de fundo e,
- depois, pode ser reanexado.
- Ver também 
-\emph on
-
-\begin_inset CommandInset ref
-LatexCommand nameref
-reference "subsec:tmux"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand vpageref
-reference "subsec:tmux"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-sumir
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Chapter
 Eletrônica
 \end_layout
@@ -5711,6 +5900,90 @@ http://gutocarvalho.net/wordpress/2010/05/11/cntlm-uma-solucao-rapida-e-elegante
 \end_layout
 
 \begin_layout Subsection
+Convert
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Convert
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Convert"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Alteração de Formato e Ajuste de Qualidade
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ convert -quality <qualidade> <arq_entrada> <arq_saida>
+\end_layout
+
+\begin_layout Standard
+Por exemplo:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ convert -quality 80 imagem.png imagem.jpeg
+\end_layout
+
+\begin_layout Standard
+Este comando irá converter uma imagem PNG para uma JPEG com fator de qualidade
+ igual a 80%.
+\end_layout
+
+\begin_layout Subsubsection
+Opções da Linha de Comando
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://imagemagick.org/script/convert.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Exemplos de Uso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://imagemagick.org/Usage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Destreamer
 \begin_inset Index idx
 status collapsed
@@ -6062,7 +6335,32 @@ Gimp
 
 \end_deeper
 \begin_layout Subsubsection
-Extração de Quadros de Um Vídeo
+Extração de Todos os Quadros de Um Vídeo
+\end_layout
+
+\begin_layout Standard
+Pode-se executar o seguinte comando:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ ffmpeg -i "${arq_e]" '%04d.png'
+\end_layout
+
+\begin_layout Standard
+Na especificação do arquivo de saída, a formatação do nome de arquivo gera
+ números sequenciais de 4 dígitos precedidos com 0 e formato de arquivo
+ do tipo 
+\family sans
+png
+\family default
+.
+ Outros padrões para estes podem ser utilizados.
+\end_layout
+
+\begin_layout Subsubsection
+Extração de Quadros Específicos de Um Vídeo
 \end_layout
 
 \begin_layout Standard
@@ -7786,8 +8084,76 @@ name "subsec:Pdfjam"
 
 \end_layout
 
+\begin_layout Subsubsection
+Geração de PDF a partir de Imagens
+\end_layout
+
 \begin_layout Standard
-Ver 
+Para gerar um PDF a partir de imagens, pode-se utilizar o comando:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ pdfjam <dir_imagens>/* -o <arq_saida.pdf>
+\end_layout
+
+\begin_layout Standard
+As imagens serão lidas em ordem alfabética crescente.
+\end_layout
+
+\begin_layout Standard
+O tamanho final do arquivo PDF será aproximadamente o tamanho total ocupado
+ pelas imagens.
+ Portanto, para ajustar o tamanho final do PDF, a forma mais prática é ajustar
+ o tamanho das imagens originais.
+\end_layout
+
+\begin_layout Standard
+As imagens podem estar em formato PNG ou JPEG, por exemplo.
+ O suporte completo é compatível com o que for suportado pelo pacote 
+\family sans
+pdfpages
+\family default
+ do LaTeX.
+\end_layout
+
+\begin_layout Standard
+O 
+\family typewriter
+convert
+\family default
+ pode ser utilizado para ajustar as propriedades das imagens originais,
+ como o formato e a qualidade.
+ Ver a 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Convert"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:Convert"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ para mais informações sobre o 
+\family typewriter
+convert
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Ver também a 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "subsec:Geração-de-Brochuras"
@@ -7797,7 +8163,7 @@ noprefix "false"
 
 \end_inset
 
- na 
+ 
 \begin_inset CommandInset ref
 LatexCommand vpageref
 reference "subsec:Geração-de-Brochuras"
@@ -11412,15 +11778,49 @@ apt-get
 
 \begin_deeper
 \begin_layout Standard
+Instala um pacote [com versão específica]:
+\end_layout
+
+\begin_layout Standard
 
 \family typewriter
-$ apt-get install <pacote>
+$ apt-get install <pacote>[=<versão>]
+\end_layout
+
+\begin_layout Standard
+Lista as versões disponíveis de um pacote:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ apt list -a <pacote>
+\end_layout
+
+\begin_layout Standard
+Limpa o 
+\emph on
+\lang english
+cache
+\emph default
+\lang brazilian
+ de pacotes baixados:
 \end_layout
 
 \begin_layout Standard
 
 \family typewriter
 $ apt-get clean
+\end_layout
+
+\begin_layout Standard
+Remoção de pacotes instalados não mais necessários:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ apt autoremove
 \end_layout
 
 \end_deeper
@@ -11439,6 +11839,16 @@ Lista os arquivos de um pacote instalado:
 
 \family typewriter
 $ dpkg -L <pacote>
+\end_layout
+
+\begin_layout Standard
+Instala um pacote:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ dpkg -i <pacote>
 \end_layout
 
 \end_deeper
@@ -11771,6 +12181,75 @@ limpa
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+Utilitários de Linha de Comando
+\end_layout
+
+\begin_layout Description
+
+\family typewriter
+tasklist
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+tasklist
+\end_layout
+
+\end_inset
+
+ 
+\family default
+Lista tarefas.
+\end_layout
+
+\begin_layout Description
+
+\family typewriter
+taskkill
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+taskkill
+\end_layout
+
+\end_inset
+
+
+\family default
+ Remove tarefas.
+\end_layout
+
+\begin_layout Description
+
+\family typewriter
+pssuspend
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+pssuspend
+\end_layout
+
+\end_inset
+
+
+\family default
+ Suspende tarefas.
+ Faz parte do pacote 
+\family sans
+PSTools
+\family default
+.
+\end_layout
+
 \begin_layout Subsection
 Código de Página para Nomes de Arquivos
 \end_layout
