@@ -9,6 +9,9 @@
 % Indenta os primeiros parágrafos.
 \usepackage{indentfirst}
 
+% Unidades do SI.
+\usepackage{siunitx}
+
 % Garante não ultrapassar a URL para além da borda do texto.
 %	(Acrescentar também 'hyphens' nas opções globais da "Classe de Documento".)
 \sloppy
@@ -22,6 +25,25 @@
       {.5\baselineskip}%
       {\normalfont\normalsize\bfseries}}
 \makeatother
+
+% Espaço vertical geral (\espv) e para tabelas (\strutp) - em tabelas, \baselineskip = 0.
+% Nota: há o comando pré-definido \strut.
+\newlength{\tabbaselineskip}
+\setlength{\tabbaselineskip}{\baselineskip}
+\newcommand{\espv}[1][4]{\rule[-.3\baselineskip]{0pt}{#1\baselineskip}}
+\newcommand{\strutp}[1][4]{\rule[-.3\tabbaselineskip]{0pt}{#1\tabbaselineskip}}
+
+% Forma alternativa para alterar o espaçamento entre linhas de tabela.
+\newcommand{\esptab}[1][1.5]{\renewcommand\arraystretch{#1}}
+
+% Personalização para unidades SI (por siunitx}.
+\sisetup{copy-decimal-marker,input-decimal-markers={,.kM}}
+
+%%%%%%%%%%%%
+% Inicializações globais.
+
+% Espaçamento maior entre linhas de tabela.
+\esptab
 \end_preamble
 \options hyphens
 \use_default_options true
@@ -147,7 +169,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.6
+ 0.2.8
 \end_layout
 
 \begin_layout Author
@@ -2576,6 +2598,13 @@ Rclone
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Rclone"
+
+\end_inset
+
 : Gratuito, multiplataforma.
  Ferramenta para 
 \emph on
@@ -2625,6 +2654,13 @@ Rclone
 
 Browser
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "RcloneBrowser"
 
 \end_inset
 
@@ -8179,7 +8215,103 @@ noprefix "false"
 \begin_layout Subsection
 Produtos 
 \emph on
+Google
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Google, 
+\emph default
+Produtos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\emph on
+Google Drive
+\end_layout
+
+\begin_layout Standard
+É possível navegar pelos arquivos do 
+\emph on
+Google Drive
+\emph default
+ no computador e, inclusive, acessar estes arquivos por meio de um ponto
+ de montagem.
+ Para tanto, pode-se utilizar os programas:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "Rclone"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (ver a seção 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "Rclone"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "RcloneBrowser"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (ver a seção 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "RcloneBrowser"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
+Produtos 
+\emph on
 Microsoft
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Microsoft, 
+\emph default
+Produtos
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Produtos-Microsoft"
@@ -8338,6 +8470,20 @@ Note-se o
 Produtos 
 \emph on
 Oracle
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Oracle, 
+\emph default
+Produtos
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Produtos-Oracle"
@@ -10860,6 +11006,199 @@ status open
 
 https://askubuntu.com/questions/1378363/how-to-mount-external-drive-with-the-same
 -name-every-time
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Liberação de Cache de Buffer de Disco
+\end_layout
+
+\begin_layout Standard
+Para limpar o cache de buffer:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ sudo sh -c `echo 
+\series bold
+\emph on
+n
+\series default
+\emph default
+ >/proc/sys/vm/drop_caches'
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\emph on
+n
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Objeto liberado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cache de página (
+\emph on
+\lang english
+pagecache
+\emph default
+\lang brazilian
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+\lang english
+dentries
+\emph default
+\lang brazilian
+ e 
+\emph on
+\lang english
+inodes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+\lang english
+pagecache
+\emph default
+\lang brazilian
+, 
+\emph on
+\lang english
+dentries
+\emph default
+\lang brazilian
+ e 
+\emph on
+\lang english
+inodes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+Por exemplo, para limpar todo o 
+\emph on
+\lang english
+cache
+\emph default
+\lang brazilian
+ de 
+\emph on
+\lang english
+buffer
+\emph default
+\lang brazilian
+:
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+$ sudo sh -c `echo 3 >/proc/sys/vm/drop_caches'
+\end_layout
+
+\begin_layout Paragraph*
+Referência:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://unix.stackexchange.com/questions/87908/how-do-you-empty-the-buffers-and-ca
+che-on-a-linux-system
 \end_layout
 
 \end_inset
