@@ -169,7 +169,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.8
+ 0.2.9
 \end_layout
 
 \begin_layout Author
@@ -4505,6 +4505,165 @@ sumir
 \end_layout
 
 \begin_layout Section
+Programação
+\end_layout
+
+\begin_layout Description
+PyCharm
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PyCharm
+\end_layout
+
+\end_inset
+
+: Gratuito ou comercial, multiplataforma.
+ IDE de desenvolvimento de programas em 
+\emph on
+Python
+\emph default
+.
+ Há a Edição da Comunidade que é gratuita.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.jetbrains.com/pycharm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Anaconda
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Anaconda
+\end_layout
+
+\end_inset
+
+: Gratuito ou comercial, multiplataforma.
+ Distribuição Python/R para ciência de dados contendo o pacote 
+\family typewriter
+conda
+\family default
+.
+ Distribuição bem completa, com mais de 250 pacotes na instalação (ocupando
+ mais de 4GiB de espaço).
+ Ver a seção 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Anaconda-Miniconda-Conda"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://docs.anaconda.com/free/anaconda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Miniconda
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Miniconda
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplaforma.
+ Instalação mínima livre para 
+\family typewriter
+conda
+\family default
+.
+ Contém apenas o 
+\family typewriter
+conda
+\family default
+, o Python, os pacotes dos quais ambos são dependentes e um número reduzido
+ de outros pacotes úteis.
+ Mais pacotes podem ser instalados com 
+\family typewriter
+conda install
+\family default
+.
+ (Ocupa em torno de 480 MiB.) Ver a seção 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Anaconda-Miniconda-Conda"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://docs.anaconda.com/free/miniconda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Rede
 \end_layout
 
@@ -5896,6 +6055,91 @@ apt-get remove <pacote>
 ) e depois proceder com a instalação normalmente.
 \end_layout
 
+\begin_layout Subsection
+Anaconda, Miniconda, Conda
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Anaconda
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Miniconda
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Conda
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Anaconda-Miniconda-Conda"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Após a instalação, tendo respondido 
+\begin_inset Quotes eld
+\end_inset
+
+sim
+\begin_inset Quotes erd
+\end_inset
+
+ para a alteração automática do 
+\family typewriter
+~/.bash
+\family default
+, a autoinicialização do conda com o 
+\family typewriter
+bash
+\family default
+ pode ser controlada pelos comandos seguintes:
+\end_layout
+
+\begin_layout Itemize
+Para desativar a autoinicialização:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ conda config --set auto_activate_base False
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Para ativar a autoinicialização:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ conda config --set auto_activate_base True
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Cntlm
 \begin_inset Index idx
