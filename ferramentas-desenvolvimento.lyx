@@ -169,7 +169,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.9
+ 0.2.11
 \end_layout
 
 \begin_layout Author
@@ -4519,6 +4519,13 @@ PyCharm
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "descr:PyCharm"
+
+\end_inset
+
 : Gratuito ou comercial, multiplataforma.
  IDE de desenvolvimento de programas em 
 \emph on
@@ -4536,6 +4543,47 @@ status collapsed
 \begin_layout Plain Layout
 
 https://www.jetbrains.com/pycharm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Conda
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Conda
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Ambiente virtual para Python.
+ Ver 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "descr:Miniconda"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://docs.anaconda.com/free/miniconda
 \end_layout
 
 \end_inset
@@ -4601,6 +4649,13 @@ Miniconda
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "descr:Miniconda"
+
+\end_inset
+
 : Gratuito, multiplaforma.
  Instalação mínima livre para 
 \family typewriter
@@ -4621,7 +4676,7 @@ conda install
  (Ocupa em torno de 480 MiB.) Ver a seção 
 \begin_inset CommandInset ref
 LatexCommand vref
-reference "subsec:Anaconda-Miniconda-Conda"
+reference "subsec:Selector-Gadget"
 plural "false"
 caps "false"
 noprefix "false"
@@ -4639,6 +4694,87 @@ status collapsed
 \begin_layout Plain Layout
 
 https://docs.anaconda.com/free/miniconda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Conan
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Conan
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Ambiente virtual para C/C++.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://conan.io/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Selector
+\begin_inset space ~
+\end_inset
+
+Gadget
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Selector
+\begin_inset space ~
+\end_inset
+
+Gadget
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Extensão para navegadores que permite identificar mais facilmente as chaves
+ HTML de uma página.
+ É em especial útil para fazer raspagem.
+ Ver a seção 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Selector-Gadget"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://selectorgadget.com/
 \end_layout
 
 \end_inset
@@ -5601,6 +5737,44 @@ https://ngspice.sourceforge.io
 
 \end_layout
 
+\begin_layout Description
+SimulIDE
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SimulIDE
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Simulador didático de circuitos digitais e analógicos.
+ Entre outros recursos, permite interação com chaves e exibe valores dinâmicos
+ em 
+\emph on
+\lang english
+displays
+\emph default
+\lang brazilian
+ e motores em movimento.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://simulide.com/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -6096,6 +6270,12 @@ name "subsec:Anaconda-Miniconda-Conda"
 
 \end_layout
 
+\begin_layout Subsubsection
+Autoinicialização do 
+\family sans
+conda
+\end_layout
+
 \begin_layout Standard
 Após a instalação, tendo respondido 
 \begin_inset Quotes eld
@@ -6109,7 +6289,11 @@ sim
 \family typewriter
 ~/.bash
 \family default
-, a autoinicialização do conda com o 
+, a autoinicialização do 
+\family sans
+conda
+\family default
+ com o 
 \family typewriter
 bash
 \family default
@@ -6140,6 +6324,240 @@ $ conda config --set auto_activate_base True
 \end_layout
 
 \end_deeper
+\begin_layout Subsubsection
+Ambiente Virtual Python para Raspagem (
+\emph on
+\lang english
+Scraping
+\emph default
+\lang brazilian
+) – Criação, Ativação e Uso
+\end_layout
+
+\begin_layout Enumerate
+Criar um diretório específico para o projeto e entrar nele.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ conda create -n <nome_ambiente_virtual> [python=<versão>]
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ conda activate <nome_ambiente_virtual>
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ pip install scrapy
+\end_layout
+
+\begin_layout Enumerate
+Criar um projeto no IDE (
+\emph on
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "descr:PyCharm"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\emph default
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Aqui, a referência textual inclui os dois pontos digitados na descrição.
+ Há alguma forma de evitar os dois pontos?
+\end_layout
+
+\end_inset
+
+, por exemplo) e informar o interpretador recém-criado pelo 
+\family sans
+conda
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Abrir o terminal no IDE (como sugestão).
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ scrapy startproject <nome_projeto_raspagem>
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ cd <nome_projeto_raspagem>
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+$ scrapy genspider <nome_spider> <domínio_spider>
+\end_layout
+
+\begin_layout Enumerate
+Escrever o código principal em 
+\family typewriter
+\SpecialChar ldots
+/spiders/<nome_spider>
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Para testes interativos de raspagem antes de escrever o código:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ scrapy shell
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+>>> fetch('<URL>')
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+>>> response.css('<chave>[::text]')[.get() | .getall() | .re(r'<expr_reg>')]
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+>>> response.xpath('<caminho>')
+\end_layout
+
+\begin_layout Standard
+Os objetos retornados por 
+\family typewriter
+response
+\family default
+ também aceitam os mesmos métodos.
+ Por exemplo:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+resp = response.css('<chave_1>')
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+dado = resp.css('<chave_2>::text').getall()
+\end_layout
+
+\begin_layout Standard
+Para executar o programa:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ scrapy crawl <nome_spider> [-o | -O <nome_arquivo>.<json | csv>]
+\end_layout
+
+\begin_layout Standard
+em que 
+\family typewriter
+-o
+\family default
+ adiciona a saída ao arquivo e 
+\family typewriter
+-O
+\family default
+ sobrescreve o arquivo com a saída.
+ O arquivo terá o formato especificado.
+\end_layout
+
+\begin_layout Paragraph*
+Referências
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://docs.scrapy.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.youtube.com/watch?v=QdLgNr1mKQU
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Listagem de Ambientes Virtuais Disponíveis
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ conda info --envs
+\end_layout
+
+\begin_layout Subsubsection
+Remoção de Ambiente Virtual do 
+\family sans
+conda
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ conda remove -n <nome_ambiente_virtual> --all
+\end_layout
+
+\begin_layout Subsubsection
+Atualização do 
+\family sans
+conda
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ conda install -n base -c defaults conda[=<versão>]
+\end_layout
+
 \begin_layout Subsection
 Cntlm
 \begin_inset Index idx
@@ -9558,6 +9976,73 @@ SESSION_PRIVS
 As consultas iniciadas por DBA também possuem versões equivalentes para
  início com ALL e USER.
  Ver o citado manual para mais informações e outras consultas disponíveis.
+\end_layout
+
+\begin_layout Subsection
+Selector Gadget
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Selector Gadget
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Selector-Gadget"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para o 
+\emph on
+Google Chrome
+\emph default
+, há uma extensão no próprio repositório que pode ser instalada.
+ Para o 
+\emph on
+Firefox
+\emph default
+ (e, eventualmente, outros navegadores), basta arrastar um 
+\emph on
+\lang english
+link
+\emph default
+\lang brazilian
+ apontado na página do 
+\emph on
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Selector Gadget"
+target "https://selectorgadget.com/"
+literal "false"
+
+\end_inset
+
+
+\emph default
+ para a barra de favoritos (na página, procure por 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+\lang english
+Or drag this link to your bookmark bar
+\emph default
+\lang brazilian
+
+\begin_inset Quotes erd
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
