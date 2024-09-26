@@ -169,7 +169,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.11
+ 0.2.12
 \end_layout
 
 \begin_layout Author
@@ -3129,7 +3129,7 @@ Convert
 
 \end_inset
 
-: Gratuito, para multiplataforma.
+: Gratuito, multiplataforma.
  Realiza diversas operações sobre imagens.
  Opera por linha de comando.
  Faz parte do pacote 
@@ -3243,6 +3243,63 @@ status collapsed
 \begin_layout Plain Layout
 
 inkscape.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Imagecodecs
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+imagecodecs
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ Biblioteca 
+\emph on
+Python
+\emph default
+ com funções orientadas a bloco e com buffer em memória para transformação,
+ compressão e descompressão de imagens ou em conjunto com pacotes de processamen
+to de imagens científicas.
+ Ver também a 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:imagecodecs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:imagecodecs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://pypi.org/project/imagecodecs/
 \end_layout
 
 \end_inset
@@ -6157,6 +6214,350 @@ $ pdfjam <arquivo.pdf> '5,4,7,2' --no-landscape --angle 180 -o /dev/stdout
  '3,4' --no-landscape --nup 2x2 -o <saida.pdf>
 \end_layout
 
+\begin_layout Subsection
+Reconfiguração de Celular
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Celular, reconfiguração
+\end_layout
+
+\end_inset
+
+ com 
+\emph on
+\lang english
+Backup
+\emph default
+\lang brazilian
+ e Restauração
+\end_layout
+
+\begin_layout Standard
+Procedimento aplicável a celulares 
+\emph on
+Android
+\emph default
+ para realizar o 
+\emph on
+\lang english
+backup
+\emph default
+\lang brazilian
+, a reconfiguração (restauração de fábrica) e a restauração do 
+\emph on
+\lang english
+backup
+\emph default
+\lang brazilian
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Conectar o celular em uma porta USB do computador.
+\end_layout
+
+\begin_layout Enumerate
+No Android:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ativar o 
+\emph on
+Modo Desenvolvedor.
+\end_layout
+
+\begin_layout Enumerate
+Habilitar a 
+\emph on
+Depuração USB
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Exportar os contatos para a pasta 
+\family sans
+\emph on
+Downloads
+\family default
+\emph default
+, em formato .vcf.
+\end_layout
+
+\begin_layout Enumerate
+Exportar outros dados de aplicativos para a pasta 
+\family sans
+\emph on
+Downloads
+\family default
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Salvar as telas dos aplicativos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Utilizar o 
+\lang english
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+screenshot
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+\lang brazilian
+ – basta pressionar simultaneamente os botões 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Volume menos
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ e 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Liga/Desliga
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+No Computador:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Criar uma pasta de 
+\emph on
+\lang english
+backup
+\emph default
+\lang brazilian
+ – sugere-se identificar o celular e a data de realização do 
+\emph on
+\lang english
+backup
+\emph default
+\lang brazilian
+ no nome da pasta.
+\end_layout
+
+\begin_layout Enumerate
+Entrar na pasta de 
+\emph on
+\lang english
+backup
+\emph default
+\lang brazilian
+.
+\end_layout
+
+\begin_layout Enumerate
+Executar o comando seguinte para copiar todos os arquivos de 
+\family sans
+/sdcard
+\family default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ adb pull -a /sdcard
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Criar a sub-pasta 
+\family sans
+pacotes
+\family default
+ e entrar nela:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ mkdir pacotes; cd pacotes
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Salvar uma lista dos pacotes instalados:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ adb shell pm list packages > pacotes.lista
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ adb shell pm list packages -f -s >> pacotes-sistema.lista
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ adb shell pm list packages -f -3 >> pacotes-todos
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Criar a sub-pasta 
+\family sans
+apk
+\family default
+ e entrar nela:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ mkdir apk; cd apk
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Executar o seguinte comando para salvar os pacotes instalados no celular:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ for i in $(adb shell pm list packages | awk -F':' '{print $2}'); do adb
+ pull "$(adb shell pm path $i | awk -F':' '{print $2}')"; mv base.apk $i.apk
+ &> /dev/null ; done
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+No Android:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Realizar a restauração de fábrica.
+\end_layout
+
+\begin_layout Enumerate
+Aplicar as atualizações do 
+\emph on
+Sistema Android
+\emph default
+ ciclicamente até que todas sejam instaladas.
+\end_layout
+
+\begin_layout Enumerate
+Instalar os aplicativos de interesse, menos o 
+\emph on
+WhatsApp
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Opcionalmente, inspecionar os arquivos salvos no 
+\emph on
+\lang english
+bakcup
+\emph default
+\lang brazilian
+ e apagar ou mover para outro local os arquivos suspeitos.
+\end_layout
+
+\begin_layout Enumerate
+Copiar para o celular os dados salvos no computador, por meio do comando:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ adb push --sync <Diretório> /sdcard/
+\end_layout
+
+\begin_layout Standard
+em que 
+\family typewriter
+<Diretório>
+\family default
+ é um dos diretórios dentro de 
+\family typewriter
+/sdcard/
+\family default
+.
+ Sugere-se que seja copiado um diretório de interesse por vez (após a inspeção),
+ a fim de evitar o envio de possíveis dados suspeitos de volta para o celular.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Certificar que o conteúdo de 
+\family typewriter
+sdcard/Android/media/com.whatsapp
+\family default
+ também tenha sido enviado (após a inspeção).
+\end_layout
+
+\begin_layout Enumerate
+Instalar o 
+\emph on
+WhatsApp
+\emph default
+ e realizar sua restauração.
+\end_layout
+
+\begin_layout Enumerate
+Apagar as conversas e correspondentes mídias de itens suspeitos dentro do
+ 
+\emph on
+WhatsApp
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Apagar contatos telefônicos desconhecidos, suspeitos ou com códigos de telefone
+ estranhos.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Programas – Notas e Dicas
 \end_layout
@@ -8102,6 +8503,67 @@ config
 
 \family typewriter
 $ chmod 644 ~/.ssh/config
+\end_layout
+
+\begin_layout Subsection
+imagecodecs
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+imagecodecs
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:imagecodecs"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O 
+\family typewriter
+imagecodecs
+\family default
+ possui funções implementadas para decodificar e/ou codificar Zlib (DEFLATE),
+ GZIP, LZMA, ZStandard (ZSTD), Blosc, Brotli, Snappy, BZ2, LZ4, LZ4F, LZ4HC,
+ LZ4H5, LZW, LZO, LZF, LZFSE, LZHAM, PGLZ (PostgreSQL LZ), RCOMP (Rice),
+ ZFP, SZ3, Pcodec, SPERR, AEC, SZIP, LERC, EER, NPY, BCn, DDS, BMP, PNG,
+ APNG, GIF, TIFF, WebP, JPEG 8 and 12-bit, Lossless JPEG (LJPEG, LJ92, JPEGLL),
+ JPEG 2000 (JP2, J2K), JPEG LS, JPEG XL, JPEG XS, JPEG XR (WDP, HD Photo),
+ Ultra HDR (JPEG_R), MOZJPEG, AVIF, HEIF, QOI, RGBE (HDR), Jetraw, DICOMRLE,
+ PackBits, Packed Integers, Delta, XOR Delta, Floating Point Predictor,
+ Bitorder reversal, Byteshuffle, Bitshuffle, Float24 (24-bit floating point),
+ Quantize (Scale, BitGroom, BitRound, GranularBR), and CMS (color space
+ transformations).
+ Ainda, há funções de verificação de redundância cíclica (
+\emph on
+\lang english
+checkum
+\emph default
+\lang brazilian
+) para crc32, adler32, fletcher32, and Jenkins lookup3.
+ (Texto conforme informações na página do projeto.)
+\end_layout
+
+\begin_layout Standard
+É possível utilizar o 
+\family typewriter
+imagecodecs
+\family default
+ por linha de comando:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ imagecodecs <arquivo>
 \end_layout
 
 \begin_layout Subsection
@@ -11342,6 +11804,285 @@ k,0,1
 \end_layout
 
 \begin_layout Subsection
+Imagem
+\end_layout
+
+\begin_layout Subsection
+Vídeo
+\end_layout
+
+\begin_layout Subsubsection
+Como Utilizar o Celular como 
+\emph on
+WebCam
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Celular-Webcam"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No 
+\emph on
+Android
+\emph default
+, instalar o aplicativo 
+\emph on
+IP Webcam
+\emph default
+.
+ No 
+\emph on
+Linux
+\emph default
+, instalar o 
+\emph on
+v4l2loopback
+\emph default
+.
+ Executar:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\family typewriter
+$ sudo modprobe v4l2loopback video_nr=
+\series bold
+<núm_vídeo>
+\series default
+ card_label="
+\series bold
+<nome_dispositivo_virtual>
+\series default
+" exclusive_caps=1
+\end_layout
+
+\begin_layout Standard
+\align left
+$ avconv -i rtsp://
+\series bold
+<ip>
+\series default
+:
+\series bold
+<porta>
+\series default
+/h264_ulaw.sdp -vsync 2 -f v4l2 /dev/video
+\series bold
+<núm_vídeo>
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por exemplo:
+\family typewriter
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\family typewriter
+$ sudo modprobe v4l2loopback video_nr=10 card_label="Câmera IP" exclusive_caps=1
+\end_layout
+
+\begin_layout Standard
+\align left
+$ avconv -i rtsp://192.168.1.101:8080/h264_ulaw.sdp -vsync 2 -f v4l2 /dev/video10
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para mais informações, ver as documentações do 
+\emph on
+avconv
+\emph default
+ e do 
+\emph on
+v4l2loopback
+\emph default
+.
+\end_layout
+
+\begin_layout Subsubsection
+
+\family sans
+Como Instalar e Usar o obs-v4l2sink
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:obs-v4l2sink"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para a instalação do 
+\family sans
+obs-v4l2sink
+\family default
+, seguir os passos de sua página no 
+\emph on
+Github
+\emph default
+, transcritos abaixo:
+\end_layout
+
+\begin_layout Itemize
+Install QT
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ sudo apt install qtbase5-dev
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Get obs-studio source code
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ git clone --recursive https://github.com/obsproject/obs-studio.git
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Build plugins
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ git clone https://github.com/CatxFish/obs-v4l2sink.git cd obs-v4l2sink mkdir
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ build && cd build
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ cmake -DLIBOBS_INCLUDE_DIR="../../obs-studio/libobs" -DCMAKE_INSTALL_PREFIX=/usr
+ ..
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ make -j4 sudo make install 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Se ocorrer erro durante o 
+\family typewriter
+cmake
+\family default
+ (LIBOBS não encontrado), instalar também o 
+\family typewriter
+libobs-dev
+\family default
+:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ sudo apt install libobs-dev
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se, após carregar o OBS, o 
+\emph on
+plugin 
+\family sans
+\emph default
+v4l2sink
+\family default
+ não for carregado, executar o comando seguinte:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ cd /usr/lib/x86_64-linux-gnu/obs-plugins/
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ sudo ln -s /usr/lib/obs-plugins/v4l2sink.so
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para a operação, deve-se selecionar, dentro do 
+\family sans
+OBS Studio
+\family default
+, o menu 
+\family sans
+Ferramentas > V4L2 Video Output
+\family default
+ e indicar o dispositivo 
+\family sans
+v4l2loopback 
+\family default
+desejado.
+ Quanto ao formato, o YUV420 provocou o encerramento abrupto do 
+\family sans
+OBS Studio
+\family default
+, enquanto que o RGB32 funcionou perfeitamente.
+\end_layout
+
+\begin_layout Subsection
 Disco
 \end_layout
 
@@ -11999,281 +12740,6 @@ ux
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Vídeo
-\end_layout
-
-\begin_layout Subsubsection
-Como Utilizar o Celular como 
-\emph on
-WebCam
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Celular-Webcam"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-No 
-\emph on
-Android
-\emph default
-, instalar o aplicativo 
-\emph on
-IP Webcam
-\emph default
-.
- No 
-\emph on
-Linux
-\emph default
-, instalar o 
-\emph on
-v4l2loopback
-\emph default
-.
- Executar:
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align left
-
-\family typewriter
-$ sudo modprobe v4l2loopback video_nr=
-\series bold
-<núm_vídeo>
-\series default
- card_label="
-\series bold
-<nome_dispositivo_virtual>
-\series default
-" exclusive_caps=1
-\end_layout
-
-\begin_layout Standard
-\align left
-$ avconv -i rtsp://
-\series bold
-<ip>
-\series default
-:
-\series bold
-<porta>
-\series default
-/h264_ulaw.sdp -vsync 2 -f v4l2 /dev/video
-\series bold
-<núm_vídeo>
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Por exemplo:
-\family typewriter
-
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align left
-
-\family typewriter
-$ sudo modprobe v4l2loopback video_nr=10 card_label="Câmera IP" exclusive_caps=1
-\end_layout
-
-\begin_layout Standard
-\align left
-$ avconv -i rtsp://192.168.1.101:8080/h264_ulaw.sdp -vsync 2 -f v4l2 /dev/video10
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Para mais informações, ver as documentações do 
-\emph on
-avconv
-\emph default
- e do 
-\emph on
-v4l2loopback
-\emph default
-.
-\end_layout
-
-\begin_layout Subsubsection
-
-\family sans
-Como Instalar e Usar o obs-v4l2sink
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:obs-v4l2sink"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Para a instalação do 
-\family sans
-obs-v4l2sink
-\family default
-, seguir os passos de sua página no 
-\emph on
-Github
-\emph default
-, transcritos abaixo:
-\end_layout
-
-\begin_layout Itemize
-Install QT
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\family typewriter
-$ sudo apt install qtbase5-dev
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Get obs-studio source code
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\family typewriter
-$ git clone --recursive https://github.com/obsproject/obs-studio.git
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Build plugins
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\family typewriter
-$ git clone https://github.com/CatxFish/obs-v4l2sink.git cd obs-v4l2sink mkdir
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-$ build && cd build
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-$ cmake -DLIBOBS_INCLUDE_DIR="../../obs-studio/libobs" -DCMAKE_INSTALL_PREFIX=/usr
- ..
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-$ make -j4 sudo make install 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-Se ocorrer erro durante o 
-\family typewriter
-cmake
-\family default
- (LIBOBS não encontrado), instalar também o 
-\family typewriter
-libobs-dev
-\family default
-:
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-$ sudo apt install libobs-dev
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Se, após carregar o OBS, o 
-\emph on
-plugin 
-\family sans
-\emph default
-v4l2sink
-\family default
- não for carregado, executar o comando seguinte:
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-$ cd /usr/lib/x86_64-linux-gnu/obs-plugins/
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-$ sudo ln -s /usr/lib/obs-plugins/v4l2sink.so
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Para a operação, deve-se selecionar, dentro do 
-\family sans
-OBS Studio
-\family default
-, o menu 
-\family sans
-Ferramentas > V4L2 Video Output
-\family default
- e indicar o dispositivo 
-\family sans
-v4l2loopback 
-\family default
-desejado.
- Quanto ao formato, o YUV420 provocou o encerramento abrupto do 
-\family sans
-OBS Studio
-\family default
-, enquanto que o RGB32 funcionou perfeitamente.
 \end_layout
 
 \begin_layout Subsection
