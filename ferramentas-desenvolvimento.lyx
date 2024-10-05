@@ -169,7 +169,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.12
+ 0.2.13
 \end_layout
 
 \begin_layout Author
@@ -6380,6 +6380,18 @@ backup
 \end_layout
 
 \begin_layout Enumerate
+Executar o seguinte comando para verificar se o celular foi reconhecido:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ adb devices
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 Executar o comando seguinte para copiar todos os arquivos de 
 \family sans
 /sdcard
@@ -8564,6 +8576,24 @@ imagecodecs
 
 \family typewriter
 $ imagecodecs <arquivo>
+\end_layout
+
+\begin_layout Subsubsection*
+Referências e exemplos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/cgohlke/imagecodecs
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
