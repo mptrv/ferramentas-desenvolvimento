@@ -169,7 +169,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.13
+ 0.2.22
 \end_layout
 
 \begin_layout Author
@@ -4568,7 +4568,7 @@ Programação
 \begin_layout Description
 PyCharm
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 PyCharm
@@ -4589,7 +4589,11 @@ name "descr:PyCharm"
 Python
 \emph default
 .
- Há a Edição da Comunidade que é gratuita.
+ A 
+\emph on
+Edição da Comunidade
+\emph default
+ é gratuita.
 \begin_inset Newline newline
 \end_inset
 
@@ -4600,6 +4604,82 @@ status collapsed
 \begin_layout Plain Layout
 
 https://www.jetbrains.com/pycharm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Builder
+\begin_inset space ~
+\end_inset
+
+(Gnome
+\begin_inset space ~
+\end_inset
+
+Builder)
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Builder
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Gnome Builder
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplataforma.
+ IDE de desenvolvimento do Gnome, com suporte às liguagens 
+\emph on
+C
+\emph default
+, 
+\emph on
+C++
+\emph default
+, 
+\emph on
+Python
+\emph default
+ e 
+\emph on
+Vala
+\emph default
+, entre outras.
+ Ver a seção 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Builder-(Gnome-Builder)"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://apps.gnome.org/pt-BR/Builder
 \end_layout
 
 \end_inset
@@ -6816,6 +6896,13 @@ $ scrapy startproject <nome_projeto_raspagem>
 
 \family typewriter
 $ cd <nome_projeto_raspagem>
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:$-cd-<nome_projeto_raspagem>"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -6831,6 +6918,29 @@ Escrever o código principal em
 /spiders/<nome_spider>
 \family default
 .
+\end_layout
+
+\begin_layout Quotation
+
+\bar under
+Nota
+\bar default
+: para o 
+\family typewriter
+scrapy
+\family default
+ (na linha de comando) reconhecer um projeto como ativo, deve-se estar dentro
+ do diretório do projeto (por isso, o passo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:$-cd-<nome_projeto_raspagem>"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ acima).
 \end_layout
 
 \begin_layout Standard
@@ -6971,10 +7081,288 @@ conda
 $ conda install -n base -c defaults conda[=<versão>]
 \end_layout
 
+\begin_layout Itemize
+
+\family typewriter
+$ conda update -n base -c conda-forge conda
+\end_layout
+
+\begin_layout Subsubsection
+Instalação do Pacote 
+\emph on
+PyGObject
+\emph default
+ e 
+\emph on
+Gtk3
+\end_layout
+
+\begin_layout Standard
+Para usar o 
+\emph on
+PyGObject
+\emph default
+ (com diversos módulos, entre eles, o 
+\emph on
+GTK
+\emph default
+) em uma instalação do 
+\family sans
+conda
+\family default
+, deve-se instalar o pacote por meio do comando 
+\family typewriter
+conda
+\family default
+.
+ Caso contrário, se instalado pelas ferramentas globais do sistema, os programas
+ das instalações específicas do 
+\family sans
+conda 
+\family default
+não enxergarão todos os arquivos necessários.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ conda install -c conda-forge pygobject gtk3
+\end_layout
+
+\begin_layout Subsubsection
+Solução do Erro 
+\family typewriter
+ffi_*
+\family default
+ ao Carregar 
+\emph on
+PyGObject
+\end_layout
+
+\begin_layout Standard
+Ao carregar o módulo 
+\family typewriter
+gi
+\family default
+ do pacote 
+\emph on
+PyGObject
+\emph default
+, pode ocorrer a seguinte mensagem de erro, com o 
+\emph on
+PyGObject 3.50.0
+\emph default
+:
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+ImportError: /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0: undefined symbol:
+ ffi_type_uint32, version LIBFFI_BASE_7.0
+\end_layout
+
+\begin_layout Standard
+Nestas ocasiões, pode-se carregar a correspondente biblioteca no 
+\family typewriter
+.bashrc
+\family default
+ da seguinte forma:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libffi.so.7
+\end_layout
+
+\begin_layout Subsection
+Builder (Gnome Builder)
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Builder
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Gnome Builder
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Builder-(Gnome-Builder)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Versão do Python
+\end_layout
+
+\begin_layout Standard
+Em projetos que utilizem o 
+\emph on
+Python
+\emph default
+, a versão do 
+\emph on
+Python
+\emph default
+ está associada ao 
+\emph on
+SDK
+\emph default
+ utilizado pelo 
+\emph on
+Builder
+\emph default
+.
+ Por exemplo, o 
+\emph on
+SDK 3.34
+\emph default
+ possui o 
+\emph on
+Python 3.7
+\emph default
+, enquanto que o 
+\emph on
+SDK 47
+\emph default
+ possui o 
+\emph on
+Python 3.12
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Para instalar o 
+\emph on
+SDK
+\emph default
+ desejado, deve-se ir ao 
+\family sans
+Menu Principal
+\family default
+ (à direita) 
+\family sans
+> Preferências > SDKs
+\family default
+.
+ Depois, em 
+\family sans
+Runtimes do Flatpak
+\family default
+, clicar em 
+\family sans
+Instalar
+\family default
+ no 
+\emph on
+SDK
+\emph default
+ desejado.
+ (
+\bar under
+Nota
+\bar default
+: na versão 
+\emph on
+3.36
+\emph default
+ do 
+\emph on
+Builder
+\emph default
+, há uma falha de tal forma que a seção 
+\emph on
+Runtimes do Flatpak
+\emph default
+ não fica visível; para torná-la visível deve-se alterar algum parâmetro
+ das outras opções – por exemplo, clicar em 
+\family sans
+Adicionar raiz de sistema
+\family default
+ e acrescentar e/ou alterar e/ou excluir algumas informações e aguardar
+ com a tela aberta um momento.) Alternativamente, pode-se tentar instalar
+ o 
+\emph on
+SDK
+\emph default
+ desejado diretamente pelo 
+\family typewriter
+flatpak:
+\end_layout
+
+\begin_layout Description
+
+\family typewriter
+\begin_inset Phantom Phantom
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ $ flatpak install org.gnome.Sdk/x86_64/47
+\end_layout
+
+\begin_layout Standard
+Este comando irá instalar a versão 
+\emph on
+47
+\emph default
+ do 
+\emph on
+SDK
+\emph default
+ para um ambiente 
+\emph on
+x86_64
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Depois de instalado, deve-se ir ao menu 
+\family sans
+Alternar superfície
+\family default
+ (à esquerda)
+\family sans
+ > Preferências de compilação
+\family default
+.
+ Na região 
+\family sans
+Runtime do aplicativo
+\family default
+, clicar em 
+\family sans
+Todos runtimes > Flatpak > GNOME > org.gnome.Sdk
+\family default
+ e ticar a versão desejada do SDK.
+\end_layout
+
 \begin_layout Subsection
 Cntlm
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Cntlm
@@ -7056,6 +7444,30 @@ $ convert -quality 80 imagem.png imagem.jpeg
 \begin_layout Standard
 Este comando irá converter uma imagem PNG para uma JPEG com fator de qualidade
  igual a 80%.
+\end_layout
+
+\begin_layout Subsubsection
+Fundo Transparente
+\end_layout
+
+\begin_layout Standard
+Para transformar uma cor em fundo transparente, pode-se utilizar o comando:
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+$ convert -transparent <cor> <arq_entrada> <arq_saída>
+\end_layout
+
+\begin_layout Standard
+Por exemplo:
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+$ convert -transparent white arq_e.png arq_s.png
 \end_layout
 
 \begin_layout Subsubsection
@@ -11245,6 +11657,30 @@ A solução foi excluir os referidos arquivos do segundo diretório.
 \end_layout
 
 \begin_layout Subsection
+Arquivos
+\end_layout
+
+\begin_layout Subsubsection
+Concatenar Arquivos de Texto
+\end_layout
+
+\begin_layout Standard
+Para concatenar arquivos de texto em um único arquivo, pode-se utilizar
+ o próprio comando 
+\family typewriter
+cat
+\family default
+.
+ Por exemplo:
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+$ cat *.csv > arquivo.csv
+\end_layout
+
+\begin_layout Subsection
 Áudio
 \end_layout
 
@@ -11835,6 +12271,350 @@ k,0,1
 
 \begin_layout Subsection
 Imagem
+\end_layout
+
+\begin_layout Subsection
+Instalação
+\end_layout
+
+\begin_layout Subsubsection
+Como Instalar o Linux a Partir da Imagem ISO usando o Grub
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+iso
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+grub
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+
+\bar under
+Nota
+\bar default
+: este procedimento poderá ser utilizado para inicializar qualquer imagem
+ ISO.
+\end_layout
+
+\begin_layout Enumerate
+Editar o Grub padrão:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ sudo nano /etc/default/grub
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Trocar as linhas:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+GRUB_TIMEOUT_STYLE=hidden
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+GRUB_TIMEOUT=0
+\end_layout
+
+\begin_layout Standard
+Por:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+GRUB_TIMEOUT_STYLE=menu
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+GRUB_TIMEOUT=10
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Salvar o arquivo e atualizar o Grub:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ sudo update-grub
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Copiar as imagens ISO para o local desejado do disco (diferente do disco
+ onde será feita a instalação) – abaixo segue uma sugestão de local:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ sudo mkdir /live
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ sudo cp <caminho de origem>/*.iso /live
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Adicionar a entrada de inicialização ao arquivo 
+\family typewriter
+/etc/grub.d/40_custom
+\family default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ sudo gvim /etc/grub.d/40_custom
+\end_layout
+
+\begin_layout Standard
+Escrever as seguintes linhas ao final do arquivo:
+\end_layout
+
+\begin_layout Verbatim
+
+menuentry "Linux Mint 22 Live"{
+\end_layout
+
+\begin_layout Verbatim
+
+	set isofile="/live/linuxmint-22-cinnamon-64bit.iso"
+\end_layout
+
+\begin_layout Verbatim
+
+	loopback loop (hd0,msdos1)$isofile
+\end_layout
+
+\begin_layout Verbatim
+
+	linux (loop)/casper/vmlinuz boot=casper 
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+
+		iso-scan/filename=${isofile} quiet splash
+\end_layout
+
+\begin_layout Verbatim
+
+	initrd (loop)/casper/initrd.lz
+\end_layout
+
+\begin_layout Verbatim
+
+}
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Notas:
+\end_layout
+
+\begin_layout Enumerate
+Aqui, 
+\family typewriter
+
+\begin_inset Quotes eld
+\end_inset
+
+Linux Mint 22 Live
+\begin_inset Quotes erd
+\end_inset
+
+
+\family default
+ é o nome que aparecerá no menu.
+ Poderá ser colocado qualquer nome que se desejar.
+\end_layout
+
+\begin_layout Enumerate
+
+Aqui, 
+\family typewriter
+linuxmint-22-cinnamon-64bit.iso
+\family default
+ é um exemplo.
+ O nome correto da imagem ISO deve ser digitado.
+\end_layout
+
+\begin_layout Enumerate
+O termo 
+\family typewriter
+(hd0,msdos1)
+\family default
+ refere-se ao disco e à partição onde encontrar o arquivo apontado pela
+ variável 
+\family typewriter
+isofile
+\family default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Os discos são numerados com base 0 (
+\family typewriter
+hd0, hd1, \SpecialChar ldots
+
+\family default
+) e as partições com base 1 (
+\family typewriter
+msdos1, msdos2, \SpecialChar ldots
+
+\family default
+).
+\end_layout
+
+\begin_layout Enumerate
+A identificação da partição indica o tipo de partição.
+ No caso do exemplo, é uma partição do tipo 
+\family typewriter
+msdos
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Pode-se utilizar o 
+\emph on
+GParted
+\emph default
+ para identificar os discos e as partições.
+ Ativar a opção no menu 
+\family sans
+Ver > Informações do dispositivo
+\family default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Os discos apontados como 
+\family typewriter
+sda, sdb, \SpecialChar ldots
+
+\family default
+ correspondem a 
+\family typewriter
+hd0, hd1, \SpecialChar ldots
+
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+O tipo da tabela de partição também pode ser visto nas informações do dispositiv
+o.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Alternativamente, também pode-se verificar o arquivo grub.cfg para informações
+ sobre discos e partições, além de diversos outros detalhes.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ cat /boot/grub/grub.cfg
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+A barra (
+\family typewriter
+
+\backslash
+
+\family default
+) na listagem acima é apenas para indicar que a linha seguinte da listagem
+ ficará na mesma linha que a anterior no arquivo.
+\end_layout
+
+\begin_layout Enumerate
+A listagem poderá ser um pouco diferente para cada distribuição.
+ Convém pesquisar a sequência correta de comandos, principalmente para outras
+ distribuições não derivadas do 
+\emph on
+Ubuntu
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Atualizar novamente o Grub:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ sudo update-grub
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Reiniciar o computar e testar a inicialização das imagens.
+\end_layout
+
+\begin_layout Paragraph
+Referência
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.youtube.com/watch?v=oSW3xCN1_Yo
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -13280,48 +14060,101 @@ flatpak
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
+\begin_layout Enumerate
 
 \family sans
 Lista os pacotes instalados:
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 
 \family typewriter
 $ flatpak list [-d]
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Enumerate
 
 \family sans
 Desinstala um pacote:
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 
 \family typewriter
 $ flatpak uninstall <pacote>
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Enumerate
 
 \family sans
 Desinstala um pacote não utilizado:
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 
 \family typewriter
 $ flatpak uninstall --unused
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+Apaga conteúdo de 
+\family typewriter
+/var/lib/flatpak/.removed
+\family default
+ após desinstalar aplicativos:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ sudo flatpak repair
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Abre o Shell para uma determinada aplicação:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+$ flatpak run --command=sh <id do aplicativo>[//<versão do aplicativo>]
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+Por exemplo:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ flatpak run --command=sh org.gnome.Sdk//47
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Standard
 Ver também:
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
+\begin_layout Itemize
+Manual:
+\end_layout
 
+\begin_deeper
+\begin_layout Standard
 \begin_inset Flex URL
 status collapsed
 
@@ -13335,6 +14168,31 @@ https://docs.flatpak.org/en/latest/flatpak-command-reference.html
 
 \end_layout
 
+\begin_layout Itemize
+Sobre o 
+\family typewriter
+\SpecialChar ldots
+/flatpak/.removed
+\family default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/flatpak/flatpak/issues/1835
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Description
 apt-get
