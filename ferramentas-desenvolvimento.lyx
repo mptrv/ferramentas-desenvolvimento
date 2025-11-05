@@ -8331,6 +8331,13 @@ Métodos de Desenho
 Por meio de 
 \emph on
 Draw a DWire
+\begin_inset CommandInset label
+LatexCommand label
+name "par:FreeCAD-Draw-a-DWrire"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -8679,6 +8686,446 @@ noprefix "false"
 ).
 \end_layout
 
+\begin_layout Subsubsection
+Importação de e Exportação para o 
+\emph on
+Sweet Home 3D
+\end_layout
+
+\begin_layout Paragraph
+Importação
+\end_layout
+
+\begin_layout Standard
+Antes de importar o arquivo no 
+\emph on
+FreeCAD
+\emph default
+, ele deve ser exportado pelo 
+\emph on
+Sweet Home 3D
+\emph default
+.
+ Após a importação, será necessário fazer um ajuste da escala da malha,
+ pois o 
+\emph on
+Sweet Home 3D 
+\emph default
+exporta as dimensões em centímetros e o 
+\emph on
+FreeCAD
+\emph default
+ considera as dimensões em milímetros.
+ Os passos são:
+\end_layout
+
+\begin_layout Enumerate
+No 
+\emph on
+Sweet Home 3D
+\emph default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Exibir os objetos desejados na vista em 3D.
+\end_layout
+
+\begin_layout Enumerate
+No menu 
+\family sans
+Visão em 3D
+\family default
+, escolher 
+\emph on
+Exportar para o formato OBJ.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+No 
+\emph on
+FreeCAD
+\emph default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Criar ou abrir o projeto de interesse.
+\end_layout
+
+\begin_layout Enumerate
+No menu 
+\family sans
+Ficheiro
+\family default
+, escolher 
+\emph on
+Importar\SpecialChar ldots
+
+\end_layout
+
+\begin_layout Enumerate
+Após a importação, na árvore do modelo, selecionar todos os elementos importados.
+\end_layout
+
+\begin_layout Enumerate
+Na bancada 
+\emph on
+Mesh
+\emph default
+, clicar na ferramenta 
+\emph on
+Escalar\SpecialChar ldots
+
+\end_layout
+
+\begin_layout Enumerate
+Digitar como fator de escala o 10 (quantidade de milímetros para cada centímetro
+) e aceitar.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Exportação
+\end_layout
+
+\begin_layout Standard
+Antes de se exportar o desenho, deve-se realizar uma cópia dos elementos
+ que serão exportados, a fim de que os elementos gerados a partir de traçados
+ (ver 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "par:FreeCAD-Draw-a-DWrire"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ em 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "par:FreeCAD-Draw-a-DWrire"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) sejam inclusos no arquivo de saída (comportamento testado para arquivo
+ de saída no formato OBJ).
+ Ainda, a fim de reduzir o tamanho do arquivo final, o desvio máximo da
+ superfície da malha também poderá ser ajustado.
+\end_layout
+
+\begin_layout Enumerate
+No 
+\emph on
+FreeCAD
+\emph default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Selecionar os elementos que serão exportados.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+como sugestão, ocultar os elementos que não forem de interesse;
+\end_layout
+
+\begin_layout Enumerate
+como sugestão, utilizar a ferramenta 
+\emph on
+Caixa de seleção
+\emph default
+ da bancada 
+\emph on
+Part.
+
+\emph default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Na árvore do modelo, sobre algum elemento selecionado, clicar o botão direito
+ do 
+\emph on
+mouse
+\emph default
+ e, em seguida, clicar em 
+\family sans
+Copiar
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Criar um novo documento vazio.
+\end_layout
+
+\begin_layout Enumerate
+Por meio da bancada 
+\emph on
+Part Design
+\emph default
+, criar um novo corpo com a ferramenta 
+\emph on
+Criar corpo
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Na árvore do modelo, clicar o botão direito do 
+\emph on
+mouse
+\emph default
+ sobre
+\family sans
+ Body
+\family default
+ e clicar em 
+\family sans
+Colar
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Selecionar os elementos que serão exportados, caso não estejam já selecionados.
+\end_layout
+
+\begin_layout Enumerate
+Ajustar o parâmetro 
+\emph on
+Desvio máximo da malha
+\emph default
+, acessível pelo menu 
+\family sans
+Editar > Preferências
+\family default
+, tópico 
+\family sans
+Importar/Exportar
+\family default
+, aba 
+\family sans
+Formatos de malha
+\family default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O valor padrão é de 0,10mm, o qual gerará uma malha relativamente refinada
+ com bom efeito visual, mas o arquivo final poderá ser consideravelmente
+ grande.
+\end_layout
+
+\begin_layout Enumerate
+Alterar o valor para 0,15mm, o qual mantém um efeito visual razoável e com
+ substancial redução do tamanho do arquivo.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+No menu 
+\family sans
+Ficheiro
+\family default
+, clicar em 
+\family sans
+Exportar\SpecialChar ldots
+
+\end_layout
+
+\begin_layout Enumerate
+Selecionar o tipo de arquivo para 
+\emph on
+Wavefront OBJ – Arch module
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Fornecer o nome e local do arquivo e salvar.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+No 
+\emph on
+Sweet Home 3D
+\emph default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+No menu 
+\family sans
+Mobília
+\family default
+, selecinar 
+\family sans
+Importar mobília\SpecialChar ldots
+
+\family default
+, o que abrirá o Assistente de importação.
+\end_layout
+
+\begin_layout Enumerate
+Clicar em 
+\family sans
+Escolher modelos\SpecialChar ldots
+
+\end_layout
+
+\begin_layout Enumerate
+Selecionar o arquivo exportado pelo 
+\emph on
+FreeCAD
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Seguir pelas telas do assistente até chegar na que permite alterar as dimensões
+ do modelo.
+\end_layout
+
+\begin_layout Enumerate
+Deixar ativada a opção 
+\family sans
+Manter proporções
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Em uma das dimensões, a da 
+\family sans
+Largura
+\family default
+, por exemplo, dividir o valor mostrado por 10 (pode-se acrescentar 
+\begin_inset Quotes eld
+\end_inset
+
+/ 10
+\begin_inset Quotes erd
+\end_inset
+
+ – dividido por 10 – ao final do valor previamente exibido).
+\end_layout
+
+\begin_layout Enumerate
+Mudar de campo para atualizar o valor.
+\end_layout
+
+\begin_layout Enumerate
+Prosseguir com o assistente até o final.
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+
+\series bold
+Nota:
+\series default
+ O 
+\emph on
+Sweet Home 3D
+\emph default
+ irá utilizar as cores definidas no arquivo 
+\family sans
+.mtl
+\family default
+, normalmente criado em conjunto com o arquivo 
+\family sans
+.obj
+\family default
+.
+ (O arquivo 
+\family sans
+.obj
+\family default
+ deverá fazer as adequadas atribuições do uso das cores e ter a adequada
+ referência ao arquivo 
+\family sans
+.mtl
+\family default
+.)
+\end_layout
+
+\begin_layout Subsubsection
+Versão Utilizada do 
+\emph on
+Python
+\end_layout
+
+\begin_layout Standard
+Para saber a versão utilizada do 
+\emph on
+Python 
+\emph default
+pelo
+\emph on
+ FreeCAD
+\emph default
+, pode-se utilizar um dos dois métodos:
+\end_layout
+
+\begin_layout Itemize
+Ir ao menu 
+\family sans
+Ajuda > Sobre o FreeCAD
+\family default
+, aba 
+\family sans
+Bibliotecas
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+No console do 
+\emph on
+Python
+\emph default
+, acessível pelo menu 
+\family sans
+Ver > Painéis > Console Python
+\family default
+, executar:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+import sys
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+print(sys.version)
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+print(sys.path)
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Gimp
 \begin_inset Index idx
@@ -12949,39 +13396,32 @@ Escrever as seguintes linhas ao final do arquivo:
 \end_layout
 
 \begin_layout Verbatim
-
 menuentry "Linux Mint 22 Live"{
 \end_layout
 
 \begin_layout Verbatim
-
 	set isofile="/live/linuxmint-22-cinnamon-64bit.iso"
 \end_layout
 
 \begin_layout Verbatim
-
 	loopback loop (hd0,msdos1)$isofile
 \end_layout
 
 \begin_layout Verbatim
-
 	linux (loop)/casper/vmlinuz boot=casper 
 \backslash
 
 \end_layout
 
 \begin_layout Verbatim
-
 		iso-scan/filename=${isofile} quiet splash
 \end_layout
 
 \begin_layout Verbatim
-
 	initrd (loop)/casper/initrd.lz
 \end_layout
 
 \begin_layout Verbatim
-
 }
 \end_layout
 
