@@ -169,7 +169,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.22
+ 0.2.23
 \end_layout
 
 \begin_layout Author
@@ -1593,6 +1593,115 @@ http://www.dbvis.com
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sumir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+CAD
+\end_layout
+
+\begin_layout Description
+FreeCAD
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FreeCAD
+\end_layout
+
+\end_inset
+
+: Gratuito, multiplaforma.
+ Modelador 3D parametrizável de objetos em 2D e 3D.
+ Atende a diversas áreas, como desenho de produto, engenharia mecânica e
+ arquitetura, incluindo modelagem de tubulações.
+ Possui integradas ferramentas de análises por elementos finitos (FEA),
+ CFD experimental, BIM dedicado, ambientes de trabalho Geodata e CAM/CNC,
+ módulo de simulação de robôs, dentre outros recursos.
+ Ver também 
+\emph on
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:FreeCAD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\emph default
+ 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "subsec:FreeCAD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.freecad.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+KiCAD: Ver 
+\emph on
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "descr:KiCad"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\emph default
+ 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "descr:KiCad"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5944,6 +6053,13 @@ KiCad
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "descr:KiCad"
+
+\end_inset
+
 : Gratuito, multiplaforma.
  Pacote EDA (
 \emph on
@@ -6121,49 +6237,6 @@ status open
 
 \backslash
 sumir
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Chapter
-Outras Áreas
-\end_layout
-
-\begin_layout Section
-CAD
-\end_layout
-
-\begin_layout Description
-Freecad
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Freecad
-\end_layout
-
-\end_inset
-
-: Gratuito, multiplaforma.
- Modelador 3D parametrizável de objetos em 2D e 3D.
- Atende a diversas áreas, como desenho de produto, engenharia mecânica e
- arquitetura.
- Possui integradas ferramentas de análises por elementos finitos (FEA),
- CFD experimental, BIM dedicado, ambientes de trabalho Geodata e CAM/CNC,
- módulo de simulação de robôs, dentre outros recursos.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://www.freecad.org/
 \end_layout
 
 \end_inset
@@ -8135,6 +8208,475 @@ storage
 \family typewriter
 $HOME/.mozilla/firefox/<\SpecialChar ldots
 >.default/storage
+\end_layout
+
+\begin_layout Subsection
+FreeCAD
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FreeCAD
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:FreeCAD"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Desenho de Encanamentos (Tubulações)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Encanamentos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Tubulações
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Preparativos
+\end_layout
+
+\begin_layout Standard
+Uma maneira de desenhar os encanamentos é por meio das seguintes extensões,
+ as quais devem ser instaladas pelo gerenciador de extensões (
+\emph on
+\lang english
+Addon Manager
+\emph default
+\lang brazilian
+):
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Dodo WB
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+OSE Piping Workbench
+\end_layout
+
+\begin_layout Standard
+Sugere-se uma personalização nas barras de ferramentas da bancada de trabalho
+ do 
+\emph on
+Dodo WB
+\emph default
+, acrescentando os comandos:
+\end_layout
+
+\begin_layout Itemize
+todos da bancada 
+\emph on
+OSE Piping Workbench
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Show snap toolbar 
+\emph default
+da bancada 
+\emph on
+Draft
+\end_layout
+
+\begin_layout Itemize
+Caixa de Seleção da bancada 
+\emph on
+Part
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Transformar
+\emph default
+ da bancada 
+\emph on
+Std
+\end_layout
+
+\begin_layout Paragraph
+Métodos de Desenho
+\end_layout
+
+\begin_layout Subparagraph
+Por meio de 
+\emph on
+Draw a DWire
+\end_layout
+
+\begin_layout Enumerate
+Selecionar a ferramenta 
+\emph on
+Draw a DWire
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Desenhar a linha por onde o encanamento irá passar.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A linha será desenhada sobre o plano de trabalho (
+\emph on
+\lang english
+Working Plane – WP
+\emph default
+\lang brazilian
+).
+\end_layout
+
+\begin_layout Enumerate
+O WP poderá ser definido nos planos específicos XY, XZ ou YZ, ao clicar
+ nos botões correspondentes.
+ Pressionando-se a tecla 
+\emph on
+Shift
+\emph default
+, restringe-se o deslocamento pelo 
+\emph on
+mouse
+\emph default
+ a um dos eixos do plano.
+\end_layout
+
+\begin_layout Enumerate
+O WP poderá ser rotacionado ou deslocado.
+ Reposicioná-lo conforme a necessidade irá permitir o desenho do caminho
+ desejado.
+\end_layout
+
+\begin_layout Enumerate
+Pode-se digitar o tamanho em cada direção e clicar em 
+\emph on
+Inserir ponto
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+O clique do 
+\emph on
+mouse
+\emph default
+ também insere um ponto e este poderá ser determinado pelas ferramentas
+ do 
+\emph on
+Snap
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Nas ferramentas do 
+\emph on
+Snap
+\emph default
+, poderá ser útil habilitar o 
+\emph on
+Snap Working Plane
+\emph default
+, o qual irá projetar o ponto encontrado no WP.
+\end_layout
+
+\begin_layout Enumerate
+Após terminado o traçado, pressionar o botão 
+\emph on
+Terminar
+\emph default
+ ou 
+\emph on
+Fechar
+\emph default
+, sendo que o primeiro deixa o caminho aberto e o segundo fecha-o ao ponto
+ inicial.
+ Também tem-se o botão 
+\emph on
+Anular
+\emph default
+, que remove o último ponto acrescentado, o botão 
+\emph on
+Limpar
+\emph default
+, que remove todos os pontos, com exceção do último, e o botão 
+\emph on
+Definir Plano de Trabalho
+\emph default
+, que reorienta o WP ao último segmento acrescentado.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Na árvore do modelo, irá aparecer um novo elemento 
+\emph on
+Wire
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Ao manter selecionado o 
+\emph on
+Wire
+\emph default
+, clicar em 
+\emph on
+Insert a branch
+\emph default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Selecionar o ramo (pode ser previamente configurado em 
+\emph on
+PypeLine Manager
+\emph default
+) e o tamanho desejado.
+\end_layout
+
+\begin_layout Enumerate
+Opcionalmente, pode-se dar um nome ao traçado que será acrescentado.
+ Se deixado em branco, o nome será 
+\emph on
+Traccio.
+\end_layout
+
+\begin_layout Enumerate
+Clicar no botão 
+\emph on
+Inserir.
+ 
+\emph default
+Neste momento, será feito um traçado da tubulação longo da linha, com cada
+ elemento da tubulação dentro do traçado.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para melhor efeito visual, pode-se ocultar o traçado inserido e exibir os
+ elementos dentro do traçado.
+\end_layout
+
+\begin_layout Subparagraph
+Por meio de 
+\emph on
+Insert Tube 
+\emph default
+e semelhantes
+\begin_inset CommandInset label
+LatexCommand label
+name "par:FreeCAD-insert-tube"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplica-se a 
+\emph on
+Insert Tube
+\emph default
+, 
+\emph on
+Insert Cuve 
+\emph default
+e outros elementos isolados.
+\end_layout
+
+\begin_layout Enumerate
+Clicar na borda da face onde o elemento será acrescentado.
+\end_layout
+
+\begin_layout Enumerate
+Clicar na correspondente ferramenta, por exemplo, em 
+\emph on
+Insert Tube.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Selecionar o ramo e o modelo e digitar o tamanho.
+\end_layout
+
+\begin_layout Enumerate
+Clicar em 
+\emph on
+Inserir
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Para alterar um elemento já existente:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+manter a janela da ferramenta aberta;
+\end_layout
+
+\begin_layout Enumerate
+clicar no elemento visual (mesmo que já esteja pré-selecionado);
+\end_layout
+
+\begin_layout Enumerate
+alterar o tamanho;
+\end_layout
+
+\begin_layout Enumerate
+clicar em 
+\emph on
+Aplicar
+\emph default
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se a borda não for previamente selecionada, o elemento será posto na origem
+ global.
+ Para alinhar ao local desejado, pode-se:
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:FreeCAD-Mate-pipes-edges"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Selecionar a borda do elemento que ficará fixo.
+\end_layout
+
+\begin_layout Enumerate
+Segurar a tecla 
+\emph on
+Ctrl
+\emph default
+ e clicar na borda do elemento que será movimentado.
+\end_layout
+
+\begin_layout Enumerate
+Clicar na ferramenta 
+\emph on
+Mate pipes edges.
+\end_layout
+
+\end_deeper
+\begin_layout Subparagraph
+Por meio de 
+\emph on
+Add a Pipe
+\emph default
+ e semelhantes
+\end_layout
+
+\begin_layout Standard
+Aplica-se aos elementos da bancada 
+\emph on
+OSE Piping Workbench
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Clicar na forma desejada do elemento.
+\end_layout
+
+\begin_layout Enumerate
+Selecionar o tipo do elemento: 
+\emph on
+sólido
+\emph default
+, 
+\emph on
+Dodo/Flamingo
+\emph default
+ ou 
+\emph on
+Parts
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Selecionar a geometria.
+\end_layout
+
+\begin_layout Enumerate
+Quando houver, informar o tamanho.
+\end_layout
+
+\begin_layout Enumerate
+Clicar no botão 
+\emph on
+OK
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Para posicionar o elemento no local desejado, recomenda-se utilizar a ferramenta
+ 
+\emph on
+Mate pipes edges
+\emph default
+ (ver o item 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "enu:FreeCAD-Mate-pipes-edges"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ da seção 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "par:FreeCAD-insert-tube"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
@@ -12467,7 +13009,6 @@ Linux Mint 22 Live
 \end_layout
 
 \begin_layout Enumerate
-
 Aqui, 
 \family typewriter
 linuxmint-22-cinnamon-64bit.iso
