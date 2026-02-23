@@ -169,7 +169,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.23
+ 0.2.26
 \end_layout
 
 \begin_layout Author
@@ -4452,6 +4452,52 @@ http://www.tug.org/texlive
 \end_layout
 
 \begin_layout Description
+pdftk
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+pdftk
+\end_layout
+
+\end_inset
+
+: Gratuito, para 
+\emph on
+Linux
+\emph default
+.
+ Permite diversas manipulações em arquivos PDF e, dentre elas, a criptografia
+ com a definição de uma senha.
+ Ver a seção 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Pdftk"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
 pdfbook2
 \begin_inset Index idx
 status open
@@ -8451,6 +8497,24 @@ Wire
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Para editá-lo (para editar um 
+\emph on
+DWire
+\emph default
+), pode-se selecioná-lo e utilizar a ferramenta 
+\emph on
+Trimex
+\emph default
+ da bancada 
+\emph on
+Draft
+\emph default
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Ao manter selecionado o 
 \emph on
@@ -8641,6 +8705,16 @@ Parts
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Recomenda-se escolher o tipo 
+\emph on
+Dodo/Flamingo
+\emph default
+, pois este tipo acrescenta dados como modelo do tubo, tipo e comprimento.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Selecionar a geometria.
 \end_layout
@@ -8684,6 +8758,69 @@ noprefix "false"
 \end_inset
 
 ).
+\end_layout
+
+\begin_layout Subsubsection
+Lista de Materiais da Tubulação
+\end_layout
+
+\begin_layout Standard
+Para extrair uma lista de materiais da tubulação, pode-se descompactar o
+ arquivo 
+\family sans
+.FCStd
+\family default
+ com 
+\family typewriter
+unzip 
+\family default
+e analisar o arquivo 
+\emph on
+Document.xml
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Há um 
+\emph on
+script
+\emph default
+ em Python para facilitar esta tarefa:
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+freecad-listar-mat-enc.py
+\end_layout
+
+\begin_layout Standard
+(este programa, por ora, não está disponível publicamente).
+\end_layout
+
+\begin_layout Quote
+
+\series bold
+Nota:
+\series default
+ Propósito dos dois arquivos principais descompactados:
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+Document.xml: 
+\family default
+possui as definições das geometrias dos objetos.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+GuiDocument.xml:
+\family default
+ possui as definições de visualização dos objetos.
 \end_layout
 
 \begin_layout Subsubsection
@@ -10765,6 +10902,81 @@ noprefix "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsection
+Pdftk
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Pdftk
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Pdftk"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Criptografia de Arquivo PDF
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PDF, senha
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PDF, criptografia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para proteger um arquivo PDF com senha, pode-se utilizar o comando:
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+$ pdftk <arq_entrada.pdf> output <arq_saida.pdf> owner_pw <senha_proprietario>
+ user_pw <senha_usuario>
+\end_layout
+
+\begin_layout Paragraph*
+Referência:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://askubuntu.com/questions/258848/is-there-a-tool-that-can-add-a-password-to
+-a-pdf-file
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -13396,32 +13608,39 @@ Escrever as seguintes linhas ao final do arquivo:
 \end_layout
 
 \begin_layout Verbatim
+
 menuentry "Linux Mint 22 Live"{
 \end_layout
 
 \begin_layout Verbatim
+
 	set isofile="/live/linuxmint-22-cinnamon-64bit.iso"
 \end_layout
 
 \begin_layout Verbatim
+
 	loopback loop (hd0,msdos1)$isofile
 \end_layout
 
 \begin_layout Verbatim
+
 	linux (loop)/casper/vmlinuz boot=casper 
 \backslash
 
 \end_layout
 
 \begin_layout Verbatim
+
 		iso-scan/filename=${isofile} quiet splash
 \end_layout
 
 \begin_layout Verbatim
+
 	initrd (loop)/casper/initrd.lz
 \end_layout
 
 \begin_layout Verbatim
+
 }
 \end_layout
 
@@ -15581,6 +15800,62 @@ limpa
 \end_inset
 
 .
+\end_layout
+
+\end_deeper
+\begin_layout Description
+
+\family typewriter
+dxdiag
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+dxdiag
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+\series bold
+DirectX
+\end_layout
+
+\end_inset
+
+ 
+\family default
+Informações sobre o DirectX
+\family typewriter
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dentre as informações, citam-se:
+\end_layout
+
+\begin_layout Itemize
+Versão do 
+\emph on
+DirectX.
+\end_layout
+
+\begin_layout Itemize
+Versão do 
+\emph on
+Driver.
 \end_layout
 
 \end_deeper
