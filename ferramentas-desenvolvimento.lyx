@@ -169,7 +169,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.26
+ 0.2.27
 \end_layout
 
 \begin_layout Author
@@ -9495,7 +9495,7 @@ git
 \begin_layout Quotation
 
 \family typewriter
-$ git config core.sshCommand 
+$ git config [--global] core.sshCommand 
 \begin_inset Quotes eld
 \end_inset
 
@@ -9538,6 +9538,18 @@ Pode-se utilizar
 , conforme o nível de detalhes desejado.
 \end_layout
 
+\begin_layout Standard
+Se 
+\family typewriter
+--global 
+\family default
+for especificado, a configuração será geral para o 
+\family typewriter
+git
+\family default
+; caso contrário, ela será aplicada somente ao repositório atual.
+\end_layout
+
 \begin_layout Subsubsection
 Configuração de Acesso Remoto por SSH no GitHub
 \end_layout
@@ -9570,6 +9582,29 @@ th-ssh
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Acesso ao Repositório em Diferentes Dispositivos via SSH
+\end_layout
+
+\begin_layout Standard
+Sugere-se que cada dispositivo tenha o seu próprio par de chave 
+\family typewriter
+ssh
+\family default
+ (pública e privada).
+ Lembra-se que a chave pública deverá ser acrescentada no 
+\emph on
+GitHub
+\emph default
+ (em 
+\emph on
+\lang english
+Settings
+\emph default
+\lang brazilian
+).
 \end_layout
 
 \begin_layout Subsubsection
