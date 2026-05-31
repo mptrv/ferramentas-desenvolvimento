@@ -169,7 +169,7 @@ Ferramentas de Desenvolvimento
 
 \size normal
 v.
- 0.2.27
+ 0.2.28
 \end_layout
 
 \begin_layout Author
@@ -9263,6 +9263,81 @@ print(sys.path)
 \end_layout
 
 \end_deeper
+\begin_layout Subsubsection
+Bancadas
+\end_layout
+
+\begin_layout Paragraph
+
+\emph on
+\lang english
+Laser Cut Interlocking
+\end_layout
+
+\begin_layout Standard
+Os valores padrão podem ser alterados nos arquivos dentro de:
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+$ ~/.local/share/FreeCAD/Mod/LCInterlocking/lasercut
+\end_layout
+
+\begin_layout Standard
+Os arquivos são os seguintes:
+\end_layout
+
+\begin_layout Description
+Linguetas
+\begin_inset space ~
+\end_inset
+
+(
+\emph on
+\lang english
+tabs
+\emph default
+\lang brazilian
+)
+\begin_inset space ~
+\end_inset
+
+–
+\begin_inset space ~
+\end_inset
+
+geral: 
+\family typewriter
+material.py
+\end_layout
+
+\begin_layout Description
+Linguetas
+\begin_inset space ~
+\end_inset
+
+(
+\series bold
+\emph on
+\lang english
+tabs
+\emph default
+\lang brazilian
+)
+\begin_inset space ~
+\end_inset
+
+–
+\begin_inset space ~
+\end_inset
+
+detalhes: 
+\family typewriter
+\series default
+tabproperties.py
+\end_layout
+
 \begin_layout Subsection
 Gimp
 \begin_inset Index idx
@@ -13643,39 +13718,32 @@ Escrever as seguintes linhas ao final do arquivo:
 \end_layout
 
 \begin_layout Verbatim
-
 menuentry "Linux Mint 22 Live"{
 \end_layout
 
 \begin_layout Verbatim
-
 	set isofile="/live/linuxmint-22-cinnamon-64bit.iso"
 \end_layout
 
 \begin_layout Verbatim
-
 	loopback loop (hd0,msdos1)$isofile
 \end_layout
 
 \begin_layout Verbatim
-
 	linux (loop)/casper/vmlinuz boot=casper 
 \backslash
 
 \end_layout
 
 \begin_layout Verbatim
-
 		iso-scan/filename=${isofile} quiet splash
 \end_layout
 
 \begin_layout Verbatim
-
 	initrd (loop)/casper/initrd.lz
 \end_layout
 
 \begin_layout Verbatim
-
 }
 \end_layout
 
